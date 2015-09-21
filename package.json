@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-availity",
+  "version": "1.0.0",
+  "description": "Shareable ESLint config for Availity projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Availity/eslint-config-availity.git"
+  },
+  "keywords": [
+    "eslint",
+    "availity"
+  ],
+  "author": "Robert McGuinness",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Availity/eslint-config-availity/issues"
+  },
+  "homepage": "https://github.com/Availity/eslint-config-availity#readme"
+}
