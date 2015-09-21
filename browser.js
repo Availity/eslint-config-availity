@@ -1,5 +1,6 @@
 module.exports = {
-  "extends": "/index",
+
+  "extends": "./index",
   "env": {
     "browser": true,
     "commonjs": true
@@ -11,4 +12,5 @@ module.exports = {
     ],
     "global-strict": 0
   }
+
 }
