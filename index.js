@@ -1,6 +1,6 @@
 'use strict';
 
-modules.exports = {
+module.exports = {
   'env': {
     'browser': false,
     'node': true,
@@ -38,7 +38,7 @@ modules.exports = {
     ],
     'no-cond-assign': [
       2,
-      'always'
+      'except-parens'
     ],
     'no-console': 1,
     'no-debugger': 1,
