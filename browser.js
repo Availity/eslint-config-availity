@@ -1,16 +1,16 @@
 module.exports = {
 
-  "extends": "./index",
-  "env": {
-    "browser": true,
-    "commonjs": true
+  'extends': './index',
+  'env': {
+    'browser': true,
+    'commonjs': true
   },
-  "rules": {
-    "strict": [
+  'rules': {
+    'strict': [
       2,
-      "global"
+      'global'
     ],
-    "global-strict": 0
+    'global-strict': 0
   }
 
 }
