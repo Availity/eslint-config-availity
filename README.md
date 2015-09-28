@@ -12,6 +12,11 @@
 npm install eslint-config-availity --save-dev
 ```
 
+## Dependencies
+
+* [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
+* [babel-eslint](https://github.com/babel/babel-eslint)
+
 ## Acknowledgments
 
 + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)

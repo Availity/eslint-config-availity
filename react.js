@@ -9,7 +9,8 @@ module.exports = {
   },
   'env': {
     'browser': true,
-    'es6': true
+    'es6': true,
+    'node': true
   },
   'rules': {
     'react/display-name': 1,
@@ -21,7 +22,7 @@ module.exports = {
     'react/jsx-no-duplicate-props': 1,
     'react/jsx-no-literals': 1,
     'react/jsx-no-undef': 1,
-    'react/jsx-quotes': 1,
+    'jsx-quotes': 1,
     'react/jsx-sort-prop-types': 1,
     'react/jsx-sort-props': 1,
     'react/jsx-uses-react': 1,
@@ -29,7 +30,7 @@ module.exports = {
     'react/no-danger': 1,
     'react/no-did-mount-set-state': 1,
     'react/no-did-update-set-state': 1,
-    'react/no-direct-mutation-state': 1,
+    'react/no-direct-mutation-state': 0, // can't find?
     'react/no-multi-comp': 1,
     'react/no-set-state': 1,
     'react/no-unknown-property': 1,
