@@ -20,7 +20,7 @@ module.exports = {
     'react/jsx-indent-props': 1,
     'react/jsx-max-props-per-line': 1,
     'react/jsx-no-duplicate-props': 1,
-    'react/jsx-no-literals': 1,
+    'react/jsx-no-literals': 0,
     'react/jsx-no-undef': 1,
     'jsx-quotes': 1,
     'react/jsx-sort-prop-types': 1,
