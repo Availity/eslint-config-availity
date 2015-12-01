@@ -1,11 +1,14 @@
 'use strict';
 
 module.exports = {
+  'parser': 'babel-eslint',
   'env': {
     'browser': false,
     'node': true,
-    'commonjs': true,
-    'es6': false
+    'es6': true
+  },
+  'ecmaFeatures': {
+    'modules': true
   },
   'rules': {
     'strict': [
