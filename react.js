@@ -1,16 +1,10 @@
 module.exports = {
-  'extends': './index',
-  'parser': 'babel-eslint',
+  'extends': './browser',
   'plugins': [
     'react'
   ],
-  'ecmaFeatures':{
+  'ecmaFeatures': {
     'jsx': true
-  },
-  'env': {
-    'browser': true,
-    'es6': true,
-    'node': true
   },
   'rules': {
     'react/display-name': 1,
