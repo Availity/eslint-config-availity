@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "devDependencies": {
-    "babel-eslint": "^4.1.3",
-    "eslint-plugin-react": "3.6.3"
+    "babel-eslint": "4.1.6",
+    "eslint-plugin-react": "3.11.1"
   }
 }
