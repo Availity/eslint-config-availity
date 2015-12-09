@@ -9,7 +9,7 @@
 
 >
 ```bash
-npm install eslint-config-availity --save-dev
+npm install babel-eslint@4.1.6 eslint-plugin-react eslint-config-availity --save-dev
 ```
 
 ## Dependencies
