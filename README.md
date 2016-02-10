@@ -9,13 +9,39 @@
 
 >
 ```bash
+npm install babel-eslint eslint-config-availity --save-dev
+```
+
+### Installation (React)
+
+>
+```bash
 npm install babel-eslint eslint-plugin-react eslint-config-availity --save-dev
+```
+
+## Usage
+
+>
+```bash
+# .bashrc
+extends: eslint-config-availity
+```
+
+### Usage (React)
+
+>
+```bash
+# .bashrc
+extends: eslint-config-availity/react
 ```
 
 ## Dependencies
 
-* [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 * [babel-eslint](https://github.com/babel/babel-eslint)
+
+## Optional Dependencies
+
+* [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react)
 
 ## Acknowledgments
 
