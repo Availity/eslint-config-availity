@@ -9,7 +9,7 @@
 
 >
 ```bash
-npm install babel-eslint@next eslint-plugin-react eslint-config-availity --save-dev
+npm install eslint babel-eslint@next eslint-plugin-react eslint-config-availity --save-dev
 ```
 
 ## Usage
