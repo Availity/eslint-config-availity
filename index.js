@@ -1,15 +1,25 @@
 'use strict';
 
 module.exports = {
+
   'parser': 'babel-eslint',
+
   'env': {
     'browser': false,
     'node': true,
     'es6': true
   },
-  'ecmaFeatures': {
-    'modules': true
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "modules": true,
+      "jsx": true
+    },
+    "sourceType": "module"
   },
+
   'rules': {
     'strict': [
       2,
@@ -183,14 +193,12 @@ module.exports = {
         'after': true
       }
     ],
-    'space-after-keywords': 2,
-    'space-before-blocks': 2,
+    'keyword-spacing': 2,
     'space-before-function-paren': [
       2,
       'never'
     ],
     'space-infix-ops': 2,
-    'space-return-throw-case': 2,
     'spaced-comment': [
       2,
       'always',

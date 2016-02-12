@@ -1,11 +1,18 @@
 module.exports = {
+
   'extends': './browser',
+
   'plugins': [
     'react'
   ],
-  'ecmaFeatures': {
-    'jsx': true
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
   },
+
   'rules': {
     'react/display-name': 1,
     'react/jsx-boolean-value': 1,
@@ -35,4 +42,5 @@ module.exports = {
     'react/sort-comp': 1,
     'react/wrap-multilines': 1
   }
+
 }

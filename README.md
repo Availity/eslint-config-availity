@@ -9,14 +9,7 @@
 
 >
 ```bash
-npm install babel-eslint eslint-config-availity --save-dev
-```
-
-### Installation (React)
-
->
-```bash
-npm install babel-eslint eslint-plugin-react eslint-config-availity --save-dev
+npm install babel-eslint@next eslint-plugin-react eslint-config-availity --save-dev
 ```
 
 ## Usage
@@ -35,8 +28,16 @@ extends: eslint-config-availity
 extends: eslint-config-availity/react
 ```
 
-## Dependencies
+### Usage (Browser)
 
+>
+```bash
+# .bashrc
+extends: eslint-config-availity/browser
+```
+
+## Dependencies
+*
 * [babel-eslint](https://github.com/babel/babel-eslint)
 
 ## Optional Dependencies
