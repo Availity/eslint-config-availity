@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "peerDependencies": {
-    "eslint": "^2.0.0-rc.1",
+    "eslint": "^2.1.0",
     "babel-eslint": "5.0.0-beta10",
     "eslint-plugin-react": "3.16.1"
   },
   "devDependencies": {
-    "eslint": "^2.0.0-rc.1",
     "babel-eslint": "^5.0.0-beta10",
+    "eslint": "^2.1.0",
     "eslint-plugin-react": "^3.16.1"
   }
 }

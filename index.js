@@ -14,48 +14,23 @@ module.exports = {
     "ecmaVersion": 6,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "modules": true,
+      "modules": false,
       "jsx": true
     },
     "sourceType": "module"
   },
 
   'rules': {
-    'strict': [
-      2,
-      'never'
-    ],
-    'indent': [
-      2,
-      2,
-      {
-        'SwitchCase': 1
-      }
-    ],
-    'quotes': [
-      2,
-      'single',
-      'avoid-escape'
-    ],
+    'strict': [2, 'global'],
+    'indent': [2, 2, {'SwitchCase': 1 } ],
+    'quotes': [2, 'single', 'avoid-escape'],
     'no-shadow': 2,
     'no-shadow-restricted-names': 2,
     'no-undef': 2,
-    'no-unused-vars': [
-      2,
-      {
-        'vars': 'all',
-        'args': 'after-used'
-      }
-    ],
+    'no-unused-vars': [2, {'vars': 'all', 'args': 'after-used'} ],
     'no-use-before-define': 2,
-    'comma-dangle': [
-      2,
-      'never'
-    ],
-    'no-cond-assign': [
-      2,
-      'except-parens'
-    ],
+    'comma-dangle': [2, 'never'],
+    'no-cond-assign': [2, 'except-parens'],
     'no-console': 1,
     'no-debugger': 1,
     'no-alert': 1,
@@ -75,18 +50,10 @@ module.exports = {
     'no-unreachable': 2,
     'use-isnan': 2,
     'block-scoped-var': 2,
-    'consistent-return': 2,
-    'curly': [
-      2,
-      'multi-line'
-    ],
+    'consistent-return': 0,
+    'curly': [2, 'multi-line'],
     'default-case': 2,
-    'dot-notation': [
-      2,
-      {
-        'allowKeywords': true
-      }
-    ],
+    'dot-notation': [2, {'allowKeywords': true } ],
     'eqeqeq': 2,
     'guard-for-in': 2,
     'no-caller': 2,
@@ -118,74 +85,26 @@ module.exports = {
     'no-with': 2,
     'radix': 2,
     'vars-on-top': 0,
-    'wrap-iife': [
-      2,
-      'any'
-    ],
+    'wrap-iife': [2, 'any'],
     'yoda': 2,
-    'brace-style': [
-      2,
-      '1tbs',
-      {
-        'allowSingleLine': true
-      }
-    ],
-    'camelcase': [
-      2,
-      {
-        'properties': 'never'
-      }
-    ],
-    'comma-spacing': [
-      2,
-      {
-        'before': false,
-        'after': true
-      }
-    ],
-    'comma-style': [
-      2,
-      'last'
-    ],
+    'brace-style': [2, '1tbs', {'allowSingleLine': true } ],
+    'camelcase': [2, {'properties': 'never'} ],
+    'comma-spacing': [2, {'before': false, 'after': true } ],
+    'comma-style': [2, 'last'],
     'eol-last': 2,
     'func-names': 0,
-    'key-spacing': [
-      2,
-      {
-        'beforeColon': false,
-        'afterColon': true
-      }
-    ],
-    'new-cap': [
-      2,
-      {
-        'newIsCap': true
-      }
-    ],
-    'no-multiple-empty-lines': [
-      2,
-      {
-        'max': 2
-      }
-    ],
+    'key-spacing': [2, {'beforeColon': false, 'afterColon': true } ],
+    'new-cap': [2, {'newIsCap': true } ],
+    'no-multiple-empty-lines': [2, {'max': 2 } ],
     'no-nested-ternary': 2,
     'no-new-object': 2,
     'no-spaced-func': 2,
     'no-trailing-spaces': 2,
-    'no-extra-parens': [
-      2,
-      'functions'
-    ],
+    'no-extra-parens': [2, 'functions'],
     'no-underscore-dangle': 0,
-    'one-var': [
-      2,
-      'never'
-    ],
+    'one-var': [2, 'never'],
     'padded-blocks': 0,
-    'semi': [
-      2,
-      'always'
-    ],
+    'semi': [2, 'always'],
     'semi-spacing': [
       2,
       {
