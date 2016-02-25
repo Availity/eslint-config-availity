@@ -1,10 +1,9 @@
 module.exports = {
 
-  'extends': './index',
+  'extends': './base',
 
   'env': {
-    'browser': true,
-    'commonjs': true
+    'browser': true
   },
 
   "globals": {
