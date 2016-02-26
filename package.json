@@ -4,7 +4,7 @@
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js"
   },
   "engines": {
     "node": ">=4.0"
@@ -17,6 +17,12 @@
     "eslint",
     "eslintconfig",
     "availity"
+  ],
+  "files": [
+    "index.js",
+    "brower.js",
+    "react.js",
+    "base.js"
   ],
   "author": "Robert McGuinness",
   "license": "MIT",
@@ -32,6 +38,9 @@
   "devDependencies": {
     "babel-eslint": "^5.0.0",
     "eslint": "^2.0.0",
-    "eslint-plugin-react": "^4.0.0"
+    "eslint-plugin-react": "^4.0.0",
+    "is-plain-obj": "1.1.0",
+    "tape": "4.4.0",
+    "temp-write": "2.1.0"
   }
 }
