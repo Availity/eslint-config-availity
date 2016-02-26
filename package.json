@@ -20,7 +20,7 @@
   ],
   "files": [
     "index.js",
-    "brower.js",
+    "browser.js",
     "react.js",
     "base.js"
   ],
