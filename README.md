@@ -38,7 +38,8 @@ extends: eslint-config-availity/browser
 ```
 
 ## Dependencies
-*
+
+* [eslint](https://github.com/eslint/eslint)
 * [babel-eslint](https://github.com/babel/babel-eslint)
 
 ## Optional Dependencies
