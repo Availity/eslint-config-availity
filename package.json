@@ -22,7 +22,8 @@
     "index.js",
     "browser.js",
     "react.js",
-    "base.js"
+    "base.js",
+    "README.md"
   ],
   "author": "Robert McGuinness",
   "license": "MIT",
