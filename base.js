@@ -14,7 +14,7 @@ module.exports = {
     'ecmaVersion': 6,
     'sourceType': 'module',
     'ecmaFeatures': {
-      'modules': false
+      'modules': true
     }
   },
 
@@ -22,6 +22,7 @@ module.exports = {
     'strict': [2, 'global'],
     'indent': [2, 2, {'SwitchCase': 1 } ],
     'quotes': [2, 'single', 'avoid-escape'],
+    'object-shorthand': 1,
     'no-shadow': 2,
     'no-shadow-restricted-names': 2,
     'no-undef': 2,
@@ -107,12 +108,12 @@ module.exports = {
     'no-undef-init': 2,
     'no-extra-parens': [2, 'functions'],
     'no-underscore-dangle': 0,
-    'no-unused-expressions': 2,
+    'no-unused-expressions': 0,
     'one-var': [2, 'never'],
     'padded-blocks': 0,
     'prefer-const': 2,
     'no-var': 2,
-    'semi': [2, "always", { "omitLastInOneLineBlock": true}],
+    'semi': [2, "always", { "omitLastInOneLineBlock": true} ],
     'semi-spacing': [2, {'before': false, 'after': true } ],
     'keyword-spacing': 2,
     'space-before-function-paren': [2, 'never'],
