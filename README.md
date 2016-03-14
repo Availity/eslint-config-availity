@@ -8,9 +8,11 @@
 
 ## Installation
 
+> Pin eslint version to 2.2.x until [#5476](https://github.com/eslint/eslint/issues/5476) is resolved
+
 >
 ```bash
-npm install eslint babel-eslint eslint-plugin-react eslint-config-availity --save-dev
+npm install eslint babel-eslint@2.2.x eslint-plugin-react eslint-config-availity --save-dev
 ```
 
 ## Usage

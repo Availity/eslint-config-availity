@@ -32,13 +32,13 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "peerDependencies": {
-    "eslint": "^2.0.0",
-    "babel-eslint": "^5.0.0",
-    "eslint-plugin-react": "^4.0.0"
+    "eslint": "2.2.x",
+    "eslint-plugin-react": "^4.0.0",
+    "babel-eslint": "6.0.0-beta.5"
   },
   "devDependencies": {
-    "babel-eslint": "^5.0.0",
-    "eslint": "^2.0.0",
+    "babel-eslint": "6.0.0-beta.5",
+    "eslint": "2.2.0",
     "eslint-plugin-react": "^4.0.0",
     "is-plain-obj": "1.1.0",
     "tape": "4.4.0",
