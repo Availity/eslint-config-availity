@@ -6,6 +6,11 @@
 [![NPM](http://img.shields.io/npm/v/eslint-config-availity.svg?style=flat-square&label=npm)](https://npmjs.org/package/eslint-config-availity)
 [![Build](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=flat-square&label=build)](https://travis-ci.org/Availity/eslint-config-availity)
 
+Configurations are split between server and client side for their respective ES2015 support.  
+
+* Node configuration is compatible with https://nodejs.org/en/docs/es6/
+* Client side configuration is fully compatible with ES2015 specification and assume a transipler like Babel 6+ for module support
+
 ## Installation
 
 >
