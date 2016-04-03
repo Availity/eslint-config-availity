@@ -4,6 +4,7 @@
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
+    "preversion": "npm run test",
     "test": "tape test.js"
   },
   "engines": {
