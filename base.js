@@ -1,5 +1,6 @@
 'use strict';
 
+// Target is code written for Node 4+
 module.exports = {
 
   'parser': 'babel-eslint',
@@ -11,11 +12,7 @@ module.exports = {
   },
 
   'parserOptions': {
-    'ecmaVersion': 6,
-    'sourceType': 'module',
-    'ecmaFeatures': {
-      'modules': true
-    }
+    'sourceType': 'script'
   },
 
   'rules': {

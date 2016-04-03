@@ -5,12 +5,14 @@ const eslint = require('eslint');
 const conf = require('./');
 
 function runEslint(str, conf) {
+
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: tempWrite.sync(JSON.stringify(conf))
   });
 
   return linter.executeOnText(str).results[0].messages;
+
 }
 
 test('rules', (t) => {
@@ -21,6 +23,6 @@ test('rules', (t) => {
   t.ok(isPlainObj(conf.rules));
 
   const errors = runEslint(`'use strict'\nvar foo = function () {};\nfoo();\n`, conf);
-  t.equal(errors[0].ruleId, 'strict');
-  t.equal(errors[1].ruleId, 'semi');
+  t.equal(errors[0].ruleId, 'semi');
+  t.equal(errors[1].ruleId, 'no-var');
 });
