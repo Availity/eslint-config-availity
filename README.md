@@ -9,7 +9,7 @@
 Configurations are split between server and client side for their respective ES2015 support.  
 
 * Node configuration is compatible with https://nodejs.org/en/docs/es6/
-* Client side configuration is fully compatible with ES2015 specification and assume a transipler like Babel 6+ for module support
+* Client side configuration is fully compatible with ES2015 specification and assumes a transpiler like Babel 6+ for module support
 
 ## Installation
 
