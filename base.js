@@ -12,7 +12,10 @@ module.exports = {
   },
 
   'parserOptions': {
-    'sourceType': 'script'
+    'sourceType': 'script',
+    'ecmaFeatures': {
+      'generators': true
+    }
   },
 
   'rules': {
@@ -20,6 +23,7 @@ module.exports = {
     'indent': [2, 2, {'SwitchCase': 1 } ],
     'quotes': [2, 'single', 'avoid-escape'],
     'object-shorthand': 1,
+    'constructor-super': 1,
     'no-shadow': 2,
     'no-shadow-restricted-names': 2,
     'no-undef': 2,

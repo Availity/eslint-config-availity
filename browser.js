@@ -1,7 +1,7 @@
 // Target is browser code written in ES6 using a transpiler like Babel
 module.exports = {
 
-  'extends': './base',
+  'extends': './base.js',
 
   'env': {
     'browser': true,
@@ -21,6 +21,5 @@ module.exports = {
     "document": false,
     "navigator": false,
     "window": false
-  },
-
+  }
 }
