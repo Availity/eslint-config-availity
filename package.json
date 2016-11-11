@@ -1,10 +1,14 @@
 {
   "name": "eslint-config-availity",
-  "version": "1.0.1",
+  "version": "2.0.0-beta.12",
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preversion": "npm run test",
+    "test": "tape test.js"
+  },
+  "engines": {
+    "node": ">=4.0"
   },
   "repository": {
     "type": "git",
@@ -12,12 +16,33 @@
   },
   "keywords": [
     "eslint",
+    "eslintconfig",
     "availity"
+  ],
+  "files": [
+    "index.js",
+    "browser.js",
+    "react.js",
+    "base.js",
+    "README.md"
   ],
   "author": "Robert McGuinness",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Availity/eslint-config-availity/issues"
   },
-  "homepage": "https://github.com/Availity/eslint-config-availity#readme"
+  "homepage": "https://github.com/Availity/eslint-config-availity#readme",
+  "peerDependencies": {
+    "eslint": ">=3.0.0",
+    "eslint-plugin-react": ">=6.0.0",
+    "babel-eslint": ">=6.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.0",
+    "eslint": "3.9.1",
+    "eslint-plugin-react": "6.6.0",
+    "is-plain-obj": "1.1.0",
+    "tape": "4.6.2",
+    "temp-write": "2.1.0"
+  }
 }
