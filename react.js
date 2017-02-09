@@ -1,6 +1,6 @@
 module.exports = {
 
-  'extends': './base.js',
+  'extends': './browser.js',
 
   'plugins': [
     'react'
@@ -16,6 +16,7 @@ module.exports = {
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
   'rules': {
+
     // Prevent missing displayName in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
     'react/display-name': [0, { 'ignoreTranspilerName': false }],
@@ -127,6 +128,11 @@ module.exports = {
     // Enforce spaces before the closing bracket of self-closing JSX elements
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
     'react/jsx-space-before-closing': [2, 'always'],
+
+    // Prevent variables used in JSX to be incorrectly marked as unused (jsx-uses-vars)
+    //
+    "react/jsx-uses-vars": 2,
+
     // Enforce component methods order
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
     'react/sort-comp': [2, {
@@ -142,7 +148,7 @@ module.exports = {
     }],
     // Prevent missing parentheses around multilines JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
-    'react/wrap-multilines': [2, {
+    'react/jsx-wrap-multilines': [2, {
       declaration: true,
       assignment: true,
       return: true
