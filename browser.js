@@ -17,6 +17,10 @@ module.exports = {
   "globals": {
     "document": true,
     "navigator": true,
-    "window": true
+    "window": true,
+    "__DEV__": true,
+    "__TEST__": true,
+    "__PROD__": true,
+    "__STAGING__": true
   }
 }
