@@ -5,7 +5,8 @@ module.exports = {
   ],
 
   "plugins": [
-    "react"
+    "react",
+    "import"
   ],
 
   "parserOptions": {
@@ -155,6 +156,11 @@ module.exports = {
       assignment: true,
       return: true
     }],
+
+    // https://github.com/benmosher/eslint-plugin-import/tree/master/docs/rules
+    'import/first': 'error',
+    'import/no-amd': 'error',
+    'import/no-webpack-loader-syntax': 'error'
   }
 
 }
