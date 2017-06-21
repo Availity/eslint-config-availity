@@ -3,14 +3,7 @@ module.exports = {
 
   "extends": "./base.js",
 
-  "env": {
-    "browser": true,
-    "es6": true
-  },
-
-  // Force ES6 module settings: http://www.2ality.com/2014/09/es6-modules-final.html
   "parserOptions": {
-    "ecmaVersion": 6,
     "sourceType": "module"
   },
 
