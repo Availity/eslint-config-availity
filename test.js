@@ -22,7 +22,7 @@ test('rules', (t) => {
   t.ok(isPlainObj(conf));
   t.ok(isPlainObj(conf.rules));
 
-  const errors = runEslint(`'use strict'\nvar foo = function () {};\nfoo();\n`, conf);
-  t.equal(errors[0].ruleId, 'semi');
-  t.equal(errors[1].ruleId, 'no-var');
+  const errors = runEslint(`var foo = function () {};\nfoo()\n`, conf);
+  t.equal(errors[0].ruleId, 'no-var');
+  t.equal(errors[1].ruleId, 'semi');
 });
