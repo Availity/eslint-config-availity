@@ -8,7 +8,7 @@
     "test": "tape test.js"
   },
   "engines": {
-    "node": ">=8.0"
+    "node": ">=6.0"
   },
   "repository": {
     "type": "git",
