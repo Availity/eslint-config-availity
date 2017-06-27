@@ -13,7 +13,8 @@ module.exports = {
     "semi": [2, "always"],
     "no-extra-semi": 2,
     "no-var": 2,
-    "comma-dangle": "always-multiline"
+    "comma-dangle": "always-multiline",
+    "no-shadow": 0
   }
 
 }
