@@ -15,14 +15,25 @@ function runEslint(str, conf) {
 
 }
 
-test('rules', (t) => {
+test('', (t) => {
 
-  t.plan(4);
+  t.plan(5);
 
-  t.ok(isPlainObj(conf));
-  t.ok(isPlainObj(conf.rules));
+  t.ok(isPlainObj(conf), 'should exist');
+  t.ok(isPlainObj(conf.rules, ), 'should have rules configuration');
 
-  const errors = runEslint(`var foo = function () {};\nfoo()\n`, conf);
-  t.equal(errors[0].ruleId, 'no-var');
-  t.equal(errors[1].ruleId, 'semi');
+  const errors = runEslint(`var foo = function () {};
+foo()
+const arr = [
+  1,
+  2
+];
+var a = 3;
+function b() {
+  var a = 10;
+}
+`, conf);
+  t.equal(errors[0].ruleId, 'no-var', 'should error when using var');
+  t.equal(errors[1].ruleId, 'semi', 'should error when missing semi-colons');
+  t.equal(errors[3].ruleId, 'comma-dangle', 'should error when not using commas in multie-line arays');
 });
