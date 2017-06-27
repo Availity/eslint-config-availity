@@ -12,7 +12,8 @@ module.exports = {
   "rules": {
     "semi": [2, "always"],
     "no-extra-semi": 2,
-    "no-var": 2
+    "no-var": 2,
+    "comma-dangle": "always-multiline"
   }
 
 }
