@@ -22,7 +22,7 @@ npm install eslint babel-eslint eslint-plugin-react eslint-config-availity eslin
 
 >
 ```bash
-# .eslintrc
+# .eslintrc.yaml
 extends: eslint-config-availity
 ```
 
@@ -30,7 +30,7 @@ extends: eslint-config-availity
 
 >
 ```bash
-# .eslintrc
+# .eslintrc.yaml
 extends: eslint-config-availity/react
 ```
 
@@ -38,7 +38,7 @@ extends: eslint-config-availity/react
 
 >
 ```bash
-# .eslintrc
+# .eslintrc.yaml
 extends: eslint-config-availity/browser
 ```
 
