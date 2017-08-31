@@ -1,20 +1,30 @@
-// Target is code written for Node 8+
 module.exports = {
 
-  "extends": "standard",
+  'parser': 'babel-eslint',
 
-  "parser": "babel-eslint",
+  'extends': [
+    'airbnb-base',
+    'plugin:node/recommended',
+    'plugin:promise/recommended'
+  ],
 
-  "parserOptions": {
-    "sourceType": "script"
+  "plugins": [
+    "node",
+    "promise"
+  ],
+
+  'parserOptions': {
+    'sourceType': 'script'
   },
 
-  "rules": {
-    "semi": [2, "always"],
-    "no-extra-semi": 2,
-    "no-var": 2,
-    "comma-dangle": ["error", "always-multiline"],
-    "no-shadow": 0
+  'rules': {
+    'strict': 0,
+    'semi': [2, 'always'],
+    'no-extra-semi': 2,
+    'no-var': 2,
+    'comma-dangle': ['error', 'always-multiline'],
+    'no-shadow': 0,
+    'arrow-body-style': 2
   }
 
-}
+};
