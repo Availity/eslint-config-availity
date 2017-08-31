@@ -8,7 +8,7 @@
     "test": "tape test.js"
   },
   "engines": {
-    "node": ">=6.0"
+    "node": ">=8.0"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,6 @@
   "files": [
     "index.js",
     "browser.js",
-    "react.js",
     "base.js",
     "README.md"
   ],
@@ -33,21 +32,26 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "peerDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint-config-standard": "^10.0.0",
-    "eslint-plugin-react": "^6.0.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3"
+    "eslint": "^4.5.0",
+    "babel-eslint": "^7.2.3",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "eslint": "^3.0.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.6.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-node": "^5.1.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.1.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-react": "^7.3.0",
     "is-plain-obj": "1.1.0",
     "tape": "^4.6.3",
     "temp-write": "^3.3.0"
