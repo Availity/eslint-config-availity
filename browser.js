@@ -28,7 +28,7 @@ module.exports = {
       '__STAGING__': true
     },
 
-    'rules': Object.assign(base.rules, {
+    'rules': Object.assign({}, base.rules, {
       'react/sort-comp': 0,
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     })
