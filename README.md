@@ -9,16 +9,16 @@
 Configurations are split between server and client side.
 
 * Node configuration is compatible with Node `v8.0.0`.
-* Client side configuration is fully compatible with ES2015 specification and assumes a transpiler like Babel 6+ for module support
+* Client side configuration is fully compatible with `ES2016` specification and assumes a transpiler like Babel for module support
 
 ## Installation
 
 >
 ```bash
-npm install eslint babel-eslint eslint-config-standard eslint-config-availity@next eslint-plugin-react eslint-plugin-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-jsx-a11y --save-dev
+npm install eslint babel-eslint eslint-config-airbnb eslint-config-availity@next eslint-plugin-react eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-jsx-a11y@5 --save-dev
 ```
 
-## Usage
+## Usage (Node)
 
 >
 ```bash
@@ -26,23 +26,10 @@ npm install eslint babel-eslint eslint-config-standard eslint-config-availity@ne
 extends: eslint-config-availity
 ```
 
-### Usage (React)
-
->
-```bash
-# .eslintrc.yaml
-extends: eslint-config-availity/react
-```
-
-### Usage (Browser)
+### Usage (React, Angular, etc)
 
 >
 ```bash
 # .eslintrc.yaml
 extends: eslint-config-availity/browser
 ```
-
-## Acknowledgments
-
-+ https://github.com/Flet/eslint-config-semistandard
-
