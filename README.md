@@ -15,7 +15,7 @@ Configurations are split between server and client side for their respective ES2
 
 >
 ```bash
-npm install eslint babel-eslint eslint-plugin-react eslint-config-availity eslint-plugin-import eslint-plugin-jsx-a11y@5 --save-dev
+npm install eslint@3 babel-eslint eslint-plugin-react eslint-config-availity eslint-plugin-import eslint-plugin-jsx-a11y@5 --save-dev
 ```
 
 ## Usage
