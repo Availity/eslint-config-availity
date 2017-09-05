@@ -18,7 +18,7 @@ Configurations are split between server and client side.
 npm install eslint babel-eslint eslint-config-airbnb eslint-config-availity@next eslint-plugin-react eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-jsx-a11y@5 --save-dev
 ```
 
-## Usage (Node)
+## Usage Node
 
 >
 ```bash
@@ -26,7 +26,7 @@ npm install eslint babel-eslint eslint-config-airbnb eslint-config-availity@next
 extends: eslint-config-availity
 ```
 
-### Usage (React, Angular, etc)
+## Usage Browser (React, Angular, etc)
 
 >
 ```bash
