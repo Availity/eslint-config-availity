@@ -21,6 +21,3 @@ echo "==> Updating Changelog"
 node_modules/.bin/conventional-changelog -i CHANGELOG.md -o CHANGELOG.md -p angular -s -r 0
 git add .
 git commit -m "chore(release): ${VERSION}"
-
-echo "==> Bumping lerna version"
-node_modules/.bin/lerna publish --repo-version ${VERSION} --yes

@@ -7,7 +7,7 @@
     "preversion": "npm run test",
     "lint": "eslint .",
     "test": "tape test.js",
-    "publish": "npm run lint && sh ./scripts/publish-conventional"
+    "publish": "npm run lint && sh ./scripts/publish"
   },
   "engines": {
     "node": ">=8.0"
