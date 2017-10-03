@@ -24,7 +24,13 @@ module.exports = {
     'no-var': 2,
     'comma-dangle': ['error', 'always-multiline'],
     'no-shadow': 0,
-    'arrow-body-style': 2
+    'arrow-body-style': 2,
+    'no-param-reassign': 0,
+    'consistent-return': 0,
+    'arrow-parens': ['error', 'as-needed'],
+    'import/no-extraneous-dependencies': [
+      "error", {"devDependencies": ['**/test/*.js', '**/*.spec.js', '**/*.test.js']}
+    ]
   }
 
 };
