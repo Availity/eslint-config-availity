@@ -3,21 +3,18 @@ const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
 const conf = require('./');
-const reactConf = require('./browser')
+const reactConf = require('./browser');
 
 function runEslint(str, configuration) {
-
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
-    configFile: tempWrite.sync(JSON.stringify(configuration))
+    configFile: tempWrite.sync(JSON.stringify(configuration)),
   });
 
   return linter.executeOnText(str).results[0].messages;
-
 }
 
 test('base rules', (t) => {
-
   t.plan(6);
 
   t.ok(isPlainObj(conf), 'should exist');
@@ -38,7 +35,6 @@ const arr = [
 });
 
 test('react rules', (t) => {
-
   t.plan(3);
 
   t.ok(isPlainObj(reactConf), 'should exist');
