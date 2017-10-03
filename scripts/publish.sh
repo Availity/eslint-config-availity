@@ -18,6 +18,6 @@ echo "==> Bumping npm version"
 VERSION="$(npm version --no-git-tag-version $BUMP_TYPE | sed 's/v//g')"
 
 echo "==> Updating Changelog"
-node_modules/.bin/conventional-changelog -i CHANGELOG.md -o CHANGELOG.md -p angular -s -r 0
+node_modules/.bin/conventional-changelog -i CHANGELOG.md -o CHANGELOG.md -p angular
 git add .
 git commit -m "chore(release): ${VERSION}"
