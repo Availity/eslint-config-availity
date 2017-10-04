@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "test": "tape test.js",
-    "publish": "npm run lint && sh ./scripts/publish.sh"
+    "release": "npm run lint && sh ./scripts/release.sh"
   },
   "engines": {
     "node": ">=8.0"
