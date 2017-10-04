@@ -1,3 +1,8 @@
+<a name="3.0.0-beta.5"></a>
+# [3.0.0-beta.5](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.4...v3.0.0-beta.5) (2017-10-04)
+
+
+
 <a name="3.0.0-beta.4"></a>
 # [3.0.0-beta.4](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.3...v3.0.0-beta.4) (2017-10-04)
 
