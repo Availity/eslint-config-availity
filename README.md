@@ -6,10 +6,21 @@
 [![NPM](http://img.shields.io/npm/v/eslint-config-availity.svg?style=flat-square&label=npm)](https://npmjs.org/package/eslint-config-availity)
 [![Build](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=flat-square&label=build)](https://travis-ci.org/Availity/eslint-config-availity)
 
-Configurations are split between server and client side.
+Based on [eslint-config-airbnb](https://github.com/airbnb/javascript) with the following rules overridden:
 
-* Node configuration is compatible with Node `v8.0.0`.
-* Client side configuration is fully compatible with `ES2016` specification and assumes a transpiler like Babel for module support
+- strict 
+- semi
+- no-extra-semi
+- no-var
+- comma-dangle
+- no-shadow
+- arrow-body-style
+- no-param-reassign
+- consistent-return
+- arrow-parens
+- import/no-extraneous-dependencies
+- react/sort-comp
+- react/jsx-filename-extension
 
 ## Installation
 
