@@ -44,3 +44,5 @@ extends: eslint-config-availity
 # .eslintrc.yaml
 extends: eslint-config-availity/browser
 ```
+## License
+[MIT](./LICENSE)
