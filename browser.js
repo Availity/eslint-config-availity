@@ -6,12 +6,10 @@ module.exports = {
   extends: [
     'airbnb',
     'plugin:promise/recommended',
-    'plugin:import/recommended',
   ],
 
   plugins: [
     'promise',
-    'import',
   ],
 
   parser: 'babel-eslint',

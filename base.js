@@ -4,12 +4,10 @@ module.exports = {
 
   extends: [
     'airbnb-base',
-    'plugin:node/recommended',
     'plugin:promise/recommended',
   ],
 
   plugins: [
-    'node',
     'promise',
   ],
 
