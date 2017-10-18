@@ -1,3 +1,23 @@
+<a name="3.0.0-beta.6"></a>
+# [3.0.0-beta.6](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2017-10-18)
+
+
+### Bug Fixes
+
+* **eslint:** eslint-plugin-import already handled by airbnb extends ([bff77fe](https://github.com/Availity/eslint-config-availity/commit/bff77fe))
+
+
+### Features
+
+* **rules:** disable class-methods-use-this ([08b6d5c](https://github.com/Availity/eslint-config-availity/commit/08b6d5c))
+
+
+### BREAKING CHANGES
+
+* **eslint:** remove eslint-plugin-node
+
+
+
 <a name="3.0.0-beta.5"></a>
 # [3.0.0-beta.5](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.4...v3.0.0-beta.5) (2017-10-04)
 
