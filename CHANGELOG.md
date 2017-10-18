@@ -1,3 +1,13 @@
+<a name="3.0.0-beta.7"></a>
+# [3.0.0-beta.7](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2017-10-18)
+
+
+### Bug Fixes
+
+* **dependency:** missing eslint-plugin-import ([d01db1e](https://github.com/Availity/eslint-config-availity/commit/d01db1e))
+
+
+
 <a name="3.0.0-beta.6"></a>
 # [3.0.0-beta.6](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.5...v3.0.0-beta.6) (2017-10-18)
 
