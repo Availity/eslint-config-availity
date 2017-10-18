@@ -27,7 +27,7 @@ Based on [eslint-config-airbnb](https://github.com/airbnb/javascript) with the f
 
 >
 ```bash
-npm install eslint babel-eslint eslint-config-airbnb eslint-config-availity@next eslint-plugin-react eslint-plugin-promise eslint-plugin-jsx-a11y@5 --save-dev
+npm install eslint babel-eslint eslint-config-airbnb eslint-config-availity@next eslint-plugin-react eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y@5 --save-dev
 ```
 
 ## Usage Node
