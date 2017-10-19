@@ -1,3 +1,23 @@
+<a name="3.0.0-beta.8"></a>
+# [3.0.0-beta.8](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2017-10-19)
+
+
+### Bug Fixes
+
+* **react/require-default-props:** don't use it ([a4271de](https://github.com/Availity/eslint-config-availity/commit/a4271de))
+
+
+### Chores
+
+* **dependencies:** upgrade eslint-config-airbnb and eslint-plugin-jsx-a11y ([442c9b6](https://github.com/Availity/eslint-config-availity/commit/442c9b6))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** eslint-plugin-jsx-a11y upgraded to 6.x
+
+
+
 <a name="3.0.0-beta.7"></a>
 # [3.0.0-beta.7](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.6...v3.0.0-beta.7) (2017-10-18)
 
