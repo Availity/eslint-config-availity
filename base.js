@@ -32,5 +32,6 @@ module.exports = {
         devDependencies: ['**/test/*.js', '**/*.spec.js', '**/*.test.js'],
       },
     ],
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
   },
 };
