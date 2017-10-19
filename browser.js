@@ -31,5 +31,6 @@ module.exports = {
   rules: Object.assign({}, base.rules, {
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/require-default-props': 0,
   }),
 };
