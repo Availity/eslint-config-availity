@@ -33,5 +33,6 @@ module.exports = {
       },
     ],
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'function-paren-newline': 0,
   },
 };
