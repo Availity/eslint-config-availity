@@ -1,3 +1,13 @@
+<a name="3.0.0-beta.10"></a>
+# [3.0.0-beta.10](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.9...v3.0.0-beta.10) (2017-12-08)
+
+
+### Bug Fixes
+
+* **browser:** estend airbnb not airbnb-base ([d8bb86f](https://github.com/Availity/eslint-config-availity/commit/d8bb86f))
+
+
+
 <a name="3.0.0-beta.9"></a>
 # [3.0.0-beta.9](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2017-12-08)
 
