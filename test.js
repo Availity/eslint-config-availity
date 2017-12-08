@@ -15,7 +15,7 @@ function runEslint(str, configuration) {
 }
 
 test('base rules', t => {
-  t.plan(6);
+  t.plan(4);
 
   t.ok(isPlainObj(conf), 'should exist');
   t.ok(isPlainObj(conf.rules), 'should have rules configuration');
@@ -32,8 +32,7 @@ const arr = [
   );
 
   t.equal(errors[0].ruleId, 'no-var', 'should error when using var');
-  t.equal(errors[2].ruleId, 'no-unused-vars', 'should error variables not used');
-  t.equal(errors[3].ruleId, 'comma-dangle', 'should error when not using commas in multie-line arays');
+  t.equal(errors[1].ruleId, 'no-unused-vars', 'should error variables not used');
 });
 
 test('react rules', t => {
@@ -58,5 +57,5 @@ export default class Patient extends Component {
     reactConf
   );
 
-  t.equal(errors[0].ruleId, 'import/no-extraneous-dependencies', 'should error modules not declare in package.json');
+  t.equal(errors[2].ruleId, 'no-unused-vars', 'should error variables not used');
 });
