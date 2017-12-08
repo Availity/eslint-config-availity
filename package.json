@@ -54,7 +54,6 @@
     "eslint-plugin-react": "^7.0.0",
     "husky": "^0.14.3",
     "is-plain-obj": "1.1.0",
-    "lerna": "^2.5.1",
     "lint-staged": "^6.0.0",
     "prettier": "^1.9.1",
     "tape": "^4.6.3",
