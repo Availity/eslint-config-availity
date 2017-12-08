@@ -27,7 +27,8 @@ extends: availity
 extends: availity/browser
 ```
 
-## Prettier
+### Prettier
+
 > Recommended settings
 ```
 {
@@ -36,6 +37,19 @@ extends: availity/browser
   "trailingComma": "es5"
 }
 ```
+
+## Contributing
+
++ `npm install`
++ Make necessary changes
++ Update `README.md` and `test.js` if necessary
++ Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
++ Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
+
+
+## Disclaimer
+
+Open source software components distributed or made available in the Availity Materials are licensed to Company under the terms of the applicable open source license agreements, which may be found in text files included in the Availity Materials.
 
 ## License
 [MIT](./LICENSE)
