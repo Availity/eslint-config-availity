@@ -1,3 +1,15 @@
+<a name="3.0.0-beta.9"></a>
+# [3.0.0-beta.9](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.8...v3.0.0-beta.9) (2017-12-08)
+
+
+### Bug Fixes
+
+* **dependencies:** remove peer deps already listed in eslint-config-airbnb and eslint-config-airbnb-base ([3bceb57](https://github.com/Availity/eslint-config-availity/commit/3bceb57))
+* **prettier:** Turn off eslint rules that conflict with prettier. Fixes [#8](https://github.com/Availity/eslint-config-availity/issues/8) ([ba9c603](https://github.com/Availity/eslint-config-availity/commit/ba9c603))
+* **rules:** turn off function-paren-newline ([3502538](https://github.com/Availity/eslint-config-availity/commit/3502538))
+
+
+
 <a name="3.0.0-beta.8"></a>
 # [3.0.0-beta.8](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.7...v3.0.0-beta.8) (2017-10-19)
 
