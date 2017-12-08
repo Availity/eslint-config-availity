@@ -2,6 +2,7 @@ const test = require('tape');
 const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
+const find = require('lodash.find');
 const conf = require('./');
 const reactConf = require('./browser');
 
@@ -43,19 +44,20 @@ test('react rules', t => {
 
   const errors = runEslint(
     `import React, { Component } from 'react';
-import { observer } from 'mobx-react';
 
-@observer
 export default class Patient extends Component {
   render() {
     return (
       <div>Hello</div>
     );
   }
+
+  displayName : 'Hello'
 }
 `,
     reactConf
   );
 
-  t.equal(errors[2].ruleId, 'no-unused-vars', 'should error variables not used');
+  const result = find(errors, { ruleId: 'react/sort-comp' });
+  t.equal(result, undefined);
 });
