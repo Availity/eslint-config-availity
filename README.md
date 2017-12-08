@@ -1,51 +1,41 @@
 # eslint-config-availity
 
-> Shareable ESLint config for Availity projects
+> Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&label=license)](http://opensource.org/licenses/MIT)
 [![NPM](http://img.shields.io/npm/v/eslint-config-availity.svg?style=flat-square&label=npm)](https://npmjs.org/package/eslint-config-availity)
 [![Build](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=flat-square&label=build)](https://travis-ci.org/Availity/eslint-config-availity)
 
-Based on [eslint-config-airbnb](https://github.com/airbnb/javascript) with the following rules overridden:
-
-- strict
-- semi
-- no-extra-semi
-- no-var
-- comma-dangle
-- no-shadow
-- arrow-body-style
-- no-param-reassign
-- consistent-return
-- arrow-parens
-- import/no-extraneous-dependencies
-- react/sort-comp
-- react/jsx-filename-extension
-- ract/require-default-props
-- class-methods-use-this
-- no-plusplus
-
 ## Installation
 
->
 ```bash
 npm install eslint babel-eslint@latest eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity@next eslint-plugin-react eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y@latest  --save-dev
 ```
 
-## Usage Node
 
->
+## Usage
+
+### Node
 ```bash
 # .eslintrc.yaml
-extends: eslint-config-availity
+extends: availity
 ```
 
-## Usage Browser (React, Angular, etc)
-
->
+### Browser (React, Angular, etc)
 ```bash
 # .eslintrc.yaml
-extends: eslint-config-availity/browser
+extends: availity/browser
 ```
+
+## Prettier
+> Recommended settings
+```
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+```
+
 ## License
 [MIT](./LICENSE)
