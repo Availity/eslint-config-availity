@@ -1,16 +1,9 @@
-// Target is browser code written in ES6 using a transpiler like Babel
 const base = require('./base');
 
 module.exports = {
+  extends: ['airbnb-base', 'plugin:promise/recommended', 'prettier'],
 
-  extends: [
-    'airbnb',
-    'plugin:promise/recommended',
-  ],
-
-  plugins: [
-    'promise',
-  ],
+  plugins: ['promise'],
 
   parser: 'babel-eslint',
 

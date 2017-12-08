@@ -1,15 +1,9 @@
 module.exports = {
-
   parser: 'babel-eslint',
 
-  extends: [
-    'airbnb-base',
-    'plugin:promise/recommended',
-  ],
+  extends: ['airbnb-base', 'plugin:promise/recommended', 'prettier'],
 
-  plugins: [
-    'promise',
-  ],
+  plugins: ['promise'],
 
   parserOptions: {
     sourceType: 'script',
@@ -17,10 +11,7 @@ module.exports = {
 
   rules: {
     strict: 0,
-    semi: [2, 'always'],
-    'no-extra-semi': 2,
     'no-var': 2,
-    'comma-dangle': ['error', 'always-multiline'],
     'no-shadow': 0,
     'arrow-body-style': 2,
     'no-param-reassign': 0,
@@ -28,7 +19,8 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 0,
     'import/no-extraneous-dependencies': [
-      'error', {
+      'error',
+      {
         devDependencies: ['**/test/*.js', '**/*.spec.js', '**/*.test.js'],
       },
     ],

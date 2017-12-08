@@ -6,7 +6,9 @@
   "scripts": {
     "lint": "eslint .",
     "test": "tape test.js",
-    "release": "npm run lint && sh ./scripts/release.sh"
+    "release": "npm run lint && sh ./scripts/release.sh",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "precommit": "lint-staged"
   },
   "engines": {
     "node": ">=8.0"
@@ -35,7 +37,8 @@
   "peerDependencies": {
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-promise": "^3.5.0"
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-config-prettier": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
@@ -44,12 +47,28 @@
     "eslint": "^4.0.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-config-prettier": "^2.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.0.0",
+    "husky": "^0.14.3",
     "is-plain-obj": "1.1.0",
+    "lerna": "^2.5.1",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.1",
     "tape": "^4.6.3",
     "temp-write": "^3.3.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier",
+      "git add"
+    ]
   }
 }
