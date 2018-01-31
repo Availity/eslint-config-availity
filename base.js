@@ -18,13 +18,11 @@ module.exports = {
     'consistent-return': 0,
     'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 0,
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/test/*.js', '**/*.spec.js', '**/*.test.js'],
-      },
-    ],
+    'import/no-extraneous-dependencies': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'object-curly-newline': 0,
     'function-paren-newline': 0,
+    'no-underscore-dangle': 0,
+    'promise/avoid-new': 0,
   },
 };
