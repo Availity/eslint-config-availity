@@ -22,8 +22,25 @@ module.exports = {
   },
 
   rules: Object.assign({}, base.rules, {
+    'promise/avoid-new': 0,
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/require-default-props': 0,
+    'react/forbid-prop-types': [
+      'error',
+      {
+        forbid: ['any'],
+      },
+    ],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        required: [
+          {
+            some: ['id', 'nesting'],
+          },
+        ],
+      },
+    ],
   }),
 };
