@@ -18,17 +18,8 @@
     "type": "git",
     "url": "git+https://github.com/Availity/eslint-config-availity.git"
   },
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "availity"
-  ],
-  "files": [
-    "index.js",
-    "browser.js",
-    "base.js",
-    "README.md"
-  ],
+  "keywords": ["eslint", "eslintconfig", "availity"],
+  "files": ["index.js", "browser.js", "base.js", "README.md"],
   "author": "Robert McGuinness",
   "license": "MIT",
   "bugs": {
@@ -69,14 +60,9 @@
     "trailingComma": "es5"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier",
-      "git add"
-    ]
+    "*.js": ["prettier", "git add"]
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "extends": ["@commitlint/config-conventional"]
   }
 }
