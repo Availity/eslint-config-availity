@@ -9,19 +9,20 @@
 ## Installation
 
 ```bash
-npm install eslint@latest babel-eslint@latest eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity@next eslint-plugin-react eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y@latest  --save-dev
+npm install eslint@4 babel-eslint@8 eslint-config-airbnb-base@12 eslint-config-airbnb@16 eslint-config-prettier@2 eslint-config-availity eslint-plugin-react@7 eslint-plugin-promise@3 eslint-plugin-import@2 eslint-plugin-jsx-a11y@latest  --save-dev
 ```
-
 
 ## Usage
 
 ### Node
+
 ```bash
 # .eslintrc.yaml
 extends: availity
 ```
 
 ### Browser (React, Angular, etc)
+
 ```bash
 # .eslintrc.yaml
 extends: availity/browser
@@ -30,6 +31,7 @@ extends: availity/browser
 ### Prettier
 
 > Recommended settings
+
 ```
 {
   "printWidth": 120,
@@ -40,16 +42,16 @@ extends: availity/browser
 
 ## Contributing
 
-+ `npm install`
-+ Make necessary changes
-+ Update `README.md` and `test.js` if necessary
-+ Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
-+ Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
-
+*   `npm install`
+*   Make necessary changes
+*   Update `README.md` and `test.js` if necessary
+*   Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
+*   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
 
 ## Disclaimer
 
 Open source software components distributed or made available in the Availity Materials are licensed to Company under the terms of the applicable open source license agreements, which may be found in text files included in the Availity Materials.
 
 ## License
+
 [MIT](./LICENSE)
