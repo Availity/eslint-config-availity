@@ -2,49 +2,62 @@ const test = require('tape');
 const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
+const find = require('lodash.find');
 const conf = require('./');
+const reactConf = require('./browser');
 
-function runEslint(str, conf) {
-
+function runEslint(str, configuration) {
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
-    configFile: tempWrite.sync(JSON.stringify(conf))
+    configFile: tempWrite.sync(JSON.stringify(configuration)),
   });
 
   return linter.executeOnText(str).results[0].messages;
-
 }
 
-test('config', (t) => {
-  t.plan(2);
-  t.ok(isPlainObj(conf));
-  t.ok(isPlainObj(conf.rules));
+test('base rules', t => {
+  t.plan(4);
+
+  t.ok(isPlainObj(conf), 'should exist');
+  t.ok(isPlainObj(conf.rules), 'should have rules configuration');
+
+  const errors = runEslint(
+    `var foo = function foo() {};
+foo()
+const arr = [
+  1,
+  2
+];
+`,
+    conf
+  );
+
+  t.equal(errors[0].ruleId, 'no-var', 'should error when using var');
+  t.equal(errors[1].ruleId, 'no-unused-vars', 'should error variables not used');
 });
 
-test('semi, no-var', (t) => {
-  t.plan(2);
+test('react rules', t => {
+  t.plan(3);
 
-  const errors = runEslint(`
-'use strict'
-var foo = function () {};
-foo();
-`, conf);
+  t.ok(isPlainObj(reactConf), 'should exist');
+  t.ok(isPlainObj(reactConf.rules), 'should have rules configuration');
 
-  t.equal(errors[0].ruleId, 'semi');
-  t.equal(errors[1].ruleId, 'no-var');
-});
+  const errors = runEslint(
+    `import React, { Component } from 'react';
 
-test('no-used (static)', (t) => {
-  t.plan(1);
+export default class Patient extends Component {
+  render() {
+    return (
+      <div>Hello</div>
+    );
+  }
 
-  const errors = runEslint(`
-'use strict';
-class Service {
-  static $inject = ['$scope'];
+  displayName : 'Hello'
 }
-Service.$inject.length;
-` , conf);
+`,
+    reactConf
+  );
 
-  t.equal(errors.length, 0);
-})
-
+  const result = find(errors, { ruleId: 'react/sort-comp' });
+  t.equal(result, undefined);
+});

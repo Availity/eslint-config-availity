@@ -1,26 +1,53 @@
-// Target is browser code written in ES6 using a transpiler like Babel
+const base = require('./base');
+
 module.exports = {
+  extends: ['airbnb', 'plugin:promise/recommended', 'prettier'],
 
-  "extends": "./base.js",
+  plugins: ['promise'],
 
-  "env": {
-    "browser": true,
-    "es6": true
+  parser: 'babel-eslint',
+
+  parserOptions: {
+    sourceType: 'module',
   },
 
-  // Force ES6 module settings: http://www.2ality.com/2014/09/es6-modules-final.html
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+  globals: {
+    document: true,
+    navigator: true,
+    window: true,
+    __DEV__: true,
+    __TEST__: true,
+    __PROD__: true,
+    __STAGING__: true,
   },
 
-  "globals": {
-    "document": true,
-    "navigator": true,
-    "window": true,
-    "__DEV__": true,
-    "__TEST__": true,
-    "__PROD__": true,
-    "__STAGING__": true
-  }
-}
+  rules: Object.assign({}, base.rules, {
+    'promise/avoid-new': 0,
+    'react/sort-comp': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/require-default-props': 0,
+    'react/forbid-prop-types': [
+      'error',
+      {
+        forbid: ['any'],
+      },
+    ],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        required: [
+          {
+            some: ['id', 'nesting'],
+          },
+        ],
+      },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+      },
+    ],
+  }),
+};

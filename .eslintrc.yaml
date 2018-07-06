@@ -2,9 +2,9 @@
 env:
   node: true
   es6: true
-parserOptions:
-  ecmaVersion: 6
-  sourceType: script
-  ecmaFeatures:
-    modules: false
+extends:
+  - airbnb-base
+  - prettier
+rules:
+  arrow-parens: 0
 
