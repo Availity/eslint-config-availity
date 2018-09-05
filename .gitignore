@@ -4,6 +4,8 @@ logs
 
 .idea
 
+/.history
+
 # Runtime data
 pids
 *.pid
