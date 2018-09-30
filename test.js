@@ -1,4 +1,3 @@
-const test = require('tape');
 const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
@@ -15,11 +14,9 @@ function runEslint(str, configuration) {
   return linter.executeOnText(str).results[0].messages;
 }
 
-test('base rules', t => {
-  t.plan(4);
-
-  t.ok(isPlainObj(conf), 'should exist');
-  t.ok(isPlainObj(conf.rules), 'should have rules configuration');
+test('base rules', () => {
+  expect(isPlainObj(conf)).toBeTruthy();
+  expect(isPlainObj(conf.rules)).toBeDefined();
 
   const errors = runEslint(
     `var foo = function foo() {};
@@ -32,15 +29,13 @@ const arr = [
     conf
   );
 
-  t.equal(errors[0].ruleId, 'no-var', 'should error when using var');
-  t.equal(errors[1].ruleId, 'no-unused-vars', 'should error variables not used');
+  expect(errors[0].ruleId).toBe('no-var');
+  expect(errors[1].ruleId).toBe('no-unused-vars');
 });
 
-test('react rules', t => {
-  t.plan(3);
-
-  t.ok(isPlainObj(reactConf), 'should exist');
-  t.ok(isPlainObj(reactConf.rules), 'should have rules configuration');
+test('react rules', () => {
+  expect(isPlainObj(reactConf)).toBeDefined();
+  expect(isPlainObj(reactConf.rules)).toBeDefined();
 
   const errors = runEslint(
     `import React, { Component } from 'react';
@@ -59,5 +54,5 @@ export default class Patient extends Component {
   );
 
   const result = find(errors, { ruleId: 'react/sort-comp' });
-  t.equal(result, undefined);
+  expect(result).toBeUndefined();
 });
