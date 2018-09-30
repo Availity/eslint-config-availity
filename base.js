@@ -9,6 +9,10 @@ module.exports = {
     sourceType: 'script',
   },
 
+  env: {
+    jest: true,
+  },
+
   rules: {
     strict: 0,
     'no-var': 2,
