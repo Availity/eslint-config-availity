@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install eslint@4 babel-eslint@8 eslint-config-airbnb-base@12 eslint-config-airbnb@16 eslint-config-prettier@2 eslint-config-availity eslint-plugin-react@7 eslint-plugin-promise@3 eslint-plugin-import@2 eslint-plugin-jsx-a11y@latest  --save-dev
+npm install eslint babel-eslint eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity eslint-plugin-react eslint-plugin-promise@3 eslint-plugin-import eslint-plugin-jsx-a11y  --save-dev
 ```
 
 ## Usage
