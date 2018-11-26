@@ -1,7 +1,7 @@
 const base = require('./base');
 
 module.exports = {
-  extends: ['airbnb', 'plugin:promise/recommended', 'prettier'],
+  extends: ['airbnb', 'plugin:promise/recommended', 'prettier', 'prettier/react'],
 
   plugins: ['promise'],
 
