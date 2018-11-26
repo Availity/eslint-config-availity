@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/Availity/eslint-config-availity.git"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "eslint",
     "eslintconfig",
