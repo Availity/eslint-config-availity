@@ -12,6 +12,13 @@
 npm install eslint babel-eslint eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity@next eslint-plugin-react eslint-plugin-jest eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y  --save-dev
 ```
 
+## Features
+-  [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+-  [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+-  [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+-  [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+-  [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
+
 ## Usage
 
 ### Node
