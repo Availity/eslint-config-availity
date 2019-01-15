@@ -45,7 +45,7 @@ extends: availity/browser
 *   `npm install`
 *   Make necessary changes
 *   Update `README.md` and `test.js` if necessary
-*   Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
+*   Run `npm run release`. This command  parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
 *   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
 *   Run `npm pulish` or `npm publish --tag=next` (if working on next release candidate)
 
