@@ -1,3 +1,28 @@
+<a name="4.0.0-alpha.2"></a>
+# [4.0.0-alpha.2](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.1...v4.0.0-alpha.2) (2018-11-26)
+
+
+### Bug Fixes
+
+* make eslint-plugin-react compat with prettier ([abf0c40](https://github.com/Availity/eslint-config-availity/commit/abf0c40))
+
+
+
+<a name="4.0.0-alpha.0"></a>
+# [4.0.0-alpha.0](https://github.com/Availity/eslint-config-availity/compare/v3.0.0...v4.0.0-alpha.0) (2018-09-05)
+
+
+### Chores
+
+* upgrade eslint and eslint-config-airbnb. closes [#15](https://github.com/Availity/eslint-config-availity/issues/15) ([4d5422b](https://github.com/Availity/eslint-config-availity/commit/4d5422b))
+
+
+### BREAKING CHANGES
+
+* upgrade to eslint v5 and eslint-config-airbnb v17
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/Availity/eslint-config-availity/compare/v3.0.0-beta.12...v3.0.0) (2018-07-06)
 

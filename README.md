@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install eslint@4 babel-eslint@8 eslint-config-airbnb-base@12 eslint-config-airbnb@16 eslint-config-prettier@2 eslint-config-availity eslint-plugin-react@7 eslint-plugin-promise@3 eslint-plugin-import@2 eslint-plugin-jsx-a11y@latest  --save-dev
+npm install eslint babel-eslint eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity@next eslint-plugin-react eslint-plugin-jest eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y  --save-dev
 ```
 
 ## Usage
@@ -47,6 +47,7 @@ extends: availity/browser
 *   Update `README.md` and `test.js` if necessary
 *   Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
 *   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
+*   Run `npm pulish` or `npm publish --tag=next` (if working on next release candidate)
 
 ## Disclaimer
 

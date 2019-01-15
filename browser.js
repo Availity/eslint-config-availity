@@ -1,9 +1,9 @@
 const base = require('./base');
 
 module.exports = {
-  extends: ['airbnb', 'plugin:promise/recommended', 'prettier'],
+  extends: ['airbnb', 'plugin:promise/recommended', 'plugin:jest/recommended', 'prettier', 'prettier/react'],
 
-  plugins: ['promise'],
+  plugins: ['promise', 'jest', 'promise'],
 
   parser: 'babel-eslint',
 
@@ -22,7 +22,6 @@ module.exports = {
   },
 
   rules: Object.assign({}, base.rules, {
-    'promise/avoid-new': 0,
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/require-default-props': 0,

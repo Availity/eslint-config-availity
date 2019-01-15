@@ -1,4 +1,3 @@
-const test = require('tape');
 const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
@@ -15,49 +14,116 @@ function runEslint(str, configuration) {
   return linter.executeOnText(str).results[0].messages;
 }
 
-test('base rules', t => {
-  t.plan(4);
+describe('rules', () => {
+  test('base', () => {
+    expect(isPlainObj(conf)).toBeTruthy();
+    expect(isPlainObj(conf.rules)).toBeDefined();
 
-  t.ok(isPlainObj(conf), 'should exist');
-  t.ok(isPlainObj(conf.rules), 'should have rules configuration');
+    const errors = runEslint(
+      `
+// no-var
+var foo = function foo() {};
 
-  const errors = runEslint(
-    `var foo = function foo() {};
 foo()
+
+// no-unused-vars
 const arr = [
   1,
   2
 ];
-`,
-    conf
-  );
 
-  t.equal(errors[0].ruleId, 'no-var', 'should error when using var');
-  t.equal(errors[1].ruleId, 'no-unused-vars', 'should error variables not used');
-});
+// no-param-reassign
+function foo(bar) {
+    bar = 13;
+}
 
-test('react rules', t => {
-  t.plan(3);
+// no-shadow
+var a = 3;
+function b() {
+    var a = 10;
+}
 
-  t.ok(isPlainObj(reactConf), 'should exist');
-  t.ok(isPlainObj(reactConf.rules), 'should have rules configuration');
+// class-methods-use-this
+class A {
+    foo() {
+        console.log("Hello World");
+    }
+}
 
-  const errors = runEslint(
-    `import React, { Component } from 'react';
+// no-plusplus
+const l = 10;
+for (i = 0; i < l; i++) {
+    return;
+}
 
-export default class Patient extends Component {
-  render() {
-    return (
-      <div>Hello</div>
-    );
-  }
+// no-underscore-dangle
+foo._bar();
 
-  displayName : 'Hello'
+// promise/avoid-new
+const fn = () =>  {
+  return new Promise((resolve, reject) => {
+    return resolve(true);
+  });
 }
 `,
-    reactConf
-  );
+      conf
+    );
 
-  const result = find(errors, { ruleId: 'react/sort-comp' });
-  t.equal(result, undefined);
+    // Enabled
+    expect(find(errors, { ruleId: 'no-var' })).toBeDefined();
+    expect(find(errors, { ruleId: 'no-unused-vars' })).toBeDefined();
+
+    // Disabled
+    expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'class-methods-use-this' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'no-plusplus' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'no-underscore-dangle' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'promise/avoid-new' })).toBeUndefined();
+  });
+
+  test('react', () => {
+    expect(isPlainObj(reactConf)).toBeDefined();
+    expect(isPlainObj(reactConf.rules)).toBeDefined();
+
+    const errors = runEslint(
+      `
+import React, { Component } from 'react';
+import { Link } from '@reach/router';
+
+class Patient extends Component {
+  render({ a }) {
+    return (
+      <>
+        <div>Hello {a}!</div>
+        <nav>
+          <Link to="/">Home</Link>
+        </nav>
+      </>
+    );
+  }
+  displayName : 'Hello'
+}
+
+// react/require-default-props
+Patient.propTypes = {
+  a: PropTypes.string,
+  b: PropTypes.array,
+  c: PropTypes.object,
+  d: PropTypes.any
+};
+
+export default Patient;
+
+`,
+      reactConf
+    );
+
+    // Enabled
+    expect(find(errors, { ruleId: 'react/forbid-prop-types' })).toBeDefined();
+
+    // Disabled
+    expect(find(errors, { ruleId: 'react/sort-comp' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'react/require-default-props' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'jsx-a11y/anchor-is-valid' })).toBeUndefined();
+  });
 });
