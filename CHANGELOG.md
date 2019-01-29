@@ -1,3 +1,13 @@
+<a name="4.0.0-alpha.3"></a>
+# [4.0.0-alpha.3](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.2...v4.0.0-alpha.3) (2019-01-29)
+
+
+### Features
+
+* **unicorn-test:** add test for toggling import-index to off ([ddcbadc](https://github.com/Availity/eslint-config-availity/commit/ddcbadc))
+
+
+
 <a name="4.0.0-alpha.2"></a>
 # [4.0.0-alpha.2](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.1...v4.0.0-alpha.2) (2018-11-26)
 
