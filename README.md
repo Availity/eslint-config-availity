@@ -18,6 +18,7 @@ npm install eslint-config-availity@next --save-dev
 -  [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 -  [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
 -  [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
+-  [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 ## Usage
 
