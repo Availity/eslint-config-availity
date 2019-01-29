@@ -2,15 +2,22 @@
 
 > Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&label=license)](http://opensource.org/licenses/MIT)
-[![NPM](http://img.shields.io/npm/v/eslint-config-availity.svg?style=flat-square&label=npm)](https://npmjs.org/package/eslint-config-availity)
-[![Build](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=flat-square&label=build)](https://travis-ci.org/Availity/eslint-config-availity)
+[![](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
+[![](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
+[![](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=for-the-badge)](https://travis-ci.org/Availity/eslint-config-availity)
 
 ## Installation
 
 ```bash
 npm install eslint-config-availity@next --save-dev
 ```
+
+## Features
+-  [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+-  [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+-  [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+-  [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+-  [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
 
 ## Usage
 
@@ -45,7 +52,7 @@ extends: availity/browser
 *   `npm install`
 *   Make necessary changes
 *   Update `README.md` and `test.js` if necessary
-*   Run `npm run release`. This command does parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
+*   Run `npm run release`. This command  parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
 *   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
 *   Run `npm pulish` or `npm publish --tag=next` (if working on next release candidate)
 
