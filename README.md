@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install eslint babel-eslint eslint-config-airbnb-base eslint-config-airbnb eslint-config-prettier eslint-config-availity@next eslint-plugin-react eslint-plugin-jest eslint-plugin-promise eslint-plugin-import eslint-plugin-jsx-a11y  --save-dev
+npm install eslint-config-availity@next --save-dev
 ```
 
 ## Features
@@ -18,6 +18,7 @@ npm install eslint babel-eslint eslint-config-airbnb-base eslint-config-airbnb e
 -  [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
 -  [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
 -  [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
+-  [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
 
 ## Usage
 

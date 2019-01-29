@@ -1,10 +1,9 @@
 const base = require('./base');
 
 module.exports = {
-  extends: ['airbnb', 'plugin:promise/recommended', 'plugin:jest/recommended', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'plugin:promise/recommended', 'plugin:jest/recommended', 'prettier', 'prettier/react','plugin:unicorn/recommended'],
 
-  plugins: ['promise', 'jest', 'promise'],
-
+  plugins: ['promise', 'jest', 'promise','unicorn'],
   parser: 'babel-eslint',
 
   parserOptions: {
