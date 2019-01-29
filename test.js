@@ -14,6 +14,7 @@ function runEslint(str, configuration) {
   return linter.executeOnText(str).results[0].messages;
 }
 
+
 describe('rules', () => {
   test('base', () => {
     expect(isPlainObj(conf)).toBeTruthy();
@@ -26,11 +27,15 @@ var foo = function foo() {};
 
 foo()
 
+
 // no-unused-vars
 const arr = [
   1,
   2
 ];
+
+// unicorn/import-index
+const conf = require('./');
 
 // no-param-reassign
 function foo(bar) {
@@ -72,6 +77,7 @@ const fn = () =>  {
     // Enabled
     expect(find(errors, { ruleId: 'no-var' })).toBeDefined();
     expect(find(errors, { ruleId: 'no-unused-vars' })).toBeDefined();
+    expect(find(errors, { ruleId: 'unicorn/import-index'})).toBeUndefined();
 
     // Disabled
     expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
