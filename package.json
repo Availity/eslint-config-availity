@@ -36,12 +36,7 @@
     "url": "https://github.com/Availity/eslint-config-availity/issues"
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
-  "devDependencies": {
-    "@commitlint/cli": "^7.1.2",
-    "@commitlint/config-conventional": "^7.1.2",
-    "babel-eslint": "^10.0.1",
-    "conventional-changelog-cli": "^2.0.5",
-    "conventional-recommended-bump": "^4.0.1",
+  "dependencies": {
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -52,6 +47,13 @@
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-unicorn": "^7.1.0",
+    "babel-eslint": "^10.0.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.1.2",
+    "@commitlint/config-conventional": "^7.1.2",
+    "conventional-changelog-cli": "^2.0.5",
+    "conventional-recommended-bump": "^4.0.1",
     "husky": "^1.0.1",
     "is-plain-obj": "1.1.0",
     "jest": "^23.6.0",
