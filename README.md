@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install eslint-config-availity@next --save-dev
+npm install eslint-config-availity --save-dev
 ```
 
 ## Features
