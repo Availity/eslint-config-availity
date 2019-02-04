@@ -1,3 +1,13 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.5...v4.0.0) (2019-02-04)
+
+
+### Bug Fixes
+
+* **object-destruct:** rules fix for unicorn and eslint fixes [#22](https://github.com/Availity/eslint-config-availity/issues/22) ([51a50d2](https://github.com/Availity/eslint-config-availity/commit/51a50d2))
+
+
+
 <a name="4.0.0-alpha.5"></a>
 # [4.0.0-alpha.5](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.4...v4.0.0-alpha.5) (2019-01-29)
 
