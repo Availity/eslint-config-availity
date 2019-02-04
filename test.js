@@ -42,6 +42,9 @@ function foo(bar) {
     bar = 13;
 }
 
+// array destructuring
+var foo = array[0];
+
 // no-shadow
 var a = 3;
 function b() {
@@ -81,6 +84,7 @@ const fn = () =>  {
 
     // Disabled
     expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'prefer-destructuring'})).toBeUndefined();
     expect(find(errors, { ruleId: 'class-methods-use-this' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-plusplus' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-underscore-dangle' })).toBeUndefined();
