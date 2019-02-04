@@ -26,5 +26,13 @@ module.exports = {
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-underscore-dangle': 0,
     'promise/avoid-new': 0,
+    'prefer-destructuring': [
+      "error",
+      {
+        'object': true,
+        'array': false
+      }
+    ]
+
   },
 };
