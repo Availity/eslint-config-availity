@@ -1,3 +1,19 @@
+<a name="4.0.1"></a>
+## [4.0.1](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.2...v4.0.1) (2019-02-07)
+
+
+### Bug Fixes
+
+* **decorators:** enable legacy decorators ([072cb68](https://github.com/Availity/eslint-config-availity/commit/072cb68))
+* **object-destruct:** rules fix for unicorn and eslint fixes [#22](https://github.com/Availity/eslint-config-availity/issues/22) ([51a50d2](https://github.com/Availity/eslint-config-availity/commit/51a50d2))
+
+
+### Features
+
+* **unicorn-test:** add test for toggling import-index to off ([ddcbadc](https://github.com/Availity/eslint-config-availity/commit/ddcbadc))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.5...v4.0.0) (2019-02-04)
 
