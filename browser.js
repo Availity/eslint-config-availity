@@ -1,13 +1,21 @@
 const base = require('./base');
 
 module.exports = {
-  extends: ['airbnb', 'plugin:promise/recommended', 'plugin:jest/recommended', 'prettier', 'prettier/react','plugin:unicorn/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:promise/recommended',
+    'plugin:jest/recommended',
+    'prettier',
+    'prettier/react',
+    'plugin:unicorn/recommended',
+  ],
 
-  plugins: ['promise', 'jest', 'promise','unicorn'],
+  plugins: ['promise', 'jest', 'promise', 'unicorn'],
   parser: 'babel-eslint',
 
   parserOptions: {
     sourceType: 'module',
+    ecmaFeatures: { legacyDecorators: true }, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
   },
 
   globals: {
