@@ -37,6 +37,7 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
@@ -46,8 +47,10 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react-hooks": "^1.2.0",
     "eslint-plugin-unicorn": "^7.1.0",
-    "babel-eslint": "^10.0.1"
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
