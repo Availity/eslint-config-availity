@@ -7,10 +7,10 @@ module.exports = {
     'plugin:jest/recommended',
     'prettier',
     'prettier/react',
-    'plugin:unicorn/recommended',
+    'plugin:unicorn/recommended'
   ],
 
-  plugins: ['promise', 'jest', 'promise', 'unicorn'],
+  plugins: ['promise', 'jest', 'promise', 'unicorn','react-hooks'],
   parser: 'babel-eslint',
 
   parserOptions: {
@@ -32,6 +32,8 @@ module.exports = {
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/require-default-props': 0,
+    'react-hooks/rules-of-hooks': 'warn',
+    'react-hooks/exhaustive-deps': 'warn',
     'react/forbid-prop-types': [
       'error',
       {
