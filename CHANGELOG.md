@@ -1,3 +1,13 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/Availity/eslint-config-availity/compare/v4.0.1...v4.1.0) (2019-02-25)
+
+
+### Features
+
+* added eslint-plugin-react-hooks fixes [#25](https://github.com/Availity/eslint-config-availity/issues/25) ([a16bdcf](https://github.com/Availity/eslint-config-availity/commit/a16bdcf))
+
+
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://github.com/Availity/eslint-config-availity/compare/v4.0.0-alpha.2...v4.0.1) (2019-02-07)
 
