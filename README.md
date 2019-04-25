@@ -19,6 +19,7 @@ npm install eslint-config-availity --save-dev
 -  [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
 -  [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
 -  [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+-  [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
 
 ## Usage
 

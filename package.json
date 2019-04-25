@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-availity",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
@@ -47,7 +47,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "eslint-plugin-unicorn": "^8.0.2"
+    "eslint-plugin-unicorn": "^8.0.2",
+    "eslint-plugin-react-hooks": "^1.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
