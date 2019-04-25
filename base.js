@@ -1,7 +1,13 @@
 module.exports = {
   parser: 'babel-eslint',
 
-  extends: ['airbnb-base', 'plugin:promise/recommended', 'plugin:jest/recommended', 'plugin:unicorn/recommended', 'prettier'],
+  extends: [
+    'airbnb-base',
+    'plugin:promise/recommended',
+    'plugin:jest/recommended',
+    'plugin:unicorn/recommended',
+    'prettier',
+  ],
 
   plugins: ['promise', 'jest', 'unicorn'],
 
@@ -20,19 +26,21 @@ module.exports = {
     'no-param-reassign': 0,
     'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 0,
-    "unicorn/import-index": "off",
-    "unicorn/filename-case": "off",
+    'unicorn/import-index': 'off',
+    'unicorn/filename-case': 'off',
+    'unicorn/prefer-includes': 'off',
+    'unicorn/prefer-node-remove': 'off',
+    'unicorn/prevent-abbreviations': 'off',
     'import/no-extraneous-dependencies': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-underscore-dangle': 0,
     'promise/avoid-new': 0,
     'prefer-destructuring': [
-      "error",
+      'error',
       {
-        'object': true,
-        'array': false
-      }
-    ]
-
+        object: true,
+        array: false,
+      },
+    ],
   },
 };

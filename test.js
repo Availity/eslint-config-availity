@@ -2,29 +2,27 @@ const isPlainObj = require('is-plain-obj');
 const tempWrite = require('temp-write');
 const eslint = require('eslint');
 const find = require('lodash.find');
-const conf = require('./');
+const baseConf = require('./');
 const reactConf = require('./browser');
 
-function runEslint(str, configuration) {
+function runEslint(string, configuration) {
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: tempWrite.sync(JSON.stringify(configuration)),
   });
 
-  return linter.executeOnText(str).results[0].messages;
+  return linter.executeOnText(string).results[0].messages;
 }
-
 
 describe('rules', () => {
   test('base', () => {
-    expect(isPlainObj(conf)).toBeTruthy();
-    expect(isPlainObj(conf.rules)).toBeDefined();
+    expect(isPlainObj(baseConf)).toBeTruthy();
+    expect(isPlainObj(baseConf.rules)).toBeDefined();
 
     const errors = runEslint(
       `
 // no-var
 var foo = function foo() {};
-
 foo()
 
 
@@ -73,22 +71,30 @@ const fn = () =>  {
     return resolve(true);
   });
 }
+
+// unicorn/prefer-includes
+[].indexOf('foo') !== -1;
+
+// unicorn/prefer-node-remove
+this.parentNode.removeChild(this)
 `,
-      conf
+      baseConf
     );
 
     // Enabled
     expect(find(errors, { ruleId: 'no-var' })).toBeDefined();
     expect(find(errors, { ruleId: 'no-unused-vars' })).toBeDefined();
-    expect(find(errors, { ruleId: 'unicorn/import-index'})).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/import-index' })).toBeUndefined();
 
     // Disabled
     expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'prefer-destructuring'})).toBeUndefined();
+    expect(find(errors, { ruleId: 'prefer-destructuring' })).toBeUndefined();
     expect(find(errors, { ruleId: 'class-methods-use-this' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-plusplus' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-underscore-dangle' })).toBeUndefined();
     expect(find(errors, { ruleId: 'promise/avoid-new' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/prefer-includes' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/prefer-node-remove' })).toBeUndefined();
   });
 
   test('react', () => {
