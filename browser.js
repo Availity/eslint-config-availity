@@ -1,17 +1,22 @@
 const base = require('./base');
 
 module.exports = {
+  parser: base.parser,
   extends: [
     'airbnb',
     'plugin:promise/recommended',
     'plugin:jest/recommended',
     'prettier',
     'prettier/react',
-    'plugin:unicorn/recommended'
+    'plugin:unicorn/recommended',
   ],
 
-  plugins: ['promise', 'jest', 'promise', 'unicorn','react-hooks'],
-  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    jest: true,
+  },
+
+  plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
 
   parserOptions: {
     sourceType: 'module',
