@@ -61,7 +61,7 @@
     "lint-staged": "^8.1.0",
     "lodash.find": "^4.6.0",
     "prettier": "^1.14.2",
-    "temp-write": "^3.4.0"
+    "temp-write": "^4.0.0"
   },
   "prettier": {
     "printWidth": 120,
