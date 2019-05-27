@@ -54,7 +54,7 @@
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
     "conventional-changelog-cli": "^2.0.5",
-    "conventional-recommended-bump": "^4.0.1",
+    "conventional-recommended-bump": "^5.0.0",
     "husky": "^1.0.1",
     "is-plain-obj": "1.1.0",
     "jest": "^23.6.0",
