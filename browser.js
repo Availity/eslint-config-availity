@@ -1,21 +1,39 @@
 const base = require('./base');
 
 module.exports = {
+  parser: base.parser,
   extends: [
     'airbnb',
     'plugin:promise/recommended',
     'plugin:jest/recommended',
     'prettier',
     'prettier/react',
-    'plugin:unicorn/recommended'
+    'plugin:unicorn/recommended',
   ],
 
-  plugins: ['promise', 'jest', 'promise', 'unicorn','react-hooks'],
-  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    jest: true,
+    es6: true,
+    node: false,
+  },
+
+  // FIXME: how to test?
+  // settings: {
+  //   react: {
+  //     version: 'detect',
+  //   },
+  // },
+
+  plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
 
   parserOptions: {
     sourceType: 'module',
-    ecmaFeatures: { legacyDecorators: true }, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      legacyDecorators: true, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+      jsx: true,
+    },
   },
 
   globals: {
@@ -27,6 +45,8 @@ module.exports = {
     __PROD__: true,
     __STAGING__: true,
   },
+
+  overrides: base.overrides,
 
   rules: Object.assign({}, base.rules, {
     'react/sort-comp': 0,
