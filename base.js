@@ -2,6 +2,8 @@ const {
   configs: { recommended },
 } = require('@typescript-eslint/eslint-plugin');
 
+const prettierTs = require('eslint-config-prettier/@typescript-eslint');
+
 module.exports = {
   root: true,
 
@@ -37,8 +39,9 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
 
-      // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554
-      rules: Object.assign(recommended.rules, {
+      // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554.
+      // Aftewards, just extend plugins like above.
+      rules: Object.assign(recommended.rules, prettierTs.rules, {
         '@typescript-eslint/no-unused-vars': 'off',
       }),
     },
