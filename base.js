@@ -1,9 +1,3 @@
-const {
-  configs: { recommended },
-} = require('@typescript-eslint/eslint-plugin');
-
-const prettierTs = require('eslint-config-prettier/@typescript-eslint');
-
 module.exports = {
   root: true,
 
@@ -27,25 +21,6 @@ module.exports = {
     jest: true,
     node: true,
   },
-
-  overrides: [
-    {
-      files: ['*.{ts,tsx}'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        warnOnUnsupportedTypeScriptVersion: true,
-      },
-      plugins: ['@typescript-eslint'],
-
-      // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554.
-      // Aftewards, just extend plugins like above.
-      rules: Object.assign(recommended.rules, prettierTs.rules, {
-        '@typescript-eslint/no-unused-vars': 'off',
-      }),
-    },
-  ],
 
   rules: {
     strict: 0,
