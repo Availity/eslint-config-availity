@@ -1,4 +1,6 @@
-const typescriptRules = require('@typescript-eslint/eslint-plugin/dist/configs/recommended.json');
+const {
+  configs: { recommended },
+} = require('@typescript-eslint/eslint-plugin');
 
 module.exports = {
   root: true,
@@ -26,16 +28,17 @@ module.exports = {
 
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
-        // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: true,
       },
       plugins: ['@typescript-eslint'],
-      rules: Object.assign(typescriptRules, {
+
+      // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554
+      rules: Object.assign(recommended.rules, {
         '@typescript-eslint/no-unused-vars': 'off',
       }),
     },

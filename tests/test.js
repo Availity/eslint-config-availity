@@ -5,15 +5,16 @@ const find = require('lodash.find');
 const baseConf = require('..');
 const reactConf = require('../browser');
 const reactString = require('./react');
+const reactTsString = require('./react-typescript.js');
 const baseString = require('./base');
 
-function runEslint(string, configuration) {
+function runEslint(string, configuration, fileName) {
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
     configFile: tempWrite.sync(JSON.stringify(configuration)),
   });
 
-  return linter.executeOnText(string).results[0].messages;
+  return linter.executeOnText(string, fileName).results[0].messages;
 }
 
 describe('rules', () => {
@@ -52,5 +53,10 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'react/sort-comp' })).toBeUndefined();
     expect(find(errors, { ruleId: 'react/require-default-props' })).toBeUndefined();
     expect(find(errors, { ruleId: 'jsx-a11y/anchor-is-valid' })).toBeUndefined();
+  });
+
+  test('typescript', () => {
+    const errors = runEslint(reactTsString(), reactConf, 'example.tsx');
+    expect(find(errors, { ruleId: '@typescript-eslint/ban-types' })).toBeDefined();
   });
 });
