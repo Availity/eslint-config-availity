@@ -18,6 +18,13 @@ module.exports = {
     node: false,
   },
 
+  // FIXME: how to test?
+  // settings: {
+  //   react: {
+  //     version: 'detect',
+  //   },
+  // },
+
   plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
 
   parserOptions: {
@@ -39,20 +46,7 @@ module.exports = {
     __STAGING__: true,
   },
 
-  overrides: [
-    {
-      files: ['**/*.ts', '**/*.tsx'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        // typescript-eslint specific options
-        warnOnUnsupportedTypeScriptVersion: true,
-      },
-      plugins: ['@typescript-eslint'],
-      rules: base.overrides[0].rules,
-    },
-  ],
+  overrides: base.overrides,
 
   rules: Object.assign({}, base.rules, {
     'react/sort-comp': 0,
