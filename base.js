@@ -1,4 +1,8 @@
+const typescriptRules = require('@typescript-eslint/eslint-plugin/dist/configs/recommended.json');
+
 module.exports = {
+  root: true,
+
   parser: 'babel-eslint',
 
   extends: [
@@ -17,7 +21,25 @@ module.exports = {
 
   env: {
     jest: true,
+    node: true,
   },
+
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        // typescript-eslint specific options
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+      plugins: ['@typescript-eslint'],
+      rules: Object.assign(typescriptRules, {
+        '@typescript-eslint/no-unused-vars': 'off',
+      }),
+    },
+  ],
 
   rules: {
     strict: 0,

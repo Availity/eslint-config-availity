@@ -14,13 +14,19 @@ module.exports = {
   env: {
     browser: true,
     jest: true,
+    es6: true,
+    node: false,
   },
 
   plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
 
   parserOptions: {
     sourceType: 'module',
-    ecmaFeatures: { legacyDecorators: true }, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      legacyDecorators: true, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+      jsx: true,
+    },
   },
 
   globals: {
@@ -32,6 +38,21 @@ module.exports = {
     __PROD__: true,
     __STAGING__: true,
   },
+
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        // typescript-eslint specific options
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+      plugins: ['@typescript-eslint'],
+      rules: base.overrides[0].rules,
+    },
+  ],
 
   rules: Object.assign({}, base.rules, {
     'react/sort-comp': 0,
