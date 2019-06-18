@@ -1,3 +1,20 @@
+<a name="4.0.3"></a>
+## [4.0.3](https://github.com/Availity/eslint-config-availity/compare/v4.0.2...v4.0.3) (2019-06-18)
+
+
+### Features
+
+* typescript support ([1cb8741](https://github.com/Availity/eslint-config-availity/commit/1cb8741)), closes [#31](https://github.com/Availity/eslint-config-availity/issues/31)
+* typescript support ([9dfa4eb](https://github.com/Availity/eslint-config-availity/commit/9dfa4eb))
+* update eslint-plugin-unicorn ([4d7c38d](https://github.com/Availity/eslint-config-availity/commit/4d7c38d)), closes [#27](https://github.com/Availity/eslint-config-availity/issues/27)
+
+
+### BREAKING CHANGES
+
+* new eslint rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v8.0.0 that will require eslint fixes
+
+
+
 <a name="4.0.2"></a>
 ## [4.0.2](https://github.com/Availity/eslint-config-availity/compare/v4.0.1...v4.0.2) (2019-02-25)
 
