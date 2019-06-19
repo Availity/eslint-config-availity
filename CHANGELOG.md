@@ -1,3 +1,13 @@
+<a name="4.0.5"></a>
+## [4.0.5](https://github.com/Availity/eslint-config-availity/compare/v4.0.4...v4.0.5) (2019-06-19)
+
+
+### Bug Fixes
+
+* hardcode typescript recommend rules ([479fb62](https://github.com/Availity/eslint-config-availity/commit/479fb62))
+
+
+
 <a name="4.0.4"></a>
 ## [4.0.4](https://github.com/Availity/eslint-config-availity/compare/v4.0.3...v4.0.4) (2019-06-18)
 
