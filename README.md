@@ -25,6 +25,8 @@ npm install eslint-config-availity --save-dev
 
 ## Usage
 
+> Typescript is supported in both configurations
+
 ### Node
 
 ```bash
@@ -32,7 +34,7 @@ npm install eslint-config-availity --save-dev
 extends: availity
 ```
 
-### Browser (React, Angular, etc)
+### Browser (React, Angular)
 
 ```bash
 # .eslintrc.yaml
@@ -58,7 +60,7 @@ extends: availity/browser
 -   Update `README.md` and `test.js` if necessary
 -   Run `npm run release`. This command parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
 -   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
--   Run `npm pulish` or `npm publish --tag=next` (if working on next release candidate)
+-   Run `npm publish` or `npm publish --tag=next` (if working on next release candidate)
 
 ## Disclaimer
 
