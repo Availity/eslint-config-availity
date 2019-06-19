@@ -1,3 +1,13 @@
+<a name="4.0.7"></a>
+## [4.0.7](https://github.com/Availity/eslint-config-availity/compare/v4.0.6...v4.0.7) (2019-06-19)
+
+
+### Bug Fixes
+
+* fixed file not being uploaded to npm ([3c20df9](https://github.com/Availity/eslint-config-availity/commit/3c20df9))
+
+
+
 <a name="4.0.6"></a>
 ## [4.0.6](https://github.com/Availity/eslint-config-availity/compare/v4.0.5...v4.0.6) (2019-06-19)
 
