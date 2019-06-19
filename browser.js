@@ -31,7 +31,8 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2018,
     ecmaFeatures: {
-      legacyDecorators: true, //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+      //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
+      legacyDecorators: true,
       jsx: true,
     },
   },
