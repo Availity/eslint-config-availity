@@ -1,6 +1,6 @@
 # eslint-config-availity
 
-> Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier) and Typescript[https://www.typescriptlang.org/]
+> Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier) and [Typescript](https://www.typescriptlang.org/)
 
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
 [![](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
