@@ -16,6 +16,13 @@ class Patient extends Component {
   displayName : 'Hello'
 }
 
+const loopy = () => {
+  const arr = [];
+  for (let index = 0; index < arr.length; index++) {
+	  const element = arr[index];
+  }
+}
+
 // react/require-default-props
 Patient.propTypes = {
   a: PropTypes.string,

@@ -6,7 +6,7 @@ BUMP_TYPE=$1
 
 if [ -z "$BUMP_TYPE" ]; then
   echo "Grabbing recommended bump type..."
-  BUMP_TYPE="$(node_modules/.bin/conventional-recommended-bump -p angular)"
+  BUMP_TYPE="$(npx conventional-recommended-bump -p angular)"
 fi
 
 if [ -z "$BUMP_TYPE" ]; then

@@ -53,6 +53,7 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'react/sort-comp' })).toBeUndefined();
     expect(find(errors, { ruleId: 'react/require-default-props' })).toBeUndefined();
     expect(find(errors, { ruleId: 'jsx-a11y/anchor-is-valid' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/no-for-loop' })).toBeUndefined();
   });
 
   test('typescript', () => {
