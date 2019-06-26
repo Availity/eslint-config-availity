@@ -1,3 +1,13 @@
+<a name="4.0.8"></a>
+## [4.0.8](https://github.com/Availity/eslint-config-availity/compare/v4.0.7...v4.0.8) (2019-06-26)
+
+
+### Bug Fixes
+
+* remove unicorn/no-for-loop for browsers/react ([530d1db](https://github.com/Availity/eslint-config-availity/commit/530d1db))
+
+
+
 <a name="4.0.7"></a>
 ## [4.0.7](https://github.com/Availity/eslint-config-availity/compare/v4.0.6...v4.0.7) (2019-06-19)
 
