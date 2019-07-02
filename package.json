@@ -61,7 +61,7 @@
     "husky": "^2.4.1",
     "is-plain-obj": "^2.0.0",
     "jest": "^24.8.0",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^9.0.1",
     "lodash.find": "^4.6.0",
     "prettier": "^1.18.2",
     "temp-write": "^4.0.0",
