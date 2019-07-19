@@ -14,8 +14,7 @@ module.exports = {
   env: {
     browser: true,
     jest: true,
-    es6: true,
-    node: false,
+    es6: true
   },
 
   // FIXME: how to test?

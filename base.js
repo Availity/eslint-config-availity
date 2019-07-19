@@ -22,8 +22,7 @@ module.exports = {
   },
 
   env: {
-    jest: true,
-    node: true,
+    jest: true
   },
 
   overrides: [
