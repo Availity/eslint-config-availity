@@ -41,6 +41,12 @@ extends: availity
 extends: availity/browser
 ```
 
+### Typescript
+```bash
+# .eslintrc.yaml
+extends: availity/browser
+```
+
 ### Prettier
 
 > Recommended settings
