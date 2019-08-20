@@ -1,3 +1,7 @@
+## [4.0.10](https://github.com/Availity/eslint-config-availity/compare/v4.0.9...v4.0.10) (2019-08-20)
+
+
+
 <a name="4.0.9"></a>
 ## [4.0.9](https://github.com/Availity/eslint-config-availity/compare/v4.0.8...v4.0.9) (2019-07-19)
 
