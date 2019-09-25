@@ -1,3 +1,24 @@
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/Availity/eslint-config-availity/compare/v4.0.10...v5.0.0) (2019-09-25)
+
+
+### Code Refactoring
+
+* remove rule ([db14667](https://github.com/Availity/eslint-config-availity/commit/db14667))
+
+
+### Features
+
+* upgrade eslint and airbnb ([3fc30a9](https://github.com/Availity/eslint-config-availity/commit/3fc30a9)), closes [/github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/CHANGELOG.md#1400--2019-08-09](https://github.com//github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/CHANGELOG.md/issues/1400--2019-08-09) [/github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md#1800--2019-08-10](https://github.com//github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/CHANGELOG.md/issues/1800--2019-08-10)
+
+
+### BREAKING CHANGES
+
+* `jsx-a11y/label-has-for` has been removed in favor of `label-has-associated-control`
+* - upgrade eslint to v6: https://eslint.org/blog/2019/06/eslint-v6.0.0-released
+
+
+
 ## [4.0.10](https://github.com/Availity/eslint-config-availity/compare/v4.0.9...v4.0.10) (2019-08-20)
 
 
