@@ -14,10 +14,11 @@ module.exports = {
   env: {
     browser: true,
     jest: true,
-    "jest/globals": true,
-    es6: true
+    'jest/globals': true,
+    es6: true,
   },
 
+  // eslint-disable-next-line unicorn/expiring-todo-comments
   // FIXME: how to test?
   // settings: {
   //   react: {
@@ -49,7 +50,8 @@ module.exports = {
 
   overrides: base.overrides,
 
-  rules: Object.assign({}, base.rules, {
+  rules: {
+    ...base.rules,
     'unicorn/no-for-loop': 0,
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
@@ -62,16 +64,6 @@ module.exports = {
         forbid: ['any'],
       },
     ],
-    'jsx-a11y/label-has-for': [
-      'error',
-      {
-        required: [
-          {
-            some: ['id', 'nesting'],
-          },
-        ],
-      },
-    ],
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
@@ -79,5 +71,5 @@ module.exports = {
         specialLink: ['to'],
       },
     ],
-  }),
+  },
 };
