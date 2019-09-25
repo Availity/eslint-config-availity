@@ -22,7 +22,7 @@ module.exports = {
   },
 
   env: {
-    jest: true
+    jest: true,
   },
 
   overrides: [
@@ -36,6 +36,7 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
 
+      // eslint-disable-next-line unicorn/expiring-todo-comments
       // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554.
       // Aftewards, just extend plugins like above.
       rules: Object.assign(recommendedTs, prettierTs.rules, {
