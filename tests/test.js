@@ -1,5 +1,4 @@
 const isPlainObj = require('is-plain-obj');
-const tempWrite = require('temp-write');
 const eslint = require('eslint');
 const find = require('lodash.find');
 const baseConf = require('..');
@@ -11,7 +10,7 @@ const baseString = require('./base');
 function runEslint(string, configuration, fileName) {
   const linter = new eslint.CLIEngine({
     useEslintrc: false,
-    configFile: tempWrite.sync(JSON.stringify(configuration)),
+    baseConfig: configuration,
   });
 
   return linter.executeOnText(string, fileName).results[0].messages;
