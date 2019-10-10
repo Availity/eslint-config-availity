@@ -9,6 +9,7 @@ module.exports = {
     'prettier',
     'prettier/react',
     'plugin:unicorn/recommended',
+    'plugin:import/typescript'
   ],
 
   env: {

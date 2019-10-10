@@ -12,6 +12,7 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:jest/recommended',
     'plugin:unicorn/recommended',
+    'plugin:import/typescript',
     'prettier',
   ],
 
