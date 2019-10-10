@@ -48,16 +48,25 @@ module.exports = {
     __STAGING__: true,
   },
 
-  overrides: base.overrides,
+  overrides: [
+    ...base.overrides,
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
+  ],
 
   rules: {
     ...base.rules,
     'unicorn/no-for-loop': 0,
     'react/sort-comp': 0,
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx','.tsx'] }],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/require-default-props': 0,
     'react-hooks/rules-of-hooks': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/jsx-props-no-spreading': 0,
     'react/forbid-prop-types': [
       'error',
       {
