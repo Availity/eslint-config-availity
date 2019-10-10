@@ -43,6 +43,12 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': 'off',
       }),
     },
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
   ],
 
   rules: {
