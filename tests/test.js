@@ -3,9 +3,11 @@ const eslint = require('eslint');
 const find = require('lodash.find');
 const baseConf = require('..');
 const reactConf = require('../browser');
+const workflowConf = require('../workflow');
 const reactString = require('./react');
 const reactTsString = require('./react-typescript.js');
 const baseString = require('./base');
+const workflowString = require('./workflow');
 
 function runEslint(string, configuration, fileName) {
   const linter = new eslint.CLIEngine({
@@ -61,5 +63,11 @@ describe('rules', () => {
     expect(find(errors, { ruleId: '@typescript-eslint/no-unused-vars' })).toBeUndefined();
     expect(find(errors, { ruleId: 'react/prop-types'})).toBeUndefined();
     expect(find(errors, { ruleId: 'react/jsx-props-no-spreading'})).toBeUndefined();
+  });
+
+  test('workflow', () => {
+    const errors = runEslint(workflowString(), workflowConf, 'example.tsx');
+
+    expect(find(errors, { ruleId: 'import/no-unresolved' })).toBeUndefined();
   });
 });

@@ -21,11 +21,11 @@ module.exports = {
 
   // eslint-disable-next-line unicorn/expiring-todo-comments
   // FIXME: how to test?
-  // settings: {
+  settings: {
   //   react: {
   //     version: 'detect',
   //   },
-  // },
+  },
 
   plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
 
