@@ -1,3 +1,12 @@
+# [5.2.0](https://github.com/Availity/eslint-config-availity/compare/v5.1.2...v5.2.0) (2019-10-10)
+
+
+### Features
+
+* added workflow config for root imports ([8fedbbb](https://github.com/Availity/eslint-config-availity/commit/8fedbbb))
+
+
+
 ## [5.1.2](https://github.com/Availity/eslint-config-availity/compare/v5.1.1...v5.1.2) (2019-10-10)
 
 
