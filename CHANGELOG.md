@@ -1,3 +1,7 @@
+## [5.1.2](https://github.com/Availity/eslint-config-availity/compare/v5.1.1...v5.1.2) (2019-10-10)
+
+
+
 ## [5.1.1](https://github.com/Availity/eslint-config-availity/compare/v5.0.0...v5.1.1) (2019-10-10)
 
 
