@@ -59,5 +59,7 @@ describe('rules', () => {
     const errors = runEslint(reactTsString(), reactConf, 'example.tsx');
     expect(find(errors, { ruleId: '@typescript-eslint/ban-types' })).toBeDefined();
     expect(find(errors, { ruleId: '@typescript-eslint/no-unused-vars' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'react/prop-types'})).toBeUndefined();
+    expect(find(errors, { ruleId: 'react/jsx-props-no-spreading'})).toBeUndefined();
   });
 });

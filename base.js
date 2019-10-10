@@ -42,7 +42,7 @@ module.exports = {
       rules: Object.assign(recommendedTs, prettierTs.rules, {
         '@typescript-eslint/no-unused-vars': 'off',
       }),
-    },
+    }
   ],
 
   rules: {
