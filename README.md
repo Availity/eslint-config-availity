@@ -47,6 +47,14 @@ extends: availity/browser
 extends: availity/browser
 ```
 
+### Workflow
+
+Allows root imports in [@availity/workflow](https://github.com/Availity/availity-workflow) projects.
+```bash
+# .eslintrc.yaml
+extends: availity/workflow
+```
+
 ### Prettier
 
 > Recommended settings
