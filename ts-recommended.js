@@ -3,7 +3,7 @@ module.exports = {
   '@typescript-eslint/array-type': 'error',
   '@typescript-eslint/ban-types': 'error',
   camelcase: 'off',
-  '@typescript-eslint/camelcase': 'error',
+  '@typescript-eslint/camelcase': 'off',
   '@typescript-eslint/class-name-casing': 'error',
   '@typescript-eslint/explicit-function-return-type': ['warn',{
     "allowExpressions": true,
