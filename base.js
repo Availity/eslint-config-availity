@@ -43,7 +43,7 @@ module.exports = {
       rules: Object.assign(recommendedTs, prettierTs.rules, {
         '@typescript-eslint/no-unused-vars': 'off',
       }),
-    }
+    },
   ],
 
   rules: {
@@ -69,5 +69,6 @@ module.exports = {
         array: false,
       },
     ],
+    'unicorn/prefer-node-append': 0,
   },
 };

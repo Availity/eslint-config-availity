@@ -55,4 +55,10 @@ const fn = () =>  {
 
 // unicorn/prefer-node-remove
 this.parentNode.removeChild(this)
+
+// unicorn/prefer-node-append
+const anchor = document.createElement('a');
+document.body.appendChild(anchor);
 `;
+
+
