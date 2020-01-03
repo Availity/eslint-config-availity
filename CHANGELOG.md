@@ -1,36 +1,22 @@
 ## [5.2.3](https://github.com/Availity/eslint-config-availity/compare/v5.2.2...v5.2.3) (2019-10-23)
 
-
-
 ## [5.2.2](https://github.com/Availity/eslint-config-availity/compare/v5.2.1...v5.2.2) (2019-10-23)
-
-
 
 ## [5.2.1](https://github.com/Availity/eslint-config-availity/compare/v5.2.0...v5.2.1) (2019-10-10)
 
-
-
 # [5.2.0](https://github.com/Availity/eslint-config-availity/compare/v5.1.2...v5.2.0) (2019-10-10)
-
 
 ### Features
 
-* added workflow config for root imports ([8fedbbb](https://github.com/Availity/eslint-config-availity/commit/8fedbbb))
-
-
+-   added workflow config for root imports ([8fedbbb](https://github.com/Availity/eslint-config-availity/commit/8fedbbb))
 
 ## [5.1.2](https://github.com/Availity/eslint-config-availity/compare/v5.1.1...v5.1.2) (2019-10-10)
 
-
-
 ## [5.1.1](https://github.com/Availity/eslint-config-availity/compare/v5.0.0...v5.1.1) (2019-10-10)
 
-
-
 <a name="5.1.0"></a>
+
 # [5.1.0](https://github.com/Availity/eslint-config-availity/compare/v5.0.0...v5.1.0) (2019-10-04)
-
-
 
 <a name="5.0.0"></a>
 
