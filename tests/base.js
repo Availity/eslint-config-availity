@@ -60,5 +60,3 @@ this.parentNode.removeChild(this)
 const anchor = document.createElement('a');
 document.body.appendChild(anchor);
 `;
-
-
