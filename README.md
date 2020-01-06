@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install eslint-config-availity --save-dev
+$ yarn add eslint-config-availity --dev
 ```
 
 ## Features
@@ -42,6 +42,7 @@ extends: availity/browser
 ```
 
 ### Typescript
+
 ```bash
 # .eslintrc.yaml
 extends: availity/browser
@@ -50,6 +51,7 @@ extends: availity/browser
 ### Workflow
 
 Allows root imports in [@availity/workflow](https://github.com/Availity/availity-workflow) projects.
+
 ```bash
 # .eslintrc.yaml
 extends: availity/workflow
@@ -69,12 +71,11 @@ extends: availity/workflow
 
 ## Contributing
 
--   `npm install`
+-   `$ yarn`
 -   Make necessary changes
 -   Update `README.md` and `test.js` if necessary
--   Run `npm run release`. This command parses `angular` style commits using `conventional-changelog` to determine the next version for the packages
--   Alternatively, run `npm run release ${VERSION}` and the release script will use `${VERSION}` as the version number in `package.json`
--   Run `npm publish` or `npm publish --tag=next` (if working on next release candidate)
+-   Run `yarn run release`. This command uses [standard-version](https://github.com/conventional-changelog/standard-version) to automatically determine the version based on commits and generate a CHANGELOG
+-   Run `git push --follow-tags origin <branch> && yarn publish` to publish
 
 ## Disclaimer
 

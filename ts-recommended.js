@@ -5,10 +5,13 @@ module.exports = {
   camelcase: 'off',
   '@typescript-eslint/camelcase': 'off',
   '@typescript-eslint/class-name-casing': 'error',
-  '@typescript-eslint/explicit-function-return-type': ['warn',{
-    "allowExpressions": true,
-    "allowTypedFunctionExpressions": true
-  }],
+  '@typescript-eslint/explicit-function-return-type': [
+    'warn',
+    {
+      allowExpressions: true,
+      allowTypedFunctionExpressions: true,
+    },
+  ],
   '@typescript-eslint/explicit-member-accessibility': 'error',
   indent: 'off',
   '@typescript-eslint/indent': 'error',

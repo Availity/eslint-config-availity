@@ -9,7 +9,7 @@ module.exports = {
     'prettier',
     'prettier/react',
     'plugin:unicorn/recommended',
-    'plugin:import/typescript'
+    'plugin:import/typescript',
   ],
 
   env: {
@@ -22,9 +22,9 @@ module.exports = {
   // eslint-disable-next-line unicorn/expiring-todo-comments
   // FIXME: how to test?
   settings: {
-  //   react: {
-  //     version: 'detect',
-  //   },
+    //   react: {
+    //     version: 'detect',
+    //   },
   },
 
   plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
@@ -62,6 +62,7 @@ module.exports = {
   rules: {
     ...base.rules,
     'unicorn/no-for-loop': 0,
+    'unicorn/prefer-query-selector': 0,
     'react/sort-comp': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/require-default-props': 0,

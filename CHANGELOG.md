@@ -1,36 +1,42 @@
-## [5.2.3](https://github.com/Availity/eslint-config-availity/compare/v5.2.2...v5.2.3) (2019-10-23)
+# Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.3.2](https://github.com/Availity/eslint-config-availity/compare/v5.3.1...v5.3.2) (2020-01-03)
 
-## [5.2.2](https://github.com/Availity/eslint-config-availity/compare/v5.2.1...v5.2.2) (2019-10-23)
+### [5.3.1](https://github.com/Availity/eslint-config-availity/compare/v5.3.0...v5.3.1) (2020-01-03)
 
-
-
-## [5.2.1](https://github.com/Availity/eslint-config-availity/compare/v5.2.0...v5.2.1) (2019-10-10)
-
-
-
-# [5.2.0](https://github.com/Availity/eslint-config-availity/compare/v5.1.2...v5.2.0) (2019-10-10)
+## [5.3.0](https://github.com/Availity/eslint-config-availity/compare/v5.2.3...v5.3.0) (2020-01-03)
 
 
 ### Features
 
-* added workflow config for root imports ([8fedbbb](https://github.com/Availity/eslint-config-availity/commit/8fedbbb))
+* turned off prefer-query-selector ([0448000](https://github.com/Availity/eslint-config-availity/commit/0448000d01b516b70e9145a94e0098d191147a0e))
 
 
+### Bug Fixes
+
+* disable unicorn/prefer-node-append ([4488748](https://github.com/Availity/eslint-config-availity/commit/4488748c641c7e06199a9cb61a98d88f3963e0de))
+
+## [5.2.3](https://github.com/Availity/eslint-config-availity/compare/v5.2.2...v5.2.3) (2019-10-23)
+
+## [5.2.2](https://github.com/Availity/eslint-config-availity/compare/v5.2.1...v5.2.2) (2019-10-23)
+
+## [5.2.1](https://github.com/Availity/eslint-config-availity/compare/v5.2.0...v5.2.1) (2019-10-10)
+
+# [5.2.0](https://github.com/Availity/eslint-config-availity/compare/v5.1.2...v5.2.0) (2019-10-10)
+
+### Features
+
+-   added workflow config for root imports ([8fedbbb](https://github.com/Availity/eslint-config-availity/commit/8fedbbb))
 
 ## [5.1.2](https://github.com/Availity/eslint-config-availity/compare/v5.1.1...v5.1.2) (2019-10-10)
 
-
-
 ## [5.1.1](https://github.com/Availity/eslint-config-availity/compare/v5.0.0...v5.1.1) (2019-10-10)
 
-
-
 <a name="5.1.0"></a>
+
 # [5.1.0](https://github.com/Availity/eslint-config-availity/compare/v5.0.0...v5.1.0) (2019-10-04)
-
-
 
 <a name="5.0.0"></a>
 
