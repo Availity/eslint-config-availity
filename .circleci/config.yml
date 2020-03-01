@@ -1,0 +1,40 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - restore_cache: # special step to restore the dependency cache
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+      - run:
+          name: Setup Dependencies
+          command: yarn install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Lint
+          command: |
+            yarn lint
+      - run: # Test
+          name: Run Test
+          command: |
+            yarn test
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build:
+          context: availity-deploy
+          filters:
+            branches:
+              ignore: gh-pages
+      - deploy:
+          context: availity-deploy
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
