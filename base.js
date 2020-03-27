@@ -1,5 +1,3 @@
-const prettierTs = require('eslint-config-prettier/@typescript-eslint');
-
 const recommendedTs = require('./ts-recommended');
 
 module.exports = {
@@ -14,6 +12,7 @@ module.exports = {
     'plugin:unicorn/recommended',
     'plugin:import/typescript',
     'prettier',
+    'prettier/@typescript-eslint',
   ],
 
   plugins: ['promise', 'jest', 'unicorn'],
@@ -36,13 +35,6 @@ module.exports = {
         warnOnUnsupportedTypeScriptVersion: true,
       },
       plugins: ['@typescript-eslint'],
-
-      // eslint-disable-next-line unicorn/expiring-todo-comments
-      // TODO: remove when eslint 6.0 is released with https://github.com/eslint/eslint/pull/11554.
-      // Aftewards, just extend plugins like above.
-      rules: Object.assign(recommendedTs, prettierTs.rules, {
-        '@typescript-eslint/no-unused-vars': 'off',
-      }),
     },
   ],
 
