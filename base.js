@@ -1,5 +1,3 @@
-const recommendedTs = require('./ts-recommended');
-
 module.exports = {
   root: true,
 
