@@ -9,9 +9,6 @@
     "release": "standard-version",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
-  "engines": {
-    "node": ">=8.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Availity/eslint-config-availity.git"
