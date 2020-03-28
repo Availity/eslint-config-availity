@@ -8,9 +8,7 @@ module.exports = {
     'plugin:promise/recommended',
     'plugin:jest/recommended',
     'plugin:unicorn/recommended',
-    'plugin:import/typescript',
     'prettier',
-    'prettier/@typescript-eslint',
   ],
 
   plugins: ['promise', 'jest', 'unicorn'],
@@ -32,6 +30,7 @@ module.exports = {
         sourceType: 'module',
         warnOnUnsupportedTypeScriptVersion: true,
       },
+      extends: ['plugin:@typescript-eslint/recommended'],
       plugins: ['@typescript-eslint'],
     },
   ],

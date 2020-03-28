@@ -6,10 +6,11 @@ module.exports = {
     'airbnb',
     'plugin:promise/recommended',
     'plugin:jest/recommended',
-    'prettier',
-    'prettier/react',
     'plugin:unicorn/recommended',
     'plugin:import/typescript',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
   ],
 
   env: {
@@ -27,7 +28,7 @@ module.exports = {
     //   },
   },
 
-  plugins: ['promise', 'jest', 'promise', 'unicorn', 'react-hooks'],
+  plugins: ['promise', 'jest', 'unicorn', 'react-hooks', '@typescript-eslint'],
 
   parserOptions: {
     sourceType: 'module',
