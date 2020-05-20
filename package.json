@@ -36,8 +36,8 @@
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "babel-eslint": "^10.0.3",
     "babel-plugin-root-import": "^6.5.0",
     "eslint": "^7.0.0",
@@ -46,7 +46,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-root-import": "^1.0.4",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.11.0",
+    "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.0",
@@ -59,11 +59,11 @@
     "husky": "^4.2.5",
     "is-plain-obj": "^2.1.0",
     "jest": "^26.0.1",
-    "lint-staged": "^10.2.2",
+    "lint-staged": "^10.2.4",
     "lodash.find": "^4.6.0",
     "prettier": "^2.0.5",
     "standard-version": "^8.0.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "prettier": {
     "printWidth": 120,
