@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.2.0",
+    "@commitlint/config-conventional": "^9.0.1",
     "husky": "^4.2.5",
     "is-plain-obj": "^2.1.0",
     "jest": "^26.0.1",
