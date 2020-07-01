@@ -54,7 +54,7 @@
     "eslint-plugin-unicorn": "^20.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^8.2.0",
     "husky": "^4.2.5",
     "is-plain-obj": "^2.1.0",
