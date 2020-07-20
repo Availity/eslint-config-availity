@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
 [![NPM Link](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
-[![Travis Link](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=for-the-badge)](https://travis-ci.org/Availity/eslint-config-availity)
+[![Github Actions Link](https://github.com/availity/eslint-config-availity/workflows/ci-build/badge.svg)](https://github.com/Availity/eslint-config-availity)
 
 ## Installation
 
@@ -35,14 +35,14 @@ yarn add --dev eslint-config-availity
 
 > Typescript is supported in both configurations
 
-### Node
+### Node w/ optional Typescript
 
 ```bash
 # .eslintrc.yaml
 extends: availity
 ```
 
-### Browser (React, Angular) w/ optional Typescript
+### Browser (React) w/ Typescript
 
 ```bash
 # .eslintrc.yaml
