@@ -1,7 +1,7 @@
 const base = require('./base');
 
 module.exports = {
-  parser: base.parser,
+  parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
     'plugin:promise/recommended',
@@ -20,12 +20,22 @@ module.exports = {
     es6: true,
   },
 
-  // eslint-disable-next-line unicorn/expiring-todo-comments
-  // FIXME: how to test?
   settings: {
-    //   react: {
-    //     version: 'detect',
-    //   },
+    // Apply special parsing for TypeScript files
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+    },
+    // Append 'ts' extensions to Airbnb 'import/resolver' setting
+    'import/resolver': {
+      node: {
+        extensions: ['.mjs', '.js', '.ts', '.json'],
+      },
+    },
+    // Append 'ts' extensions to Airbnb 'import/extensions' setting
+    'import/extensions': ['.js', '.ts', '.mjs'],
+    react: {
+      version: 'detect',
+    },
   },
 
   plugins: ['promise', 'jest', 'unicorn', 'react-hooks', '@typescript-eslint'],
@@ -65,6 +75,9 @@ module.exports = {
     'unicorn/no-for-loop': 0,
     'unicorn/prefer-query-selector': 0,
     'react/sort-comp': 0,
+    // Replace Airbnb 'camelcase' rule with '@typescript-eslint/naming-convention'
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
+    camelcase: 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/require-default-props': 0,
     'react-hooks/rules-of-hooks': 'warn',
