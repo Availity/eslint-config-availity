@@ -8,8 +8,16 @@
 
 ## Installation
 
+### Typescript
+
 ```bash
-$ yarn add eslint-config-availity --dev
+npx install-peerdeps --dev eslint-config-availity
+```
+
+### Vanilla JS
+
+```bash
+yarn add --dev eslint-config-availity
 ```
 
 ## Features
