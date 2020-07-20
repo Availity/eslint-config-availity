@@ -2,9 +2,9 @@
 
 > Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier) and [Typescript](https://www.typescriptlang.org/)
 
-[![](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
-[![](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
-[![](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=for-the-badge)](https://travis-ci.org/Availity/eslint-config-availity)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
+[![NPM Link](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
+[![Travis Link](https://img.shields.io/travis/Availity/eslint-config-availity.svg?style=for-the-badge)](https://travis-ci.org/Availity/eslint-config-availity)
 
 ## Installation
 
@@ -14,7 +14,7 @@
 npx install-peerdeps --dev eslint-config-availity
 ```
 
-### Vanilla JS
+### Vanilla
 
 ```bash
 yarn add --dev eslint-config-availity
@@ -42,14 +42,7 @@ yarn add --dev eslint-config-availity
 extends: availity
 ```
 
-### Browser (React, Angular)
-
-```bash
-# .eslintrc.yaml
-extends: availity/browser
-```
-
-### Typescript
+### Browser (React, Angular) w/ optional Typescript
 
 ```bash
 # .eslintrc.yaml
