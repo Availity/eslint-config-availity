@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/Availity/eslint-config-availity/compare/v5.3.2...v6.0.0) (2020-08-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* ESLint upgraded to v7. enlist-plugin-react-hooks eslint-plugin-unicorn upgraded as well that require ESLint v7
+* - eslint-plugin-react-hooks  upgraded to 3.x
+- eslint-plugin-unicorn upgraded to 18.x
+* eslint-plugin-unicorn drops support for Node 10. New rules added https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v16.0.0
+
+### Features
+
+* make [@typescript-eslint](https://github.com/typescript-eslint) parser optional ([2e0d397](https://github.com/Availity/eslint-config-availity/commit/2e0d39764d7ab2e811f3039f8b1ed95af53b5692))
+
+
+### Bug Fixes
+
+* add recommended tslint settings ([a1269da](https://github.com/Availity/eslint-config-availity/commit/a1269dae462d9abeeb1dffc14d5444e3a6903560))
+
+
+### build
+
+* upgrade dependencies ([168c6bb](https://github.com/Availity/eslint-config-availity/commit/168c6bbb868ac445d49001c0737d283b6c970b30))
+* upgrade Eslint v7 ([5d739bf](https://github.com/Availity/eslint-config-availity/commit/5d739bf2a8d4ff98accd678d3b11e400a28b8ec5))
+* upgrade libs ([8c9ca2f](https://github.com/Availity/eslint-config-availity/commit/8c9ca2fcb5aa1801e9ca2edb2ed1f21138eddb0c))
+
 ### [5.3.2](https://github.com/Availity/eslint-config-availity/compare/v5.3.1...v5.3.2) (2020-01-03)
 
 ### [5.3.1](https://github.com/Availity/eslint-config-availity/compare/v5.3.0...v5.3.1) (2020-01-03)
