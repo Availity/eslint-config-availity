@@ -68,7 +68,7 @@
     "lodash.find": "^4.6.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
-    "standard-version": "^8.0.2",
+    "standard-version": "^9.0.0",
     "typescript": "^3.9.7"
   },
   "prettier": {
