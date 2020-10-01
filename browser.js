@@ -96,5 +96,8 @@ module.exports = {
         specialLink: ['to'],
       },
     ],
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2540
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
   },
 };
