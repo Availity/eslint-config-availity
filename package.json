@@ -67,7 +67,7 @@
     "lint-staged": "^10.2.11",
     "lodash.find": "^4.6.0",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "standard-version": "^9.0.0",
     "typescript": "^4.0.3"
   },
