@@ -59,4 +59,13 @@ this.parentNode.removeChild(this)
 // unicorn/prefer-node-append
 const anchor = document.createElement('a');
 document.body.appendChild(anchor);
+
+// no-restricted-syntax
+var doSomething = function () {};
+
+// global-require
+function readFile(filename, callback) {
+    var fs = require('fs');
+    fs.readFile(filename, callback)
+}
 `;
