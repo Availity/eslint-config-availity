@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/Availity/eslint-config-availity/compare/v6.0.2...v7.0.0) (2020-11-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* eslint-plugin-unicorn has been updated.
+
+See https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v23.0.0
+
+* upgrade dependencies ([0a497c8](https://github.com/Availity/eslint-config-availity/commit/0a497c8eb444e8b273dab69785079ab058e67eeb))
+
 ### [6.0.2](https://github.com/Availity/eslint-config-availity/compare/v6.0.1...v6.0.2) (2020-10-01)
 
 
