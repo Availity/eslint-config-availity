@@ -68,4 +68,8 @@ function readFile(filename, callback) {
     var fs = require('fs');
     fs.readFile(filename, callback)
 }
+
+// unicorn/prefer-math-trunc
+var targetLength = 1;
+targetLength >>= 0;
 `;
