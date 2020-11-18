@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.1](https://github.com/Availity/eslint-config-availity/compare/v7.0.0...v7.0.1) (2020-11-18)
+
+
+### Bug Fixes
+
+* disable unicorn/prefer-math-trunc ([3b1bb75](https://github.com/Availity/eslint-config-availity/commit/3b1bb756b37adf26a69a42232f052c681a329e48))
+
 ## [7.0.0](https://github.com/Availity/eslint-config-availity/compare/v6.0.2...v7.0.0) (2020-11-17)
 
 
