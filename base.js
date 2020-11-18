@@ -63,6 +63,7 @@ module.exports = {
     'unicorn/import-index': 'off',
     'unicorn/filename-case': 'off',
     'unicorn/no-nested-ternary': 0,
+    'unicorn/prefer-math-trunc': 0,
     'unicorn/no-null': 0,
     'unicorn/number-literal-case': 0,
     'unicorn/prefer-includes': 'off',
