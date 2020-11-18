@@ -40,6 +40,7 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'unicorn/prefer-includes' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/prefer-node-remove' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/prefer-node-append' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/prefer-math-trunc' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-restricted-syntax' })).toBeUndefined();
     expect(find(errors, { ruleId: 'global-require' })).toBeUndefined();
   });
