@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.55](https://github.com/Availity/eslint-config-availity/compare/v7.0.54...v7.0.55) (2020-11-25)
+
 ### [7.0.54](https://github.com/Availity/eslint-config-availity/compare/v7.0.53...v7.0.54) (2020-11-25)
 
 ### [7.0.53](https://github.com/Availity/eslint-config-availity/compare/v7.0.52...v7.0.53) (2020-11-25)
