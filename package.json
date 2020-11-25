@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-availity",
-  "version": "7.0.167",
+  "version": "7.0.168",
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
