@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "test": "jest .",
     "release": "standard-version",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier"
   },
   "repository": {
     "type": "git",
