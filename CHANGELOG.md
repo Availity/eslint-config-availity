@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.238](https://github.com/Availity/eslint-config-availity/compare/v7.0.237...v7.0.238) (2020-12-18)
+
+
+### Bug Fixes
+
+* fix command name in eslint-check ([0e0708f](https://github.com/Availity/eslint-config-availity/commit/0e0708f3d102cc16a6461f0696f121f0451926aa))
+* fix command name in eslint-check ([878f89a](https://github.com/Availity/eslint-config-availity/commit/878f89a2103616c11ee4a5b058a3b19a046cb626))
+* fix deps registry ([41702cd](https://github.com/Availity/eslint-config-availity/commit/41702cd797398df2b6f14e1bbf6c4a7a24165d8b))
+
 ### [7.0.237](https://github.com/Availity/eslint-config-availity/compare/v7.0.236...v7.0.237) (2020-11-25)
 
 ### [7.0.236](https://github.com/Availity/eslint-config-availity/compare/v7.0.235...v7.0.236) (2020-11-25)
