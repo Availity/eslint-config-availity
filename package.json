@@ -93,5 +93,8 @@
       "pre-commit": "lint-staged",
       "pre-push": "yarn lint && yarn test && yarn eslint-check"
     }
+  },
+  "standard-version": {
+    "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
   }
 }
