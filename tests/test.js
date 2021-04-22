@@ -43,6 +43,7 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'unicorn/prefer-math-trunc' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-restricted-syntax' })).toBeUndefined();
     expect(find(errors, { ruleId: 'global-require' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/no-reduce' })).toBeUndefined();
   });
 
   test('react', () => {
