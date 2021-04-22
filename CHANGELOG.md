@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.252](https://github.com/Availity/eslint-config-availity/compare/v7.0.251...v7.0.252) (2021-04-22)
+
+
+### Bug Fixes
+
+* remove no reduce lint rule ([7ce59e9](https://github.com/Availity/eslint-config-availity/commit/7ce59e9f48942213037b4a9d2f54cf435cecccee))
+
 ### [7.0.251](https://github.com/Availity/eslint-config-availity/compare/v7.0.250...v7.0.251) (2021-01-12)
 
 
