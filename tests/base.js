@@ -72,4 +72,8 @@ function readFile(filename, callback) {
 // unicorn/prefer-math-trunc
 var targetLength = 1;
 targetLength >>= 0;
+
+// unicorn/no-reduce
+var array = [1, 2, 3]
+var result = array.reduce((acc, current) => acc + current)
 `;

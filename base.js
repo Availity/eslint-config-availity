@@ -81,5 +81,6 @@ module.exports = {
       },
     ],
     'unicorn/prefer-node-append': 0,
+    'unicorn/no-reduce': 0,
   },
 };
