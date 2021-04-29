@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: eslint
+    versions:
+    - 7.17.0
+    - 7.19.0
+    - 7.21.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.11.1
+    - 4.14.1
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.11.1
+    - 4.14.1
+  - dependency-name: husky
+    versions:
+    - 4.3.8
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 7.1.0
+    - 7.2.0
+  - dependency-name: standard-version
+    versions:
+    - 9.1.0
+  commit-message:
+    prefix: build
+    include: scope
