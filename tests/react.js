@@ -1,29 +1,20 @@
 module.exports = () => `
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from '@reach/router';
 
-class Patient extends Component {
-  render({ a }) {
-    return (
-      <>
+export default function Patient({ a }) {
+  return (
+    <>
         <div>Hello {a}!</div>
         <nav>
           <Link to="/">Home</Link>
         </nav>
+        <label htmlFor="a">A</label>
+        <input id="a"/>
       </>
-    );
-  }
-  displayName : 'Hello'
+  )
 }
 
-const loopy = () => {
-  const arr = [];
-  for (let index = 0; index < arr.length; index++) {
-	  const element = arr[index];
-  }
-}
-
-// react/require-default-props
 Patient.propTypes = {
   a: PropTypes.string,
   b: PropTypes.array,

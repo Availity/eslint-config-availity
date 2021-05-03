@@ -60,6 +60,7 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'react/require-default-props' })).toBeUndefined();
     expect(find(errors, { ruleId: 'jsx-a11y/anchor-is-valid' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/no-for-loop' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'jsx-a11y/label-has-associated-control' })).toBeUndefined();
   });
 
   test('typescript', () => {
@@ -72,7 +73,6 @@ describe('rules', () => {
 
   test('workflow', () => {
     const errors = runEslint(workflowString(), workflowConf, 'example.tsx');
-
     expect(find(errors, { ruleId: 'import/no-unresolved' })).toBeUndefined();
   });
 });
