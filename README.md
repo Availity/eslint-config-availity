@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
 [![NPM Link](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
-[![Github Actions Link](https://github.com/availity/eslint-config-availity/workflows/ci-build/badge.svg)](https://github.com/Availity/eslint-config-availity)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/availity/eslint-config-availity/ci-build?style=for-the-badge)
 
 ## Installation
 
