@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/Availity/eslint-config-availity/compare/v7.0.255...v7.1.0) (2021-05-03)
+
+
+### Features
+
+* upgrade eslint-plugin-promise to v5 ([dbcfab4](https://github.com/Availity/eslint-config-availity/commit/dbcfab422195298fa61fb5efa5d3aca6f817b69c))
+
 ### [7.0.255](https://github.com/Availity/eslint-config-availity/compare/v7.0.254...v7.0.255) (2021-05-03)
 
 
