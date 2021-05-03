@@ -49,7 +49,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-unicorn": "^24.0.0"
+    "eslint-plugin-unicorn": "^31.0.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.3.0",
@@ -85,7 +85,24 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ]
+    ],
+    "rules": {
+      "header-max-length": [
+        0,
+        "always",
+        100
+      ],
+      "body-max-line-length": [
+        0,
+        "always",
+        500
+      ],
+      "footer-max-line-length": [
+        0,
+        "always",
+        500
+      ]
+    }
   },
   "husky": {
     "hooks": {
