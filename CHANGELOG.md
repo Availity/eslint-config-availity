@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.0.253](https://github.com/Availity/eslint-config-availity/compare/v7.0.252...v7.0.253) (2021-05-03)
+
+
+### Bug Fixes
+
+* jsx-a11y/label-has-associated-control. Fixed [#228](https://github.com/Availity/eslint-config-availity/issues/228) ([d9a0e3a](https://github.com/Availity/eslint-config-availity/commit/d9a0e3a8bdd15794833f8379b3df88b4638fe60f))
+
 ### [7.0.252](https://github.com/Availity/eslint-config-availity/compare/v7.0.251...v7.0.252) (2021-04-22)
 
 
