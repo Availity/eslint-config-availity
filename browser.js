@@ -9,8 +9,6 @@ module.exports = {
     'plugin:unicorn/recommended',
     'plugin:import/typescript',
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
   ],
 
   env: {
