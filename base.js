@@ -62,6 +62,7 @@ module.exports = {
     'class-methods-use-this': 0,
     'unicorn/import-index': 'off',
     'unicorn/filename-case': 'off',
+    'unicorn/empty-brace-spaces': 0,
     'unicorn/no-nested-ternary': 0,
     'unicorn/prefer-math-trunc': 0,
     'unicorn/no-null': 0,
