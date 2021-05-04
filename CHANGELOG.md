@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/Availity/eslint-config-availity/compare/v7.1.1...v8.0.0) (2021-05-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* - `v25` Rules were renamed in v25 https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v25.0.0
+- `v26` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v26.0.0
+- `v27` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v27.0.0
+- `v28` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v28.0.0
+- `v29` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v29.0.0
+- `v30` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v30.0.0 and options renamed for `prevent-abbreviations` and `no-keyword-prefix`
+-  `v31` New rules https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v31.0.0
+
+### Features
+
+* upgrade eslint-config-prettier to v8 ([0ec8ae9](https://github.com/Availity/eslint-config-availity/commit/0ec8ae9bcc810c7fc6a210bba506a7991a569e77))
+* upgrade eslint-plugin-unicorn to v31 ([042a31d](https://github.com/Availity/eslint-config-availity/commit/042a31d8b781f1852d92313a7cadaa5fd47a8d46))
+
+## 7.1.0 (2021-05-03)
+
 ### [7.1.1](https://github.com/Availity/eslint-config-availity/compare/v7.1.0...v7.1.1) (2021-05-03)
 
 ### 7.0.252 (2021-04-22)
