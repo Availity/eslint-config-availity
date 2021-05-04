@@ -53,10 +53,10 @@ const fn = () =>  {
 // unicorn/prefer-includes
 [].indexOf('foo') !== -1;
 
-// unicorn/prefer-node-remove
+// unicorn/prefer-dom-node-remove
 this.parentNode.removeChild(this)
 
-// unicorn/prefer-node-append
+// unicorn/prefer-dom-node-append
 const anchor = document.createElement('a');
 document.body.appendChild(anchor);
 
@@ -73,7 +73,7 @@ function readFile(filename, callback) {
 var targetLength = 1;
 targetLength >>= 0;
 
-// unicorn/no-reduce
+// unicorn/no-array-reduce
 var array = [1, 2, 3]
 var result = array.reduce((acc, current) => acc + current)
 `;
