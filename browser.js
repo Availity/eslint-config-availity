@@ -40,7 +40,9 @@ module.exports = {
 
   parserOptions: {
     sourceType: 'module',
+    requireConfigFile: false,
     ecmaVersion: 2018,
+    presets: ["@babel/preset-react"],
     ecmaFeatures: {
       //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
       legacyDecorators: true,

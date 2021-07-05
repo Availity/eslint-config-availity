@@ -5,7 +5,7 @@ const baseConf = require('..');
 const reactConf = require('../browser');
 const workflowConf = require('../workflow');
 const reactString = require('./react');
-const reactTsString = require('./react-typescript.js');
+const reactTsString = require('./react-typescript');
 const baseString = require('./base');
 const workflowString = require('./workflow');
 

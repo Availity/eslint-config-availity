@@ -30,7 +30,7 @@ try {
 module.exports = {
   root: true,
 
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
 
   extends: [
     'airbnb-base',
@@ -44,6 +44,7 @@ module.exports = {
 
   parserOptions: {
     sourceType: 'script',
+    requireConfigFile: false,
   },
 
   env: {
