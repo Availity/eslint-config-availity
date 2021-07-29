@@ -26,7 +26,6 @@
     "index.js",
     "browser.js",
     "workflow.js",
-    "ts-recommended.js",
     "base.js",
     "README.md"
   ],
