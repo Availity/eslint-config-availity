@@ -25,12 +25,17 @@ describe('rules', () => {
 
     const errors = runEslint(baseString(), baseConf);
 
+    const foundSibling = errors.some(
+      (element) => element.ruleId === 'no-unused-vars' && element.message.includes('ignoredAttribute')
+    );
+
     // Enabled
     expect(find(errors, { ruleId: 'no-var' })).toBeDefined();
     expect(find(errors, { ruleId: 'no-unused-vars' })).toBeDefined();
     expect(find(errors, { ruleId: 'unicorn/import-index' })).toBeUndefined();
 
     // Disabled
+    expect(foundSibling).toBe(false);
     expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
     expect(find(errors, { ruleId: 'prefer-destructuring' })).toBeUndefined();
     expect(find(errors, { ruleId: 'class-methods-use-this' })).toBeUndefined();
@@ -40,6 +45,7 @@ describe('rules', () => {
     expect(find(errors, { ruleId: 'unicorn/prefer-includes' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/prefer-dom-node-remove' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/prefer-dom-node-append' })).toBeUndefined();
+    expect(find(errors, { ruleId: 'unicorn/numeric-separators-style' })).toBeUndefined();
     expect(find(errors, { ruleId: 'unicorn/prefer-math-trunc' })).toBeUndefined();
     expect(find(errors, { ruleId: 'no-restricted-syntax' })).toBeUndefined();
     expect(find(errors, { ruleId: 'global-require' })).toBeUndefined();
