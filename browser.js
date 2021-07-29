@@ -26,11 +26,11 @@ module.exports = {
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.ts', '.json'],
+        extensions: ['.mjs', '.js', '.ts', '.json', '.jsx'],
       },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
-    'import/extensions': ['.js', '.ts', '.mjs'],
+    'import/extensions': ['.js', '.ts', '.mjs', '.jsx'],
     react: {
       version: 'detect',
     },
@@ -41,11 +41,9 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     requireConfigFile: false,
-    ecmaVersion: 2018,
-    presets: ["@babel/preset-react"],
+    ecmaVersion: 2020,
+    presets: ['@babel/preset-react'],
     ecmaFeatures: {
-      //  This goes away with babel-eslint@11 https://github.com/babel/babel-eslint/issues/662#issuecomment-459712913
-      legacyDecorators: true,
       jsx: true,
     },
   },
