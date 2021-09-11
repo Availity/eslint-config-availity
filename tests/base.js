@@ -3,12 +3,12 @@ module.exports = () => `
 var foo = function foo() {};
 foo()
 
+const number = 100000; // Pass, this number does not contains separators
 
-// no-unused-vars
-const arr = [
-  1,
-  2
-];
+// no-unused-vars ignore siblings
+const { ignoredAttribute , ...other } = {};
+
+console.log(other);
 
 // unicorn/import-index
 const conf = require('./');

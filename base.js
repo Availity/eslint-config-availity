@@ -14,7 +14,7 @@ try {
     files: ['*.{ts,tsx}'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-      ecmaVersion: 2018,
+      ecmaVersion: 2020,
       sourceType: 'module',
       warnOnUnsupportedTypeScriptVersion: true,
     },
@@ -64,6 +64,8 @@ module.exports = {
     'unicorn/import-index': 'off',
     'unicorn/filename-case': 'off',
     'unicorn/empty-brace-spaces': 0,
+    'unicorn/prefer-node-protocol': 0,
+    'unicorn/numeric-separators-style': ['error', { onlyIfContainsSeparator: true }],
     'unicorn/no-nested-ternary': 0,
     'unicorn/prefer-math-trunc': 0,
     'unicorn/no-null': 0,
@@ -76,6 +78,7 @@ module.exports = {
     'unicorn/no-array-reduce': 0,
     'import/no-extraneous-dependencies': 0,
     'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'no-unused-vars': ['error', { ignoreRestSiblings: true }],
     'no-underscore-dangle': 0,
     'promise/avoid-new': 0,
     'prefer-destructuring': [
