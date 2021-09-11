@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.2](https://github.com/Availity/eslint-config-availity/compare/v8.0.1...v8.0.2) (2021-09-11)
+
+
+### Bug Fixes
+
+* import/resolver missing file extension "tsx". closes [#217](https://github.com/Availity/eslint-config-availity/issues/217) ([a1a4e96](https://github.com/Availity/eslint-config-availity/commit/a1a4e9682b7266b2a1662095550c47f059a3ab4f))
+* relax rules. closes [#249](https://github.com/Availity/eslint-config-availity/issues/249) ([3cf3e93](https://github.com/Availity/eslint-config-availity/commit/3cf3e93714b5845a7eb7eb39ab7ce55a9e71f7c4))
+
 ### [8.0.1](https://github.com/Availity/eslint-config-availity/compare/v8.0.0...v8.0.1) (2021-07-05)
 
 ## [8.0.0](https://github.com/Availity/eslint-config-availity/compare/v7.1.1...v8.0.0) (2021-05-04)
