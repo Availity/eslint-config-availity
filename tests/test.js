@@ -1,84 +1,95 @@
 const isPlainObj = require('is-plain-obj');
-const eslint = require('eslint');
-const find = require('lodash.find');
+const { ESLint } = require('eslint');
+
 const baseConf = require('..');
 const reactConf = require('../browser');
 const workflowConf = require('../workflow');
+
 const reactString = require('./react');
 const reactTsString = require('./react-typescript');
 const baseString = require('./base');
 const workflowString = require('./workflow');
 
-function runEslint(string, configuration, fileName) {
-  const linter = new eslint.CLIEngine({
+async function runEslint(string, configuration, fileName) {
+  const linter = new ESLint({
     useEslintrc: false,
     baseConfig: configuration,
   });
 
-  return linter.executeOnText(string, fileName).results[0].messages;
+  const results = await linter.lintText(string, { filePath: fileName });
+
+  return results[0].messages;
 }
 
+const findRule = (errors, rule) => errors.find(({ ruleId }) => ruleId === rule);
+
 describe('rules', () => {
-  test('base', () => {
+  test('base', async () => {
     expect(isPlainObj(baseConf)).toBeTruthy();
     expect(isPlainObj(baseConf.rules)).toBeDefined();
 
-    const errors = runEslint(baseString(), baseConf);
+    const errors = await runEslint(baseString(), baseConf);
 
     const foundSibling = errors.some(
       (element) => element.ruleId === 'no-unused-vars' && element.message.includes('ignoredAttribute')
     );
 
     // Enabled
-    expect(find(errors, { ruleId: 'no-var' })).toBeDefined();
-    expect(find(errors, { ruleId: 'no-unused-vars' })).toBeDefined();
-    expect(find(errors, { ruleId: 'unicorn/import-index' })).toBeUndefined();
+    expect(findRule(errors, 'no-var')).toBeDefined();
+    expect(findRule(errors, 'no-unused-vars')).toBeDefined();
+    expect(findRule(errors, 'unicorn/import-index')).toBeUndefined();
 
     // Disabled
     expect(foundSibling).toBe(false);
-    expect(find(errors, { ruleId: 'no-param-reassign/sort-comp' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'prefer-destructuring' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'class-methods-use-this' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'no-plusplus' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'no-underscore-dangle' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'promise/avoid-new' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/prefer-includes' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/prefer-dom-node-remove' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/prefer-dom-node-append' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/numeric-separators-style' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/prefer-math-trunc' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'no-restricted-syntax' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'global-require' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/no-array-reduce' })).toBeUndefined();
+    expect(findRule(errors, 'no-param-reassign/sort-comp')).toBeUndefined();
+    expect(findRule(errors, 'prefer-destructuring')).toBeUndefined();
+    expect(findRule(errors, 'class-methods-use-this')).toBeUndefined();
+    expect(findRule(errors, 'no-plusplus')).toBeUndefined();
+    expect(findRule(errors, 'no-underscore-dangle')).toBeUndefined();
+    expect(findRule(errors, 'promise/avoid-new')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/prefer-includes')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/prefer-dom-node-remove')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/prefer-dom-node-append')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/numeric-separators-style')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/prefer-math-trunc')).toBeUndefined();
+    expect(findRule(errors, 'no-restricted-syntax')).toBeUndefined();
+    expect(findRule(errors, 'global-require')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/no-array-reduce')).toBeUndefined();
   });
 
-  test('react', () => {
+  test('react', async () => {
     expect(isPlainObj(reactConf)).toBeDefined();
     expect(isPlainObj(reactConf.rules)).toBeDefined();
 
-    const errors = runEslint(reactString(), reactConf);
+    const errors = await runEslint(reactString(), reactConf);
 
     // Enabled
-    expect(find(errors, { ruleId: 'react/forbid-prop-types' })).toBeDefined();
+    expect(findRule(errors, 'react/forbid-prop-types')).toBeDefined();
 
     // Disabled
-    expect(find(errors, { ruleId: 'react/sort-comp' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'react/require-default-props' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'jsx-a11y/anchor-is-valid' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'unicorn/no-for-loop' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'jsx-a11y/label-has-associated-control' })).toBeUndefined();
+    expect(findRule(errors, 'react/sort-comp')).toBeUndefined();
+    expect(findRule(errors, 'react/require-default-props')).toBeUndefined();
+    expect(findRule(errors, 'jsx-a11y/anchor-is-valid')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/no-for-loop')).toBeUndefined();
+    expect(findRule(errors, 'jsx-a11y/label-has-associated-control')).toBeUndefined();
   });
 
-  test('typescript', () => {
-    const errors = runEslint(reactTsString(), reactConf, 'example.tsx');
-    expect(find(errors, { ruleId: '@typescript-eslint/ban-types' })).toBeDefined();
-    expect(find(errors, { ruleId: '@typescript-eslint/no-unused-vars' })).toBeDefined();
-    expect(find(errors, { ruleId: 'react/prop-types' })).toBeUndefined();
-    expect(find(errors, { ruleId: 'react/jsx-props-no-spreading' })).toBeUndefined();
+  test('typescript', async () => {
+    const errors = await runEslint(reactTsString(), reactConf, 'example.tsx');
+
+    // Enabled
+    expect(findRule(errors, '@typescript-eslint/ban-types')).toBeDefined();
+    expect(findRule(errors, '@typescript-eslint/no-unused-vars')).toBeDefined();
+
+    // Disabled
+    expect(findRule(errors, 'react/prop-types')).toBeUndefined();
+    expect(findRule(errors, 'react/jsx-props-no-spreading')).toBeUndefined();
   });
 
-  test('workflow', () => {
-    const errors = runEslint(workflowString(), workflowConf, 'example.tsx');
-    expect(find(errors, { ruleId: 'import/no-unresolved' })).toBeUndefined();
+  test('workflow', async () => {
+    const errors = await runEslint(workflowString(), workflowConf, 'example.tsx');
+
+    // Disabled
+    expect(findRule(errors, 'import/no-unresolved')).toBeUndefined();
   });
 });

@@ -8,28 +8,42 @@
 
 ## Installation
 
-### Typescript
+### NPM
 
 ```bash
-npx install-peerdeps --dev eslint-config-availity
+npm install --save-dev eslint-config-availity
 ```
 
-### Vanilla
+### Yarn
 
 ```bash
 yarn add --dev eslint-config-availity
 ```
 
+> If you need TypeScript support then you will also need to include `typescript`, `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser` as `devDependencies`
+
 ## Features
 
--   [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+### Configs
+
 -   [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+-   [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 -   [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+
+### Plugins
+
+-   [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
 -   [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+-   [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
 -   [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
--   [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+-   [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 -   [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+-   [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+
+### TypeScript
+
 -   [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
+-   [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
 
 ## Usage
 
@@ -37,14 +51,14 @@ yarn add --dev eslint-config-availity
 
 ### Node w/ optional Typescript
 
-```bash
+```yaml
 # .eslintrc.yaml
 extends: availity
 ```
 
 ### Browser (React) w/ Typescript
 
-```bash
+```yaml
 # .eslintrc.yaml
 extends: availity/browser
 ```
@@ -53,30 +67,33 @@ extends: availity/browser
 
 Allows root imports in [@availity/workflow](https://github.com/Availity/availity-workflow) projects.
 
-```bash
+```yaml
 # .eslintrc.yaml
 extends: availity/workflow
 ```
 
+> If you are using TypeScript then you can take advantage of root imports with your `tsconfig.json`
+
 ### Prettier
 
-> Recommended settings
+Recommended settings
 
-```js
+```json
 {
-  "printWidth": 120,
-  "singleQuote": true,
-  "trailingComma": "es5"
+    "printWidth": 120,
+    "singleQuote": true,
+    "trailingComma": "es5"
 }
 ```
 
 ## Contributing
 
--   `$ yarn`
+-   `yarn`
 -   Make necessary changes
 -   Update `README.md` and `test.js` if necessary
--   Run `yarn run release`. This command uses [standard-version](https://github.com/conventional-changelog/standard-version) to automatically determine the version based on commits and generate a CHANGELOG
--   Run `git push --follow-tags origin <branch> && yarn publish` to publish
+-   Commit your changes using the [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary) format
+-   Push your changes and open a PR
+-   A new version will be deployed automatically through the CI process
 
 ## Disclaimer
 
