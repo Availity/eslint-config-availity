@@ -58,7 +58,15 @@ module.exports = {
     __STAGING__: true,
   },
 
-  overrides: [...base.overrides],
+  overrides: [
+    ...base.overrides,
+    {
+      files: ['**/*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
+  ],
 
   rules: {
     ...base.rules,
