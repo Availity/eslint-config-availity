@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.4](https://github.com/Availity/eslint-config-availity/compare/v8.0.3...v8.0.4) (2021-11-01)
+
+
+### Bug Fixes
+
+* disable prop-types in tsx files ([c80454a](https://github.com/Availity/eslint-config-availity/commit/c80454a99ad309e6003db874bc6fd6ff413b6a2a))
+
 ### [8.0.3](https://github.com/Availity/eslint-config-availity/compare/v8.0.2...v8.0.3) (2021-11-01)
 
 
