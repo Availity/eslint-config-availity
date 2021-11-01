@@ -18,7 +18,7 @@ async function runEslint(string, configuration, fileName) {
 
   const results = await linter.lintText(string, { filePath: fileName });
 
-  return results?.[0]?.messages || [];
+  return results[0].messages;
 }
 
 const findRule = (errors, rule) => errors.find(({ ruleId }) => ruleId === rule);
