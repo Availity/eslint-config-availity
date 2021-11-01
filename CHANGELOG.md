@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.3](https://github.com/Availity/eslint-config-availity/compare/v8.0.2...v8.0.3) (2021-11-01)
+
+
+### Bug Fixes
+
+* remove elvis operator ([0fbafa5](https://github.com/Availity/eslint-config-availity/commit/0fbafa525a4e3e75a82dd66cf1eb4b9c45ab7788))
+* update import rules to account for tsx files ([681e50f](https://github.com/Availity/eslint-config-availity/commit/681e50fa8743a65b7a2f885ab22a31cd9dafc18b))
+
 ### [8.0.2](https://github.com/Availity/eslint-config-availity/compare/v8.0.1...v8.0.2) (2021-09-11)
 
 
