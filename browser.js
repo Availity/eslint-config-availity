@@ -26,11 +26,11 @@ module.exports = {
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.ts', '.json', '.jsx'],
+        extensions: ['.mjs', '.js', '.ts', '.tsx', '.json', '.jsx'],
       },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
-    'import/extensions': ['.js', '.ts', '.mjs', '.jsx'],
+    'import/extensions': ['.js', '.ts', '.tsx', '.mjs', '.jsx'],
     react: {
       version: 'detect',
     },
@@ -58,15 +58,7 @@ module.exports = {
     __STAGING__: true,
   },
 
-  overrides: [
-    ...base.overrides,
-    {
-      files: ['**/*.tsx'],
-      rules: {
-        'react/prop-types': 'off',
-      },
-    },
-  ],
+  overrides: [...base.overrides],
 
   rules: {
     ...base.rules,
@@ -100,6 +92,17 @@ module.exports = {
       {
         components: ['Link'],
         specialLink: ['to'],
+      },
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
     ],
     // https://github.com/typescript-eslint/typescript-eslint/issues/2540
