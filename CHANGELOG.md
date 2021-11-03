@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.5](https://github.com/Availity/eslint-config-availity/compare/v8.0.4...v8.0.5) (2021-11-03)
+
+
+### Bug Fixes
+
+* add .d.ts extension to import/resolver rule ([16ae71b](https://github.com/Availity/eslint-config-availity/commit/16ae71b23d43d319f7d60e90070f0302bffec648))
+* disable prop-types in tsx files ([c80454a](https://github.com/Availity/eslint-config-availity/commit/c80454a99ad309e6003db874bc6fd6ff413b6a2a))
+
+### 8.0.3 (2021-11-01)
+
 ### [8.0.4](https://github.com/Availity/eslint-config-availity/compare/v8.0.3...v8.0.4) (2021-11-01)
 
 
