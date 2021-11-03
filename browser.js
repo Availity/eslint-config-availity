@@ -26,7 +26,7 @@ module.exports = {
     // Append 'ts' extensions to Airbnb 'import/resolver' setting
     'import/resolver': {
       node: {
-        extensions: ['.mjs', '.js', '.ts', '.tsx', '.json', '.jsx'],
+        extensions: ['.mjs', '.js', '.ts', '.tsx', '.d.ts', '.json', '.jsx'],
       },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
