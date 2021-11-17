@@ -28,6 +28,9 @@ module.exports = {
       node: {
         extensions: ['.mjs', '.js', '.ts', '.tsx', '.d.ts', '.json', '.jsx'],
       },
+      typescript: {
+        alwaysTryTypes: true,
+      },
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
     'import/extensions': ['.js', '.ts', '.tsx', '.mjs', '.jsx'],
@@ -36,7 +39,7 @@ module.exports = {
     },
   },
 
-  plugins: ['promise', 'jest', 'unicorn', 'react-hooks', '@typescript-eslint'],
+  plugins: ['promise', 'jest', 'unicorn', 'react-hooks', '@typescript-eslint', 'import'],
 
   parserOptions: {
     sourceType: 'module',
