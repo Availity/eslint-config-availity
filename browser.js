@@ -105,17 +105,6 @@ module.exports = {
         specialLink: ['to'],
       },
     ],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
     // https://github.com/typescript-eslint/typescript-eslint/issues/2540
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': 'warn',
