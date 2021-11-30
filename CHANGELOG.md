@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.6](https://github.com/Availity/eslint-config-availity/compare/v8.0.5...v8.0.6) (2021-11-30)
+
+
+### Bug Fixes
+
+* add eslint-import-resolver-typescript ([3967ee0](https://github.com/Availity/eslint-config-availity/commit/3967ee0963eba8fe2d2fb83bdb72402bb1c0a583))
+
 ### [8.0.5](https://github.com/Availity/eslint-config-availity/compare/v8.0.4...v8.0.5) (2021-11-03)
 
 
