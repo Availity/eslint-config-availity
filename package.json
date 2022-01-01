@@ -67,7 +67,7 @@
     "husky": "^7.0.4",
     "is-plain-obj": "3",
     "jest": "^27.0.6",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.1.4",
     "prettier": "^2.4.1",
     "react": "^17.0.1",
     "standard-version": "^9.3.2",
