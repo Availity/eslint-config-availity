@@ -20,7 +20,7 @@ npm install --save-dev eslint-config-availity
 yarn add --dev eslint-config-availity
 ```
 
-> If you need TypeScript support then you will also need to include `typescript`, `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser` as `devDependencies`
+> If you need TypeScript support then you will also need to include `typescript` as a `devDependency`
 
 ## Features
 

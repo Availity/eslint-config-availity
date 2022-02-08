@@ -33,4 +33,3 @@ build/Release
 node_modules
 .DS_Store
 /.vscode
-/yarn.lock
