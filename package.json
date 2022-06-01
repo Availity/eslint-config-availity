@@ -64,7 +64,7 @@
     "@commitlint/config-conventional": "^13.2.0",
     "husky": "^7.0.4",
     "is-plain-obj": "3",
-    "jest": "^27.0.6",
+    "jest": "^28.1.0",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "react": "^17.0.1",
