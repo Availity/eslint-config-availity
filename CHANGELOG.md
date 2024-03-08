@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.1](https://github.com/Availity/eslint-config-availity/compare/v9.0.0...v9.0.1) (2024-03-08)
+
+
+### Bug Fixes
+
+* typescript peerDep incapatibility ([694b769](https://github.com/Availity/eslint-config-availity/commit/694b7691652067429b8f7369e094684c675b0e21))
+
 ## [9.0.0](https://github.com/Availity/eslint-config-availity/compare/v8.0.9...v9.0.0) (2023-09-12)
 
 
