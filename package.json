@@ -57,7 +57,7 @@
     "eslint-plugin-unicorn": "^34.0.1"
   },
   "peerDependencies": {
-    "typescript": "^4.5.5"
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
