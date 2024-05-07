@@ -7,6 +7,7 @@
     "lint": "eslint .",
     "test": "jest .",
     "release": "standard-version",
+    "release:dry-run": "standard-version --dry-run",
     "eslint-check": "npx eslint-config-prettier .eslintrc.js",
     "prepare": "husky"
   },

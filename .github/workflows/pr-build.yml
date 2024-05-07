@@ -34,3 +34,6 @@ jobs:
 
       - name: Unit Test
         run: yarn test
+
+      - name: Dry Run Version Bump
+        run: yarn release:dry-run
