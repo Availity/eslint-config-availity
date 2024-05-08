@@ -1,4 +1,3 @@
-const isPlainObj = require('is-plain-obj');
 const { ESLint } = require('eslint');
 
 const baseConf = require('..');
@@ -23,10 +22,12 @@ async function runEslint(string, configuration, fileName) {
 
 const findRule = (errors, rule) => errors.find(({ ruleId }) => ruleId === rule);
 
+const isObject = (object) => typeof object === 'object' && object !== null;
+
 describe('rules', () => {
   test('base', async () => {
-    expect(isPlainObj(baseConf)).toBeTruthy();
-    expect(isPlainObj(baseConf.rules)).toBeDefined();
+    expect(isObject(baseConf)).toBeTruthy();
+    expect(isObject(baseConf.rules)).toBeTruthy();
 
     const errors = await runEslint(baseString(), baseConf);
 
@@ -58,8 +59,8 @@ describe('rules', () => {
   });
 
   test('react', async () => {
-    expect(isPlainObj(reactConf)).toBeDefined();
-    expect(isPlainObj(reactConf.rules)).toBeDefined();
+    expect(isObject(reactConf)).toBeTruthy();
+    expect(isObject(reactConf.rules)).toBeTruthy();
 
     const errors = await runEslint(reactString(), reactConf);
 

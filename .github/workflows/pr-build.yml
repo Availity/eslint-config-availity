@@ -13,16 +13,27 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18, 20]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+
+      - name: Set Node Version ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: yarn lint
-      - run: yarn test
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Unit Test
+        run: yarn test
+
+      - name: Dry Run Version Bump
+        run: yarn release:dry-run

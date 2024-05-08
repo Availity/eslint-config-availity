@@ -8,6 +8,8 @@
 
 ## Installation
 
+This package is compatible with v18 and v20 of Node.
+
 ### NPM
 
 ```bash
@@ -90,7 +92,7 @@ Recommended settings
 
 -   `yarn`
 -   Make necessary changes
--   Update `README.md` and `test.js` if necessary
+-   Update `README.md` and `rules.test.js` if necessary
 -   Commit your changes using the [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary) format
 -   Push your changes and open a PR
 -   A new version will be deployed automatically through the CI process
