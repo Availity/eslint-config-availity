@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [10.0.0](https://github.com/Availity/eslint-config-availity/compare/v9.0.1...v10.0.0) (2024-05-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* drop support of Node 16 and lower
+* Node ^18.18.0 or ^20 is required
+
+### Features
+
+* update to eslint 8 and update dependencies ([6d7d41f](https://github.com/Availity/eslint-config-availity/commit/6d7d41fce049b44bb8fd1bbeffc930fc68a5d81e))
+
+
+### build
+
+* add dry-run release script ([b0730bb](https://github.com/Availity/eslint-config-availity/commit/b0730bb94611540c780d6d3fa3ca504307296d18))
+
 ### [9.0.1](https://github.com/Availity/eslint-config-availity/compare/v9.0.0...v9.0.1) (2024-03-08)
 
 
