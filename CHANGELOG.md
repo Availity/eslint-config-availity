@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [10.0.1](https://github.com/Availity/eslint-config-availity/compare/v10.0.0...v10.0.1) (2024-05-09)
+
+
+### Bug Fixes
+
+* update rules ([0f12dbd](https://github.com/Availity/eslint-config-availity/commit/0f12dbd43a5510f2be628d8c409f6138f8676cc5))
+
 ## [10.0.0](https://github.com/Availity/eslint-config-availity/compare/v9.0.1...v10.0.0) (2024-05-08)
 
 
