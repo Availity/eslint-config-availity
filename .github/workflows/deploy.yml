@@ -15,6 +15,7 @@ jobs:
       actions: read
       contents: write
       pull-requests: write
+      id-token: write
 
     steps:
       - name: Checkout Code
@@ -27,6 +28,10 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install latest npm
+        run: npm install -g npm@latest
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
@@ -49,12 +54,9 @@ jobs:
       - name: Unit Test
         run: yarn test
 
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
-      - run: git config --global user.email ${{ secrets.GH_EMAIL }}
-      - run: git config --global user.name ${{ secrets.GH_USER }}
       - run: yarn release --no-verify # skip lifecycle checks for automated releases
       - run: npm publish
-      
+
       - name: Create Release PR
         run: |
           BRANCH_NAME="release/$(date +%Y%m%d-%H%M%S)"
