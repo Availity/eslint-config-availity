@@ -11,8 +11,8 @@ const workflowString = require('./workflow');
 
 async function runEslint(string, configuration, fileName) {
   const linter = new ESLint({
-    useEslintrc: false,
-    baseConfig: configuration,
+    overrideConfigFile: true,
+    overrideConfig: configuration,
   });
 
   const results = await linter.lintText(string, { filePath: fileName });
@@ -22,12 +22,11 @@ async function runEslint(string, configuration, fileName) {
 
 const findRule = (errors, rule) => errors.find(({ ruleId }) => ruleId === rule);
 
-const isObject = (object) => typeof object === 'object' && object !== null;
+const isArray = (value) => Array.isArray(value);
 
 describe('rules', () => {
   test('base', async () => {
-    expect(isObject(baseConf)).toBeTruthy();
-    expect(isObject(baseConf.rules)).toBeTruthy();
+    expect(isArray(baseConf)).toBeTruthy();
 
     const errors = await runEslint(baseString(), baseConf);
 
@@ -59,8 +58,7 @@ describe('rules', () => {
   });
 
   test('react', async () => {
-    expect(isObject(reactConf)).toBeTruthy();
-    expect(isObject(reactConf.rules)).toBeTruthy();
+    expect(isArray(reactConf)).toBeTruthy();
 
     const errors = await runEslint(reactString(), reactConf);
 
@@ -78,8 +76,8 @@ describe('rules', () => {
   test('typescript', async () => {
     const errors = await runEslint(reactTsString(), reactConf, 'example.tsx');
 
-    // Enabled
-    expect(findRule(errors, '@typescript-eslint/ban-types')).toBeDefined();
+    // Enabled — typescript-eslint v8 replaced ban-types with no-wrapper-object-types
+    expect(findRule(errors, '@typescript-eslint/no-wrapper-object-types')).toBeDefined();
     expect(findRule(errors, '@typescript-eslint/no-unused-vars')).toBeDefined();
 
     // Disabled

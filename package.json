@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-availity",
-  "version": "10.0.10",
+  "version": "11.0.0",
   "description": "Shareable ESLint config for Availity projects",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "jest .",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
-    "eslint-check": "npx eslint-config-prettier .eslintrc.js",
+    "eslint-check": "npx eslint-config-prettier eslint.config.js",
     "prepare": "husky"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "browser.js",
     "workflow.js",
     "base.js",
+    "compat.js",
     "README.md"
   ],
   "author": "Robert McGuinness",
@@ -40,10 +41,11 @@
     "@babel/core": "^7.28.5",
     "@babel/eslint-parser": "^7.28.5",
     "@babel/preset-react": "^7.28.5",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
+    "@eslint/compat": "^1.2.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.0.0",
     "babel-plugin-root-import": "^6.6.0",
-    "eslint": "^8.56.0",
+    "eslint": "^9.0.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -54,8 +56,10 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-unicorn": "^52.0.0"
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "globals": "^16.0.0",
+    "typescript-eslint": "^8.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"
