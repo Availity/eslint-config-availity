@@ -1,105 +1,113 @@
 # eslint-config-availity
 
-> Shareable ESLint config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier) and [Typescript](https://www.typescriptlang.org/)
+> Shareable ESLint flat config for Availity projects designed to be used with [Prettier](https://github.com/prettier/prettier) and [TypeScript](https://www.typescriptlang.org/)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](http://opensource.org/licenses/MIT)
 [![NPM Link](http://img.shields.io/npm/v/eslint-config-availity.svg?style=for-the-badge&logo=npm)](https://npmjs.org/package/eslint-config-availity)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/availity/eslint-config-availity/ci-build?style=for-the-badge)
 
 ## Installation
 
-This package is compatible with v18 and v20 of Node.
-
-### NPM
-
-```bash
-npm install --save-dev eslint-config-availity
-```
-
-### Yarn
+Requires Node 20+ and ESLint 9+.
 
 ```bash
 yarn add --dev eslint-config-availity
 ```
 
-> If you need TypeScript support then you will also need to include `typescript` as a `devDependency`
-
-## Features
-
-### Configs
-
--   [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
--   [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
--   [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
-
-### Plugins
-
--   [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
--   [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
--   [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
--   [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
--   [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
--   [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
--   [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
-
-### TypeScript
-
--   [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
--   [@typescript-eslint/parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)
+> If you need TypeScript support, also include `typescript` as a `devDependency`.
 
 ## Usage
 
-> Typescript is supported in both configurations
+This package exports [ESLint flat configs](https://eslint.org/docs/latest/use/configure/configuration-files). Create an `eslint.config.js` in your project root.
 
-### Node w/ optional Typescript
+### Workflow (for [@availity/workflow](https://github.com/Availity/availity-workflow) projects)
 
-```yaml
-# .eslintrc.yaml
-extends: availity
+```js
+import workflow from 'eslint-config-availity/workflow';
+
+export default [
+  ...workflow,
+];
 ```
 
-### Browser (React) w/ Typescript
+### Browser (React + TypeScript)
 
-```yaml
-# .eslintrc.yaml
-extends: availity/browser
+```js
+import browser from 'eslint-config-availity/browser';
+
+export default [
+  ...browser,
+];
 ```
 
-### Workflow
+### Base (Node)
 
-Allows root imports in [@availity/workflow](https://github.com/Availity/availity-workflow) projects.
+```js
+import base from 'eslint-config-availity';
 
-```yaml
-# .eslintrc.yaml
-extends: availity/workflow
+export default [
+  ...base,
+];
 ```
 
-> If you are using TypeScript then you can take advantage of root imports with your `tsconfig.json`
+### Adding project-specific rules
+
+```js
+import workflow from 'eslint-config-availity/workflow';
+
+export default [
+  ...workflow,
+  {
+    rules: {
+      'no-console': 'warn',
+    },
+  },
+  {
+    ignores: ['**/static/*'],
+  },
+];
+```
+
+## Migrating from `.eslintrc`
+
+If upgrading from a previous version, see the [@availity/workflow upgrade guide](https://github.com/Availity/availity-workflow/blob/master/UPGRADE.md). The `@availity/workflow-upgrade` tool automates the migration from `.eslintrc` to `eslint.config.js`.
+
+## Included Configs and Plugins
+
+### Configs
+
+- [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) (via [@eslint/compat](https://github.com/eslint/rewrite/tree/main/packages/compat))
+- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+
+### Plugins
+
+- [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
+- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest)
+- [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+- [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+- [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+- [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
+- [typescript-eslint](https://typescript-eslint.io/) (v8)
 
 ### Prettier
 
-Recommended settings
+Recommended settings:
 
 ```json
 {
-    "printWidth": 120,
-    "singleQuote": true,
-    "trailingComma": "es5"
+  "printWidth": 120,
+  "singleQuote": true,
+  "trailingComma": "es5"
 }
 ```
 
 ## Contributing
 
--   `yarn`
--   Make necessary changes
--   Update `README.md` and `rules.test.js` if necessary
--   Commit your changes using the [conventional-commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary) format
--   Push your changes and open a PR
--   A new version will be deployed automatically through the CI process
-
-## Disclaimer
-
-Open source software components distributed or made available in the Availity Materials are licensed to Company under the terms of the applicable open source license agreements, which may be found in text files included in the Availity Materials.
+- `yarn`
+- Make necessary changes
+- Update `README.md` and `rules.test.js` if necessary
+- Commit using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary)
+- Push and open a PR
 
 ## License
 
