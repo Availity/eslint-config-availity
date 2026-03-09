@@ -1,4 +1,4 @@
-module.exports = () => `
+export default () => `
 import * as React from 'react';
 
 class Foo<F = String> extends Bar<String> implements Baz<String> {

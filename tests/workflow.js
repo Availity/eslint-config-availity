@@ -1,3 +1,3 @@
-module.exports = () => `
+export default () => `
 import SomeComp from '@/components/SomeComp';
 `;

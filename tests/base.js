@@ -1,4 +1,4 @@
-module.exports = () => `
+export default () => `
 // no-var
 var foo = function foo() {};
 foo()
