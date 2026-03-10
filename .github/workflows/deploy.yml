@@ -60,6 +60,7 @@ jobs:
           git config --global user.name ${{ secrets.GH_USER }}
 
       - run: yarn release --no-verify # skip lifecycle checks for automated releases
+      - run: git push --tags origin
       - run: npm publish
 
       - name: Create Release PR
