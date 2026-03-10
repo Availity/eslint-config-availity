@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/Availity/eslint-config-availity/compare/v10.0.7...v12.0.0) (2026-03-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrated to ESLint 9 flat config format with full ESM support. Legacy .eslintrc configs are no longer exported.
+
+### Features
+
+* migrate to ESLint 9 flat config with ESM and typescript-eslint v8 ([5930a92](https://github.com/Availity/eslint-config-availity/commit/5930a92c3525aa88f789519825a2cb1a2eea8271))
+
+
+### Bug Fixes
+
+* deploy github action ([77da204](https://github.com/Availity/eslint-config-availity/commit/77da204402fdaefe221f49bd928142430b4bbbc8))
+* deploy github action ([547174e](https://github.com/Availity/eslint-config-availity/commit/547174ea177ab1c5464284ce6b4a6fc99dd56ac7))
+
 ## [11.0.0](https://github.com/Availity/eslint-config-availity/compare/v10.0.7...v11.0.0) (2026-03-09)
 
 
