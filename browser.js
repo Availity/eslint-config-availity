@@ -1,43 +1,32 @@
-import { fixupConfigRules, fixupPluginRules } from '@eslint/compat';
-import eslintPluginPromise from 'eslint-plugin-promise';
-import eslintPluginJest from 'eslint-plugin-jest';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import { fixupConfigRules } from '@eslint/compat';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import { compat } from './compat.js';
-import base from './base.js';
+import { baseRules, tsConfigs } from './base.js';
 
 export default [
   ...fixupConfigRules(compat.extends('airbnb', 'plugin:import/typescript')),
-  eslintPluginPromise.configs['flat/recommended'],
-  eslintPluginJest.configs['flat/recommended'],
-  eslintConfigPrettier,
-  ...base,
+  ...baseRules,
   {
+    name: 'availity/browser',
     plugins: {
-      'react-hooks': fixupPluginRules(reactHooksPlugin),
+      'react-hooks': reactHooksPlugin,
       '@typescript-eslint': tseslint.plugin,
     },
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
         sourceType: 'module',
-        requireConfigFile: false,
-        ecmaVersion: 2020,
-        presets: ['@babel/preset-react'],
+        ecmaVersion: 'latest',
         ecmaFeatures: {
           jsx: true,
         },
       },
       globals: {
         ...globals.browser,
-        ...globals.jest,
-        ...globals.es2020,
-        __DEV__: true,
-        __TEST__: true,
-        __PROD__: true,
-        __STAGING__: true,
+        ...globals.es2025,
       },
     },
     settings: {
@@ -59,13 +48,16 @@ export default [
     },
     rules: {
       'arrow-body-style': ['warn', 'as-needed'],
-      'unicorn/prefer-query-selector': 0,
-      'react/sort-comp': 0,
+      'unicorn/prefer-module': 'error',
+      'unicorn/prefer-query-selector': 'off',
+      'unicorn/prefer-dom-node-remove': 'off',
+      'unicorn/prefer-dom-node-append': 'off',
+      'react/sort-comp': 'off',
       camelcase: 'off',
-      'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
-      'react/require-default-props': 0,
+      'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx', '.tsx'] }],
+      'react/require-default-props': 'off',
       'jsx-a11y/label-has-associated-control': [
-        2,
+        'error',
         {
           required: {
             some: ['nesting', 'id'],
@@ -74,15 +66,15 @@ export default [
       ],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'react/jsx-props-no-spreading': 0,
+      'react/jsx-props-no-spreading': 'off',
       'react/forbid-prop-types': [
         'error',
         {
           forbid: ['any'],
         },
       ],
-      'react/react-in-jsx-scope': 0,
-      'react/jsx-uses-react': 0,
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
       'jsx-a11y/anchor-is-valid': [
         'error',
         {
@@ -101,9 +93,9 @@ export default [
           tsx: 'never',
         },
       ],
-      'import/prefer-default-export': 0,
+      'import/prefer-default-export': 'off',
       'react/function-component-definition': [
-        2,
+        'error',
         {
           namedComponents: ['function-declaration', 'arrow-function'],
         },
@@ -112,12 +104,15 @@ export default [
       '@typescript-eslint/no-use-before-define': 'warn',
     },
   },
-  // TS recommended rules are already included via base.js
+  // TypeScript recommended rules
+  ...tsConfigs,
   // Disable prop-types rule in .tsx files
   {
+    name: 'availity/tsx-overrides',
     files: ['**/*.tsx'],
     rules: {
       'react/prop-types': 'off',
     },
   },
+  eslintConfigPrettier,
 ];

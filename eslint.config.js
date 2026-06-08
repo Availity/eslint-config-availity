@@ -3,7 +3,7 @@ import base from './base.js';
 export default [
   ...base,
   {
-    ignores: ['coverage/', 'project/', 'esm-output/'],
+    ignores: ['coverage/', 'project/', 'esm-output/', '.yarn/'],
   },
   {
     languageOptions: {
@@ -12,8 +12,9 @@ export default [
       },
     },
     rules: {
-      'import/no-unresolved': ['error', { ignore: ['typescript-eslint'] }],
-      'import/extensions': ['error', 'ignorePackages', { js: 'always' }],
+      'import/no-unresolved': 'off',
+      'import/no-named-as-default': 'off',
+      'import/no-named-as-default-member': 'off',
       'import/prefer-default-export': 'off',
       'no-restricted-exports': 'off',
     },

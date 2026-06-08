@@ -1,6 +1,7 @@
 export default () => `
 import * as React from 'react';
 
+// @typescript-eslint/no-wrapper-object-types (error)
 class Foo<F = String> extends Bar<String> implements Baz<String> {
   constructor(foo: String) {}
 
@@ -9,16 +10,29 @@ class Foo<F = String> extends Bar<String> implements Baz<String> {
   }
 }
 
-// testing no-unused-vars
-const hello: String  = "World";
+// @typescript-eslint/no-unused-vars (error)
+const hello: String = "World";
 
+// @typescript-eslint/no-explicit-any (warn)
+const anything: any = 'test';
+console.log(anything);
+
+// no-use-before-define (off) / @typescript-eslint/no-use-before-define (warn)
+const usedLater = laterFn();
+function laterFn() { return 'later'; }
+console.log(usedLater);
+
+// react/prop-types (off in .tsx)
 interface HelloProps {
   world: string;
 };
 
-const SomeComp = props => <div {...props} />
+const SomeComp = (props: any) => <div {...props} />;
 
-const Hello: React.SFC<HelloProps> = ({ world, ...props }) => (
+// react/jsx-props-no-spreading (off)
+const Hello: React.FC<HelloProps> = ({ world, ...props }) => (
   <div>Hello {world}<SomeComp {...props} /></div>
 );
+
+export default Hello;
 `;
