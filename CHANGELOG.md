@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [14.0.0](https://github.com/Availity/eslint-config-availity/compare/v13.0.0...v14.0.0) (2026-06-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* New error-level rules enabled that may flag existing code.
+
+Plugin upgrades:
+- @eslint/compat ^1.2.0 → ^2.1.0
+- eslint-config-prettier ^9.1.2 → ^10.1.8
+- eslint-import-resolver-typescript ^3.10.1 → ^4.4.5
+- eslint-plugin-jest ^28.14.0 → ^29.15.2
+- eslint-plugin-react-hooks ^5.2.0 → ^7.1.1
+- eslint-plugin-unicorn ^56.0.1 → ^65.0.0
+- globals ^16.0.0 → ^17.6.0
+- @commitlint/cli ^19.5.0 → ^21.0.2
+- @commitlint/config-conventional ^19.5.0 → ^21.0.2
+- lint-staged ^15.5.2 → ^17.0.7
+
+Config restructuring:
+- Move eslint-config-prettier to end of each exported array
+- Extract shared TS config (tsConfigs) to avoid duplication
+- Remove fixupPluginRules for react-hooks (v7 native flat config)
+- Remove globals.jest from browser config (scoped via test runner detection)
+- Update globals.es2020 → globals.es2025 in browser config
+- Update ecmaVersion 2020 → 'latest' in browser config
+- Add name fields to all config objects
+- Remove unused eslint-plugin-import-x dependency
+
+New rules enabled:
+- unicorn/prefer-node-protocol: error (base)
+- unicorn/prefer-module: error (browser only)
+- import/extensions: always require .js/.mjs/.ts (base)
+- @typescript-eslint/no-unused-vars: ignoreRestSiblings (TS files)
+
+CI and tooling fixes:
+- PR build matrix: Node [22, 24] (was [20, 22])
+- Deploy workflow: Node 22 (was 20), remove stale cache step
+- Husky commit-msg: use $1 instead of $HUSKY_GIT_PARAMS
+- Husky pre-commit: use lint-staged instead of npm test
+- Remove legacy .husky/_/ directory
+
+Test improvements:
+- Add coverage for react-hooks/exhaustive-deps
+- Add coverage for unicorn/prefer-module in browser
+- Add coverage for @typescript-eslint/no-use-before-define
+- Add coverage for @typescript-eslint/no-unused-vars ignoreRestSiblings
+- Update snapshots for new rules
+* migrated to ESLint 9 flat config format with full ESM support. Legacy .eslintrc configs are no longer exported.
+
+### Features
+
+* migrate to ESLint 9 flat config with ESM and typescript-eslint v8 ([5930a92](https://github.com/Availity/eslint-config-availity/commit/5930a92c3525aa88f789519825a2cb1a2eea8271))
+* upgrade ESLint plugins and restructure shared configs ([6e6849e](https://github.com/Availity/eslint-config-availity/commit/6e6849e823d56b79a9baacc78d47fd14e4c6074f))
+
+
+### Bug Fixes
+
+* deploy github action ([77da204](https://github.com/Availity/eslint-config-availity/commit/77da204402fdaefe221f49bd928142430b4bbbc8))
+* deploy github action ([547174e](https://github.com/Availity/eslint-config-availity/commit/547174ea177ab1c5464284ce6b4a6fc99dd56ac7))
+* push release tags directly to remote ([e0f4733](https://github.com/Availity/eslint-config-availity/commit/e0f473335b3d4262be39c95dda6a8a871d08c704))
+
+### 10.0.7 (2025-04-14)
+
 ## [13.0.0](https://github.com/Availity/eslint-config-availity/compare/v10.0.7...v13.0.0) (2026-03-10)
 
 
