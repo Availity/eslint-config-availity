@@ -33,3 +33,4 @@ build/Release
 node_modules
 .DS_Store
 /.vscode
+.yarn/install-state.gz

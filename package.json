@@ -17,7 +17,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest .",
+    "test": "vitest run",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
     "eslint-check": "npx eslint-config-prettier eslint.config.js",
@@ -44,49 +44,52 @@
     "README.md"
   ],
   "author": "Robert McGuinness",
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Availity/eslint-config-availity/issues"
   },
   "homepage": "https://github.com/Availity/eslint-config-availity#readme",
   "dependencies": {
-    "@babel/core": "^7.28.5",
-    "@babel/eslint-parser": "^7.28.5",
-    "@babel/preset-react": "^7.28.5",
-    "@eslint/compat": "^1.2.0",
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.0.0",
-    "babel-plugin-root-import": "^6.6.0",
-    "eslint": "^9.0.0",
+    "@eslint/compat": "^2.1.0",
+    "@eslint/eslintrc": "^3.3.5",
+    "@vitest/eslint-plugin": "^1.6.19",
+    "eslint": "^9.39.4",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-root-import": "^1.0.4",
-    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^28.8.3",
+    "eslint-plugin-jest": "^29.15.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-promise": "^6.4.0",
+    "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-unicorn": "^56.0.0",
-    "globals": "^16.0.0",
-    "typescript-eslint": "^8.0.0"
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-unicorn": "^65.0.0",
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.60.1"
   },
   "peerDependencies": {
     "typescript": "^5.2.2"
   },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@types/react": "^18.3.11",
-    "husky": "^9.1.6",
-    "jest": "^29.7.0",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
-    "react": "^18.3.1",
-    "standard-version": "^9.3.2",
-    "typescript": "^5.2.2"
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@types/react": "^19.2.17",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.3",
+    "react": "^19.2.7",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.8"
   },
   "prettier": {
     "printWidth": 120,
@@ -121,13 +124,8 @@
       ]
     }
   },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/esm-output/"
-    ]
-  },
   "standard-version": {
     "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }

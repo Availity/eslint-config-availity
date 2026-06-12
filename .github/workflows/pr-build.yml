@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20, 22]
+        node-version: [22, 24]
 
     steps:
       - name: Checkout Code
@@ -34,6 +34,9 @@ jobs:
 
       - name: Unit Test
         run: yarn test
+
+      - name: Prettier Compatibility Check
+        run: yarn eslint-check
 
       - name: Dry Run Version Bump
         run: yarn release:dry-run
