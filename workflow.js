@@ -14,7 +14,9 @@ export default [
     },
     rules: {
       'import/no-unresolved': ['error', { ignore: ['^@/'] }],
-      'import/extensions': 'off',
     },
+  },
+  {
+    ignores: ['dist/', 'static/'],
   },
 ];

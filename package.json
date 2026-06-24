@@ -91,11 +91,6 @@
     "typescript": "^5.9.3",
     "vitest": "^4.1.8"
   },
-  "prettier": {
-    "printWidth": 120,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
@@ -127,5 +122,5 @@
   "standard-version": {
     "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.17.0"
 }

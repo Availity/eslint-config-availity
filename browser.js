@@ -82,17 +82,7 @@ export default [
           specialLink: ['to'],
         },
       ],
-      'import/extensions': [
-        'error',
-        'ignorePackages',
-        {
-          js: 'never',
-          mjs: 'never',
-          jsx: 'never',
-          ts: 'never',
-          tsx: 'never',
-        },
-      ],
+      'import/extensions': 'off',
       'import/prefer-default-export': 'off',
       'react/function-component-definition': [
         'error',
