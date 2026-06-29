@@ -6,11 +6,17 @@ import globals from 'globals';
 import { compat } from './compat.js';
 import { baseRules, tsConfigs } from './base.js';
 
+const FILE_PATTERNS = ['**/*.{js,jsx,ts,tsx}'];
+
 export default [
-  ...fixupConfigRules(compat.extends('airbnb', 'plugin:import/typescript')),
+  ...fixupConfigRules(compat.extends('airbnb', 'plugin:import/typescript')).map((config) => ({
+    ...config,
+    files: config.files || FILE_PATTERNS,
+  })),
   ...baseRules,
   {
     name: 'availity/browser',
+    files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
       'react-hooks': reactHooksPlugin,
       '@typescript-eslint': tseslint.plugin,
