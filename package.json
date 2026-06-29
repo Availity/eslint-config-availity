@@ -18,8 +18,6 @@
   "scripts": {
     "lint": "eslint .",
     "test": "vitest run",
-    "release": "standard-version",
-    "release:dry-run": "standard-version --dry-run",
     "eslint-check": "npx eslint-config-prettier eslint.config.js",
     "prepare": "husky"
   },
@@ -87,7 +85,6 @@
     "lint-staged": "^17.0.7",
     "prettier": "^3.8.3",
     "react": "^19.2.7",
-    "standard-version": "^9.5.0",
     "typescript": "^5.9.3",
     "vitest": "^4.1.8"
   },
@@ -118,9 +115,6 @@
         500
       ]
     }
-  },
-  "standard-version": {
-    "releaseCommitMessageFormat": "chore(release): {{currentTag}} [skip ci]"
   },
   "packageManager": "yarn@4.17.0"
 }
