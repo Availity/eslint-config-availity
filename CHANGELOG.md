@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.1.1](https://github.com/Availity/eslint-config-availity/compare/v15.1.0...v15.1.1) (2026-06-29)
+
+
+### Bug Fixes
+
+* scope browser config rules to JS/TS files ([560991b](https://github.com/Availity/eslint-config-availity/commit/560991bed419abfad0f6abfac209cc17032b7941))
+* scope browser config rules to JS/TS files ([667db79](https://github.com/Availity/eslint-config-availity/commit/667db793f0279ee7f5c66f6c7d75dc3b2a5efd0a))
+
 ## [15.1.0](https://github.com/Availity/eslint-config-availity/compare/v15.0.0...v15.1.0) (2026-06-29)
 
 
