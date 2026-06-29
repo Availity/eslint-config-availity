@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [15.1.0](https://github.com/Availity/eslint-config-availity/compare/v15.0.0...v15.1.0) (2026-06-29)
+
+
+### Features
+
+* test release-please detection ([39b3676](https://github.com/Availity/eslint-config-availity/commit/39b367617e9ec82d5587b492c156c2c9014ed019))
+
 ## [15.0.0](https://github.com/Availity/eslint-config-availity/compare/v14.0.0...v15.0.0) (2026-06-24)
 
 
