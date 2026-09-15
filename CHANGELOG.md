@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.1](https://github.com/Availity/eslint-config-availity/compare/v16.0.0...v16.0.1) (2026-09-15)
+
+
+### Bug Fixes
+
+* use globals.vitest instead of globals.jest in withVitest ([7d14c86](https://github.com/Availity/eslint-config-availity/commit/7d14c8604082206e03a47c331317519c6ea6c35d))
+* use globals.vitest instead of globals.jest in withVitest ([eccbf3b](https://github.com/Availity/eslint-config-availity/commit/eccbf3b21e3903b1f95dfb427056a993bee20dcc))
+* use npm publish in release-please workflow to match deploy.yml ([bd68ad7](https://github.com/Availity/eslint-config-availity/commit/bd68ad71a2c060f92e76b7834dbde851f86f8ddc))
+
 ## [16.0.0](https://github.com/Availity/eslint-config-availity/compare/v15.1.1...v16.0.0) (2026-09-15)
 
 
