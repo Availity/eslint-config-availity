@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [16.0.0](https://github.com/Availity/eslint-config-availity/compare/v15.1.1...v16.0.0) (2026-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Test runner plugins are no longer auto-detected or bundled. Consumers must opt in via withJest/withVitest/withNodeTest exports and install the corresponding plugins (eslint-plugin-jest, @vitest/eslint-plugin, eslint-node-test) as devDependencies. eslint is now a peer dependency and must be present in the consumer project.
+
+### Features
+
+* opt-in test runner configs and TypeScript 6 support ([c67ec66](https://github.com/Availity/eslint-config-availity/commit/c67ec6624c50f9042034a26e246d3279ebce5d50))
+
 ## [15.1.1](https://github.com/Availity/eslint-config-availity/compare/v15.1.0...v15.1.1) (2026-06-29)
 
 
