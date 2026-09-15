@@ -42,7 +42,7 @@ const resolveVitest = async () => {
 
     return [
       { ...eslintPluginVitest.configs.recommended, files: testFiles },
-      { files: testFiles, languageOptions: { globals: globals.jest } },
+      { files: testFiles, languageOptions: { globals: globals.vitest } },
     ];
   } catch {
     return [];
