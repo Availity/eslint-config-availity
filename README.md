@@ -13,7 +13,7 @@ Requires Node 22+ and ESLint 9+.
 yarn add --dev eslint-config-availity
 ```
 
-> If you need TypeScript support, also include `typescript` as a `devDependency`.
+> If you need TypeScript support, also include `typescript` as a `devDependency`. TypeScript 5.2+ and 6.0.x are supported.
 
 ## Profiles
 
@@ -21,7 +21,7 @@ This package provides three ESLint flat config profiles, each targeting a differ
 
 ### Base (`eslint-config-availity`)
 
-For **Node.js and CLI projects**. Includes airbnb-base, Prettier compatibility, and plugins for promises, Jest/Vitest (auto-detected), and unicorn. Uses ESM (`sourceType: 'module'`) with `ecmaVersion: 'latest'`. If `typescript` is installed, TypeScript recommended rules are automatically applied to `.ts`/`.tsx` files. Enforces explicit file extensions in imports (required for Node ESM).
+For **Node.js and CLI projects**. Includes airbnb-base, Prettier compatibility, and plugins for promises and unicorn. Uses ESM (`sourceType: 'module'`) with `ecmaVersion: 'latest'`. If `typescript` is installed, TypeScript recommended rules are automatically applied to `.ts`/`.tsx` files. Enforces explicit file extensions in imports (required for Node ESM).
 
 ```js
 import base from 'eslint-config-availity';
@@ -41,13 +41,61 @@ export default [...browser];
 
 ### Workflow (`eslint-config-availity/workflow`)
 
-For projects scaffolded with **[@availity/workflow](https://github.com/Availity/availity-workflow)**. Extends the browser profile and adds workflow-specific configuration: the `@/` root-import resolver (mapped to `project/app`) and webpack DefinePlugin globals (`__DEV__`, `__TEST__`, `__PROD__`, `__STAGING__`).
+For projects scaffolded with **[@availity/workflow](https://github.com/Availity/availity-workflow)**. Extends the browser profile and adds workflow-specific configuration: the `@/` root-import resolver (mapped to `project/app`) and webpack DefinePlugin globals (`__DEV__`, `__TEST__`, `__PROD__`, `__STAGING__`). Vitest rules are included automatically since workflow projects use Vitest as their test runner.
 
 ```js
 import workflow from 'eslint-config-availity/workflow';
 
 export default [...workflow];
 ```
+
+## Test Runner Support
+
+Test runner rules are **opt-in** via named exports. Add the appropriate export for your test runner alongside your base config:
+
+### Jest
+
+```js
+import base, { withJest } from 'eslint-config-availity';
+
+export default [...base, ...withJest];
+```
+
+Requires `jest` and `eslint-plugin-jest` to be installed:
+
+```bash
+yarn add --dev jest eslint-plugin-jest
+```
+
+### Vitest
+
+```js
+import base, { withVitest } from 'eslint-config-availity';
+
+export default [...base, ...withVitest];
+```
+
+Requires `@vitest/eslint-plugin` to be installed:
+
+```bash
+yarn add --dev @vitest/eslint-plugin
+```
+
+### Node.js built-in test runner (`node:test`)
+
+```js
+import base, { withNodeTest } from 'eslint-config-availity';
+
+export default [...base, ...withNodeTest];
+```
+
+Requires `eslint-node-test` to be installed as a peer dependency, and **ESLint >=10.4**:
+
+```bash
+yarn add --dev eslint-node-test eslint@^10
+```
+
+> Each runner export can also be imported directly from `eslint-config-availity/test-runners` if you prefer not to import from the main entry.
 
 ## Usage
 
@@ -85,13 +133,14 @@ If upgrading from a previous version, see the [@availity/workflow upgrade guide]
 ### Plugins
 
 - [eslint-plugin-import](https://github.com/import-js/eslint-plugin-import)
-- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) (auto-detected)
+- [eslint-plugin-jest](https://github.com/jest-community/eslint-plugin-jest) (opt-in via `withJest`)
 - [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
 - [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise)
 - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
 - [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
-- [@vitest/eslint-plugin](https://github.com/vitest-dev/eslint-plugin-vitest) (auto-detected)
+- [@vitest/eslint-plugin](https://github.com/vitest-dev/eslint-plugin-vitest) (opt-in via `withVitest`)
+- [eslint-node-test](https://github.com/sindresorhus/eslint-node-test) (opt-in via `withNodeTest`, optional peer dependency)
 - [typescript-eslint](https://typescript-eslint.io/) (v8)
 
 ### Prettier
@@ -121,7 +170,7 @@ yarn test     # Run tests
 ### Development workflow
 
 1. Create a branch from `master`
-2. Make changes to config files (`base.js`, `browser.js`, `workflow.js`)
+2. Make changes to config files (`base.js`, `browser.js`, `workflow.js`, `testRunners.js`)
 3. If adding or modifying a rule, add corresponding test coverage in `tests/rules.test.js` and the relevant fixture file
 4. Run `yarn lint && yarn test` to verify
 5. Run `yarn eslint-check` to ensure no rules conflict with Prettier

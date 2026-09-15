@@ -1,7 +1,9 @@
 import browser from './browser.js';
+import { withVitest } from './testRunners.js';
 
 export default [
   ...browser,
+  ...withVitest,
   {
     name: 'availity/workflow',
     languageOptions: {

@@ -130,4 +130,11 @@ exports[`rules > typescript 1`] = `
 ]
 `;
 
+exports[`rules > withVitest 1`] = `
+[
+  "vitest/no-disabled-tests",
+  "vitest/no-focused-tests",
+]
+`;
+
 exports[`rules > workflow 1`] = `[]`;
