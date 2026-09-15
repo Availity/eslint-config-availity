@@ -5,38 +5,9 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import { compat } from './compat.js';
 
-// Detect test runner and include appropriate plugin scoped to test files
-const testFiles = ['**/*.test.*', '**/*.spec.*', '**/tests/**', '**/__tests__/**'];
-const testRunnerConfigs = [];
-
-try {
-  const { createRequire } = await import('node:module');
-  const require = createRequire(import.meta.url);
-  const jestPkg = require('jest/package.json');
-  const jestVersion = Number.parseInt(jestPkg.version.split('.', 1)[0], 10);
-  const jestModule = await import('eslint-plugin-jest');
-  const eslintPluginJest = jestModule.default;
-  testRunnerConfigs.push(
-    { ...eslintPluginJest.configs['flat/recommended'], files: testFiles },
-    { files: testFiles, settings: { jest: { version: jestVersion } }, languageOptions: { globals: globals.jest } }
-  );
-} catch {
-  try {
-    const vitestModule = await import('@vitest/eslint-plugin');
-    const eslintPluginVitest = vitestModule.default;
-    testRunnerConfigs.push(
-      { ...eslintPluginVitest.configs.recommended, files: testFiles },
-      { files: testFiles, languageOptions: { globals: globals.jest } }
-    );
-  } catch {
-    // Neither jest nor vitest detected — no test runner rules
-  }
-}
-
 // Shared plugins and rule overrides (no airbnb-base)
 export const baseRules = [
   eslintPluginPromise.configs['flat/recommended'],
-  ...testRunnerConfigs,
   eslintPluginUnicorn.configs['flat/recommended'],
   {
     name: 'availity/base',

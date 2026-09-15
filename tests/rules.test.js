@@ -3,11 +3,15 @@ import { ESLint } from 'eslint';
 import baseConf from '../index.js';
 import reactConf from '../browser.js';
 import workflowConf from '../workflow.js';
+import { withJest, withVitest, withNodeTest } from '../testRunners.js';
 import reactString from './react.js';
 import reactTsString from './react-typescript.js';
 import baseString from './base.js';
 import baseTsString from './base-typescript.js';
 import workflowString from './workflow.js';
+import jestString from './jest.js';
+import vitestString from './vitest-fixture.js';
+import nodeTestString from './node-test-fixture.js';
 
 async function runEslint(string, configuration, fileName) {
   const linter = new ESLint({
@@ -149,5 +153,51 @@ describe('rules', () => {
 
     // Workflow globals should not trigger no-undef
     expect(findRule(errors, 'no-undef')).toBeUndefined();
+  });
+
+  test('withJest', async () => {
+    expect(Array.isArray(withJest)).toBe(true);
+    // withJest may be empty if jest is not installed (requires jest package for version detection)
+    if (withJest.length === 0) {
+      return;
+    }
+
+    const errors = await runEslint(jestString(), [...baseConf, ...withJest], 'example.test.js');
+
+    expect(ruleIds(errors)).toMatchSnapshot();
+
+    // jest/no-focused-tests should fire on test.only
+    expect(findRule(errors, 'jest/no-focused-tests')).toBeDefined();
+    // jest/no-disabled-tests should fire on test.skip
+    expect(findRule(errors, 'jest/no-disabled-tests')).toBeDefined();
+  });
+
+  test('withVitest', async () => {
+    expect(Array.isArray(withVitest)).toBe(true);
+    expect(withVitest.length).toBeGreaterThan(0);
+
+    const errors = await runEslint(vitestString(), [...baseConf, ...withVitest], 'example.test.js');
+
+    expect(ruleIds(errors)).toMatchSnapshot();
+
+    // vitest/no-focused-tests should fire on test.only
+    expect(findRule(errors, 'vitest/no-focused-tests')).toBeDefined();
+    // vitest/no-disabled-tests should fire on test.skip
+    expect(findRule(errors, 'vitest/no-disabled-tests')).toBeDefined();
+  });
+
+  test('withNodeTest', async () => {
+    expect(Array.isArray(withNodeTest)).toBe(true);
+    // withNodeTest may be empty if eslint-node-test is not installed (optional peer dep)
+    if (withNodeTest.length === 0) {
+      return;
+    }
+
+    const errors = await runEslint(nodeTestString(), [...baseConf, ...withNodeTest], 'example.test.js');
+
+    expect(ruleIds(errors)).toMatchSnapshot();
+
+    // node-test/no-only-test should fire on test.only
+    expect(findRule(errors, 'node-test/no-only-test')).toBeDefined();
   });
 });

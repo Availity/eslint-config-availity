@@ -13,7 +13,9 @@
     "./workflow": "./workflow.js",
     "./workflow.js": "./workflow.js",
     "./compat": "./compat.js",
-    "./compat.js": "./compat.js"
+    "./compat.js": "./compat.js",
+    "./test-runners": "./testRunners.js",
+    "./testRunners.js": "./testRunners.js"
   },
   "scripts": {
     "lint": "eslint .",
@@ -39,6 +41,7 @@
     "workflow.js",
     "base.js",
     "compat.js",
+    "testRunners.js",
     "README.md"
   ],
   "author": "Robert McGuinness",
@@ -53,14 +56,11 @@
   "dependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/eslintrc": "^3.3.5",
-    "@vitest/eslint-plugin": "^1.6.19",
-    "eslint": "^9.39.4",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.5",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^29.15.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-promise": "^7.3.0",
     "eslint-plugin-react": "^7.37.5",
@@ -70,9 +70,22 @@
     "typescript-eslint": "^8.60.1"
   },
   "peerDependencies": {
-    "typescript": "^5.2.2"
+    "@vitest/eslint-plugin": "^1.0.0",
+    "eslint": "^9.0.0 || ^10.0.0",
+    "eslint-node-test": "^0.4.0",
+    "eslint-plugin-jest": "^29.0.0",
+    "typescript": ">=5.2.2 <6.1.0"
   },
   "peerDependenciesMeta": {
+    "@vitest/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-node-test": {
+      "optional": true
+    },
+    "eslint-plugin-jest": {
+      "optional": true
+    },
     "typescript": {
       "optional": true
     }
@@ -81,11 +94,14 @@
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
     "@types/react": "^19.2.17",
+    "@vitest/eslint-plugin": "^1.6.19",
+    "eslint": "^9.39.4",
+    "eslint-plugin-jest": "^29.15.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
     "prettier": "^3.8.3",
     "react": "^19.2.7",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.8"
   },
   "lint-staged": {
