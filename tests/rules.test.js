@@ -43,6 +43,9 @@ describe('rules', () => {
     expect(findRule(errors, 'unicorn/prefer-string-replace-all')).toBeDefined();
     expect(findRule(errors, 'unicorn/prefer-at')).toBeDefined();
     expect(findRule(errors, 'unicorn/prefer-spread')).toBeDefined();
+    expect(findRule(errors, 'unicorn/no-immediate-mutation')).toBeDefined();
+    expect(findRule(errors, 'unicorn/require-module-specifiers')).toBeDefined();
+    expect(findRule(errors, 'unicorn/no-instanceof-builtins')).toBeDefined();
 
     // no-unused-vars should ignore rest siblings
     const foundSibling = errors.some(
@@ -78,6 +81,7 @@ describe('rules', () => {
     expect(findRule(errors, 'unicorn/switch-case-braces')).toBeUndefined();
     expect(findRule(errors, 'unicorn/prefer-global-this')).toBeUndefined();
     expect(findRule(errors, 'unicorn/prefer-ternary')).toBeUndefined();
+    expect(findRule(errors, 'unicorn/no-anonymous-default-export')).toBeUndefined();
   });
 
   test('base typescript', async () => {

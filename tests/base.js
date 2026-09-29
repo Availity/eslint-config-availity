@@ -181,6 +181,19 @@ console.log(ternaryResult);
 const sliced = array.slice();
 console.log(sliced);
 
+// unicorn/no-immediate-mutation (warn) - mutating a freshly created value
+[...array].reverse();
+
+// unicorn/require-module-specifiers (error) - empty specifier list
+import {} from 'node:path';
+
+// unicorn/no-instanceof-builtins (error) - use Array.isArray() instead
+const isArray = array instanceof Array;
+console.log(isArray);
+
+// unicorn/no-anonymous-default-export (off)
+export default { foo: 1 };
+
 // import/no-extraneous-dependencies (off)
 // Tested by requiring packages not in deps
 

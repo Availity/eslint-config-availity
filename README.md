@@ -157,8 +157,6 @@ Recommended settings:
 
 ## Contributing
 
-ƒ
-
 ### Setup
 
 ```bash
@@ -183,6 +181,19 @@ yarn test     # Run tests
 - `fix:` — Bug fixes (triggers patch version bump)
 - `feat!:` or `BREAKING CHANGE:` — Breaking changes like enabling new error-level rules (triggers major version bump)
 - `chore:` — Dependency updates, CI changes (no version bump)
+
+### Release process
+
+Releases are fully automated via [Release Please](https://github.com/googleapis/release-please):
+
+1. Commits merged to `master` are analyzed by Release Please, which maintains an open release PR that accumulates changes and updates `CHANGELOG.md` and the version in `package.json`.
+2. When you're ready to release, merge the Release Please PR.
+3. Merging triggers Release Please to create a GitHub Release and tag automatically.
+4. The publish workflow runs on the new release: installs dependencies, runs lint and tests, then publishes to npm with provenance via `npm publish --provenance`.
+
+No manual `npm publish` or tagging is needed. Commit message format (conventional commits) directly controls the version bump — this is why commit conventions are enforced.
+
+If the automated release ever fails, the **Publish Release (Manual)** workflow in GitHub Actions can be triggered manually from the Actions tab as a fallback.
 
 ## License
 
