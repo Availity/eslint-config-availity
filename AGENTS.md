@@ -10,7 +10,7 @@ Shared ESLint config with Prettier and TypeScript support. It is the most widely
 
 ## Environment
 
-- Node `^22 || ^24` (`.nvmrc` is `v22`).
+- Node `^22.12 || ^24` (`.nvmrc` is 24).
 - Yarn 4 (`packageManager: yarn@4.17.0`). Install with `yarn install --immutable`.
 - ESM (`"type": "module"`). Keep it that way.
 

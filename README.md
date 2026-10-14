@@ -7,7 +7,7 @@
 
 ## Installation
 
-Requires Node 22+ and ESLint 9+.
+Requires Node 22.12+ (or 24) and ESLint 9+.
 
 ```bash
 yarn add --dev eslint-config-availity
