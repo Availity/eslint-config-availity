@@ -157,43 +157,15 @@ Recommended settings:
 
 ## Contributing
 
-### Setup
+Contributions are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for setup, the development workflow, commit conventions, and the release process.
+
+Quick start:
 
 ```bash
-yarn          # Install dependencies
-yarn lint     # Run ESLint
-yarn test     # Run tests
+corepack enable
+yarn install --immutable
+yarn lint && yarn test
 ```
-
-### Development workflow
-
-1. Create a branch from `master`
-2. Make changes to config files (`base.js`, `browser.js`, `workflow.js`, `testRunners.js`)
-3. If adding or modifying a rule, add corresponding test coverage in `tests/rules.test.js` and the relevant fixture file
-4. Run `yarn lint && yarn test` to verify
-5. Run `yarn eslint-check` to ensure no rules conflict with Prettier
-6. Commit using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) (enforced by commitlint)
-7. Push and open a PR
-
-### Commit conventions
-
-- `feat:` — New rules or features (triggers minor version bump)
-- `fix:` — Bug fixes (triggers patch version bump)
-- `feat!:` or `BREAKING CHANGE:` — Breaking changes like enabling new error-level rules (triggers major version bump)
-- `chore:` — Dependency updates, CI changes (no version bump)
-
-### Release process
-
-Releases are fully automated via [Release Please](https://github.com/googleapis/release-please):
-
-1. Commits merged to `master` are analyzed by Release Please, which maintains an open release PR that accumulates changes and updates `CHANGELOG.md` and the version in `package.json`.
-2. When you're ready to release, merge the Release Please PR.
-3. Merging triggers Release Please to create a GitHub Release and tag automatically.
-4. The publish workflow runs on the new release: installs dependencies, runs lint and tests, then publishes to npm with provenance via `npm publish --provenance`.
-
-No manual `npm publish` or tagging is needed. Commit message format (conventional commits) directly controls the version bump — this is why commit conventions are enforced.
-
-If the automated release ever fails, the **Publish Release (Manual)** workflow in GitHub Actions can be triggered manually from the Actions tab as a fallback.
 
 ## License
 
