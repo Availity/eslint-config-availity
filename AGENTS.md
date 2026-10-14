@@ -31,7 +31,7 @@ Before you say a change is done, run `yarn lint` and `yarn test`. Then check at 
 - Commit messages should say which rules changed, because consumers read them to decide whether an upgrade will break them.
 
 ## Commits
-- Use conventional commits (`feat:`, `fix:`, and so on). The format is checked locally: `.husky/commit-msg` runs commitlint, using the inline `commitlint` config in `package.json`. The CI workflows do not run commitlint, so a commit made with `--no-verify` will pass CI. The type still drives version bumps, so use it correctly.
+- Use conventional commits (`feat:`, `fix:`, and so on). The format is checked locally: `.husky/commit-msg` runs commitlint, using `commitlint.config.js`. The CI workflows do not run commitlint, so a commit made with `--no-verify` will pass CI. The type still drives version bumps, so use it correctly.
 
 ## Do not
 - Do not add a second config flavor. Add a profile to this package instead.
