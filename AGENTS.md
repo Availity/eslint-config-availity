@@ -5,7 +5,7 @@ Shared ESLint config with Prettier and TypeScript support. It is the most widely
 ## Branches
 - Default and PR target: `master`.
 - Check `git branch --show-current` before editing.
-- Never push to `master`. Work on `feature/<JIRA-###>-description` or `fix/<JIRA-###>-description`.
+- Never push to `master`. Work on a branch named `feature/<short-description>` or `fix/<short-description>`.
 
 ## Environment
 - Node `^22 || ^24` (`.nvmrc` is `v22`).
